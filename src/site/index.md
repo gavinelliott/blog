@@ -1,6 +1,6 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.<br /> Made by <a href="https://twitter.com/philhawksworth">Phil</a> for <a href="https://twitter.com/philhawksworth">Phil</a>, but perhaps you might also find it useful.
+title: Gavin Elliott
+subtitle: Head of Interaction and Service Design at @DigitalDWP.
 layout: layouts/base.njk
 ---
 
@@ -84,7 +84,3 @@ Netlify's Redirects API can provide friendlier URLs as proxies to these URLs.
 
 - [/api/hello](/api/hello)
 - [/api/fetch-joke](/api/fetch-joke)
-
-
-
-
