@@ -2,6 +2,9 @@
 title: Impostor Syndrome
 date: 2017-11-04
 ---
+
+![imposter-syndrome](/images/IMG_4898.jpg)
+
 This article will be one of the most important you’ve read about impostor syndrome and mental health in our industry.
 
 It will cover several points;
@@ -47,19 +50,19 @@ There are several traits and behaviour associated with impostor syndrome. If you
 
 #### You have difficulty accepting praise
 
-![imposter-syndrome-1.001](../../../uploads/2017/07/imposter-syndrome-1.001-1.jpeg)
+![imposter-syndrome-1.001](/images/imposter-syndrome-1.001-1.jpeg)
 
 Ever been praised for doing a piece of work only to completely discount the praise you’ve been given? It’s not about being modest with ‘the impostor’, as ‘the impostor genuinely feels unworthy.
 
 #### You discount your success
 
-![imposter-syndrome-2.001](../../../uploads/2017/07/imposter-syndrome-2.001.jpeg)
+![imposter-syndrome-2.001](/images/imposter-syndrome-2.001.jpeg)
 
 You may have heard yourself say “it wasn’t really me who managed to do something successfully, it was everyone around me”. You push your successes away in fear that it might open the fraud door.
 
 #### You’re an overworker
 
-![imposter-syndrome-3.001](../../../uploads/2017/07/imposter-syndrome-3.001.jpeg)
+![imposter-syndrome-3.001](/images/imposter-syndrome-3.001.jpeg)
 
 You overwork to prove to everyone around you that you’re good enough or your work is good enough. Working longer hours and running yourself into the ground obviously, means that you’re amazing.
 
@@ -67,13 +70,13 @@ You forget that working smarter is better than working harder.
 
 #### You have to be the best
 
-![imposter-syndrome-4.001](../../../uploads/2017/07/imposter-syndrome-4.001.jpeg)
+![imposter-syndrome-4.001](/images/imposter-syndrome-4.001.jpeg)
 
 The impostor will not let you be anything less than the best. Now imagine the perpetual cycle of trying to be the best in a world where everyone else also thinks they’re supposed to be the best?
 
 #### You’re a perfectionist
 
-![imposter-syndrome-5.001](../../../uploads/2017/07/imposter-syndrome-5.001.jpeg)
+![imposter-syndrome-5.001](/images/imposter-syndrome-5.001.jpeg)
 
 You hold yourself to impossible, unbelievable and often unachievable high-standards.
 
@@ -83,7 +86,7 @@ A mistake makes you feel worthless.
 
 #### You avoid showing confidence
 
-![imposter-syndrome-11.001](../../../uploads/2017/07/imposter-syndrome-11.001.jpeg)
+![imposter-syndrome-11.001](/images/imposter-syndrome-11.001.jpeg)
 
 One of the most common traits that I’ve seen in those that suffer from impostor syndrome.
 
@@ -91,13 +94,13 @@ There’s a fear of showing confidence, in that doing so could come off as cocky
 
 #### Everyone else is doing fine
 
-![imposter-syndrome-12.001](../../../uploads/2017/07/imposter-syndrome-12.001.jpeg "impostor syndrome trait #7")
+![imposter-syndrome-12.001](/images/imposter-syndrome-12.001.jpeg "impostor syndrome trait #7")
 
 The voice in the back of your head is telling you that everyone else is doing perfectly fine in life, thus everything is wrong with you. You’re not that good and everyone else is better than you are.
 
 #### You’re never enough
 
-![imposter-syndrome-13.001](../../../uploads/2017/07/imposter-syndrome-13.001.jpeg "impostor syndrome trait #8")
+![imposter-syndrome-13.001](/images/imposter-syndrome-13.001.jpeg "impostor syndrome trait #8")
 
 Impostor guilt is multi-pronged.
 
@@ -105,7 +108,7 @@ You feel like you’re ever doing enough and you believe everyone else around yo
 
 #### You’re a fraud
 
-![imposter-syndrome-14.001](../../../uploads/2017/07/imposter-syndrome-14.001.jpeg "impostor syndrome")
+![imposter-syndrome-14.001](/images/imposter-syndrome-14.001.jpeg "impostor syndrome")
 
 When all of these things are mixed together, you’ve got the result of being convinced that you’re not enough and you are **that** fraud.
 
@@ -119,13 +122,13 @@ To tell you more about my impostor, I asked a number of people to add 3 differen
 
 This is what happened.
 
-![Imposter Syndrome Talk.001](../../../uploads/2017/07/Imposter-Syndrome-Talk.001.jpeg)
+![Imposter Syndrome Talk.001](/images/Imposter-Syndrome-Talk.001.jpeg)
 
 The results made me smile. Of course, they would.
 
 But let me tell you about my impostor’s view on those words.
 
-![Imposter Syndrome Talk.001](../../../uploads/2017/07/Imposter-Syndrome-Talk.001-1.jpeg)
+![Imposter Syndrome Talk.001](/images/Imposter-Syndrome-Talk.001-1.jpeg)
 
 My impostor would fixate on the words in white. Let me take you through what my impostor would do.
 

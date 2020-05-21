@@ -75,8 +75,6 @@ If you follow the advice above, if you use a process wheel, your service team wi
 
 All parts of the team will be working in parallel. Hitting sprint goals and delivering over and over again.
 
-\* [We’re hiring soon](https://careers.dwp.gov.uk/) – [get in touch](http://www.gavinelliott.co.uk/contact/)
-
-[Download the Product Development Wheel](/uploads/product-development-wheel.pdf).
+[Download the Product Development Wheel](/resources/product-development-wheel.pdf).
 
 *Hat tip to [Anna ](https://twitter.com/annarzepczynski)*Rzepcynski *who originally showed me the wheel as part of the “UR Wheel”.*
