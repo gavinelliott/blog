@@ -2,6 +2,8 @@
 title: 2 years ago
 date: 2017-07-30
 ---
+![X-Gov Design Meetup in 2015](/images/xgov-design-meetup-2015.jpg)
+
 2 years ago I started my first day working at the [Department for Work and Pensions](https://dwpdigital.blog.gov.uk/). It’s been a wild ride with no sign it’s slowing down.
 
 I’m enjoying every minute.
