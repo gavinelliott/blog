@@ -29,29 +29,29 @@ This practical guide focuses on principles, tactics, and actionable methods for 
 
 [Buy It on Amazon](https://amzn.to/2NRMBJn)
 
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321929039&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)</figure>Product Design for the Web
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321929039&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)</figure>Product Design for the Web
 
-Principles of Designing and Releasing Web Products. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)
-
-- - - - - -
-
-### [<figure>![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0753556782&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)</figure><figure>![](http://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0753556782)</figure>](http://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=WBOCHQFRWYLOIENA)More Human: Designing a World Where People Come First
-
-Start designing a world where people come first. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT)
+Principles of Designing and Releasing Web Products. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)
 
 - - - - - -
 
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491904909&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)</figure><figure>![](http://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1491904909)</figure>User Story Mapping: Discover the Whole Story, Build the Right Product
+### [<figure>![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0753556782&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0753556782)</figure>](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=WBOCHQFRWYLOIENA)More Human: Designing a World Where People Come First
 
-This insightful book examines how this often misunderstood technique can help your team stay focused on users and their needs without getting lost in the enthusiasm for individual product features. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)
+Start designing a world where people come first. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT)
 
 - - - - - -
 
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1625274793&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)</figure><figure>![](http://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1625274793)</figure>Well-Designed
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491904909&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1491904909)</figure>User Story Mapping: Discover the Whole Story, Build the Right Product
+
+This insightful book examines how this often misunderstood technique can help your team stay focused on users and their needs without getting lost in the enthusiasm for individual product features. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)
+
+- - - - - -
+
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1625274793&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1625274793)</figure>Well-Designed
 
 How to use empathy to create products people love.
 
-[Buy it on Amazon](http://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)
 
 - - - - - -
 
@@ -68,20 +68,20 @@ No matter your business or position, you can apply Marquet’s approach to creat
 
 [Buy it on Amazon](https://amzn.to/2CuKJRi)
 
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0307886050&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)</figure><figure>![](http://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0307886050)</figure>American Icon
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0307886050&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0307886050)</figure>American Icon
 
-Alan Mulally and the fight to save to save Ford Motor Company. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)
-
-- - - - - -
-
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00J379F3O&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B00J379F3O&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=27BUM4ABWBNTVU5Z)</figure>How Google Works
-
-How to hire, manage, motivate, strategize and grow a business in today’s disruptive world from Eric Schmidt, Google’s executive chairman, and Jonathan Rosenberg, advisor to Google CEO Larry Page. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
+Alan Mulally and the fight to save to save Ford Motor Company. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)
 
 - - - - - -
 
-### <figure>[![](http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0470977647&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](http://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=BKW3KB4SZ7EW73BD)</figure><figure>![](http://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0470977647)</figure>Onward
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00J379F3O&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B00J379F3O&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=27BUM4ABWBNTVU5Z)</figure>How Google Works
 
-In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. [Buy it on Amazon](http://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
+How to hire, manage, motivate, strategize and grow a business in today’s disruptive world from Eric Schmidt, Google’s executive chairman, and Jonathan Rosenberg, advisor to Google CEO Larry Page. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
+
+- - - - - -
+
+### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0470977647&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=BKW3KB4SZ7EW73BD)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0470977647)</figure>Onward
+
+In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
 
 - - - - - -

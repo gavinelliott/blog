@@ -14,7 +14,7 @@ Mental health is still a taboo subject. It’s often thought that because we ‘
 
 Geek Mental Help Week gives people a voice. More importantly, it starts the open communication the topic needs.
 
-Over the past couple of months I’ve been touring the UK giving a talk on [Impostor Syndrome](http://www.gavinelliott.co.uk/talks/imposter-syndrome/) for that very reason.
+Over the past couple of months I’ve been touring the UK giving a talk on [Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/) for that very reason.
 
 #### Who will be speaking at the event?
 
