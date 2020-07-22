@@ -25,18 +25,20 @@ body {
   color: mix($text-color, $page-color, 90%);
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.8;
   min-height: 100vh;
-  background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 
   @media (min-width: $narrow) {
     font-size: 18px;
   };
 }
 
-img { max-width: 100%; height: auto;}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 hr {
     display: block;
     unicode-bidi: isolate;
@@ -67,6 +69,14 @@ hr {
   };
 }
 
+.intro {
+  font-family: "Ringside Regular A", "Ringside Regular B";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.intro-highlight { color: #1e88e5; font-weight: bold; }
 
 h1, h2, h3, h4 {
   color: $text-color;
@@ -103,10 +113,10 @@ p {
 .subtitle {
   font-size: 1.2em;
   margin-top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 3.5em;
   font-family: "Sentinel SSm A", "Sentinel SSm B";
-font-style: normal;
-font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 ul, ol {
