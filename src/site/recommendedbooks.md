@@ -1,17 +1,25 @@
 ---
-title: Recommended Books
+title: Good reads
 layout: layouts/base.njk
 subtitle: Recommended books for design, business and product management.
 ---
 
 Over the years I’ve read many books which I’ve found incredibly valuable. All of my recommended books cover topics of design, product management and business.
 
-Design Books
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<ul>
+  <li><a href="#designbooks">Design books</a></li>
+  <li><a href="#management-and-leadership">Management and Leadership books</a></li>
+</ul>
+
+<a name="designbooks">Design Books</a>
+---
 
 The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Design or Product Designer.
 
-### <figure>[![](//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491945923&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21&language=en_GB)](https://amzn.to/36N0qkZ)</figure>Microinteractions
+### Microinteractions
+
+
+<img align="left" src="/images/microinteractions.jpg" style="padding: 10px; margin-top: 20px;">
 
 It’s the little things that turn a good digital product into a great one. With this full color practical book, you’ll learn how to design effective microinteractions: the small details that exist inside and around features. How can users change a setting? How do they turn on mute, or know they have a new email message?
 
@@ -21,7 +29,9 @@ Through vivid, real-world examples from today’s devices and applications, auth
 
 - - - - - -
 
-### <figure>[![](//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491921560&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21&language=en_GB)](https://amzn.to/2NRMBJn)</figure>Articulating Design Decisions
+### Articulating Design Decisions
+
+<img align="left" src="/images/articulating-design-decisions.jpg" style="padding: 10px; margin-top: 20px;">
 
 Talking to people about your designs might seem like a basic skill, but it can be difficult to do efficiently and well. And, in many cases, how you communicate about your work with stakeholders, clients, and other non-designers is more critical than the designs themselves—simply because the most articulate person usually wins.
 
@@ -29,59 +39,83 @@ This practical guide focuses on principles, tactics, and actionable methods for 
 
 [Buy It on Amazon](https://amzn.to/2NRMBJn)
 
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321929039&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)</figure>Product Design for the Web
+- - - - - -
 
-Principles of Designing and Releasing Web Products. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)
+### Product Design for the Web
+
+<img align="left" src="/images/product-design-for-the-web.jpg" style="padding: 10px; margin-top: 20px;">Web designers are no longer just web designers. To create a successful web product that’s as large as Etsy, Facebook, Twitter, or Pinterest–or even as small as a tiny app–you need to know more than just HTML and CSS. You need to understand how to create meaningful online experiences so that users want to come back again and again.
+
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)
 
 - - - - - -
 
-### [<figure>![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0753556782&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0753556782)</figure>](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=WBOCHQFRWYLOIENA)More Human: Designing a World Where People Come First
+### More Human: Designing a World Where People Come First
 
-Start designing a world where people come first. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT)
+<img align="left" src="/images/more-human.jpg" style="padding: 10px; margin-top: 20px;"> In this powerful manifesto, Steve Hilton argues that the frustrations people feel with government, politics, their economic circumstances and their daily lives are caused by deep structural problems with the systems that dominate our modern world – systems that have become too big, bureaucratic and distant from the human scale. He shows how change is possible, offering us a more human way of living.
 
-- - - - - -
-
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491904909&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1491904909)</figure>User Story Mapping: Discover the Whole Story, Build the Right Product
-
-This insightful book examines how this often misunderstood technique can help your team stay focused on users and their needs without getting lost in the enthusiasm for individual product features. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT)
 
 - - - - - -
 
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1625274793&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=1625274793)</figure>Well-Designed
+### User Story Mapping: Discover the Whole Story, Build the Right Product
 
-How to use empathy to create products people love.
+<img align="left" src="/images/user-story-mapping.jpg" style="padding: 10px; margin-top: 20px;"> User story mapping is a valuable tool for software development, once you understand why and how to use it. This insightful book examines how this often misunderstood technique can help your team stay focused on users and their needs without getting lost in the enthusiasm for individual product features.
+
+Author Jeff Patton shows you how changeable story maps enable your team to hold better conversations about the project throughout the development process. Your team will learn to come away with a shared understanding of what you’re attempting to build and why.
+
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)
+
+- - - - - -
+
+### Well-Designed
+
+<img align="left" src="/images/well-designed.jpg" style="padding: 10px; margin-top: 20px;"> In this refreshingly jargon-free and practical book, product design expert Jon Kolko maps out this process, demonstrating how it will help you and your team conceive and build successful, emotionally resonant products again and again.
+
+The key, says Kolko, is empathy. You need to deeply understand customer needs and feelings, and this understanding must be reflected in the product. In successive chapters of the book, we see how leading companies use a design process of storytelling and iteration that evokes positive emotions, changes behavior, and creates deep engagement.
 
 [Buy it on Amazon](https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)
 
 - - - - - -
 
-Management and Leadership Books
+<a name="management-and-leadership">Management and Leadership Books</a>
 -------------------------------
 
-### <figure>[![](//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0241250943&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21&language=en_GB)](https://amzn.to/2CuKJRi)</figure>Turn the Ship Around!
+### Turn the Ship Around!
 
-Captain David Marquet was used to giving orders. In the high-stress environment of the USS *Santa Fe,* a nuclear-powered submarine, it was crucial his men did their job well. But the ship was dogged by poor morale, poor performance and the worst retention in the fleet.
+<img align="left" src="/images/turn-the-ship-around.jpg" style="padding: 10px; margin-top: 20px;"> Captain David Marquet was used to giving orders. In the high-stress environment of the USS *Santa Fe,* a nuclear-powered submarine, it was crucial his men did their job well. But the ship was dogged by poor morale, poor performance and the worst retention in the fleet.
 
-Marquet took matters into his own hands and pushed for leadership at every level. Before long, his crew became fully engaged and the *Santa Fe* skyrocketed from worst t first in the fleet.
+Marquet took matters into his own hands and pushed for leadership at every level. Before long, his crew became fully engaged and the *Santa Fe* skyrocketed from worst to the first in the fleet.
 
 No matter your business or position, you can apply Marquet’s approach to create a workplace where everyone takes responsibility for their actions, people are healthier and happier – and everyone is a leader.
 
 [Buy it on Amazon](https://amzn.to/2CuKJRi)
 
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0307886050&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0307886050)</figure>American Icon
+- - - - - -
 
-Alan Mulally and the fight to save to save Ford Motor Company. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)
+### American Icon
+
+<img align="left" src="/images/american-icon.jpg" style="padding: 10px; margin-top: 20px;"> At the end of 2008, Ford Motor Company was just months away from running out of cash. With the auto industry careening toward ruin, Congress offered all three Detroit automakers a bailout. General Motors and Chrysler grabbed the taxpayer lifeline, but Ford decided to save itself.
+
+Under the leadership of charismatic CEO Alan Mulally, Ford had already put together a bold plan to unify its divided global operations, transform its lackluster product lineup, and overcome a dys-functional culture of infighting, backstabbing, and excuses. It was an extraordinary risk, but it was the only way the Ford family--America's last great industrial dynasty--could hold on to their company.
+
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)
 
 - - - - - -
 
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00J379F3O&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B00J379F3O&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=27BUM4ABWBNTVU5Z)</figure>How Google Works
+### How Google Works
 
-How to hire, manage, motivate, strategize and grow a business in today’s disruptive world from Eric Schmidt, Google’s executive chairman, and Jonathan Rosenberg, advisor to Google CEO Larry Page. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
+<img align="left" src="/images/how-google-works.jpg" style="padding: 10px; margin-top: 20px;"> At the end of 2008, Ford Motor Company was just months away from running out of cash. With the auto industry careening toward ruin, Congress offered all three Detroit automakers a bailout. General Motors and Chrysler grabbed the taxpayer lifeline, but Ford decided to save itself.
+
+Under the leadership of charismatic CEO Alan Mulally, Ford had already put together a bold plan to unify its divided global operations, transform its lackluster product lineup, and overcome a dys-functional culture of infighting, backstabbing, and excuses. It was an extraordinary risk, but it was the only way the Ford family--America's last great industrial dynasty--could hold on to their company.
+
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
 
 - - - - - -
 
-### <figure>[![](https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0470977647&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=gaelmywo-21)](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=BKW3KB4SZ7EW73BD)</figure><figure>![](https://ir-uk.amazon-adsystem.com/e/ir?t=gaelmywo-21&l=as2&o=2&a=0470977647)</figure>Onward
+### Onward
 
-In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
+<img align="left" src="/images/onward.jpg" style="padding: 10px; margin-top: 20px;"> In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. Concerned that Starbucks had lost its way, Schultz was determined to help it return to its core values and restore not only its financial health, but also its soul. In Onward, he shares the remarkable story of his return and the company's ongoing transformation under his leadership, revealing how, during one of the most tumultuous economic times in history, Starbucks again achieved profitability and sustainability without sacrificing humanity. 
+
+[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
 
 - - - - - -

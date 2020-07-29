@@ -72,8 +72,9 @@ hr {
   font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.6;
+  margin-bottom: 4em;
 }
 
 .intro-highlight { color: #1e88e5; font-weight: bold; }
@@ -94,10 +95,10 @@ h1 {
   line-height: 1;
 
   @media (min-width: $mid) {
-    font-size: 5em;
+    font-size: 4em;
   };
   @media (min-width: $wide) {
-    font-size: 6em;
+    font-size: 5.4em;
   };
 }
 
@@ -110,7 +111,7 @@ font-weight: 400;
 }
 
 .subtitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-top: 1em;
   margin-bottom: 3.5em;
   font-family: "Sentinel A", "Sentinel B";
