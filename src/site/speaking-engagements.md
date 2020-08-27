@@ -8,7 +8,7 @@ subtitle: A list of my recent speaking appearances is below. Want me to speak at
 
 ### Past Speaking Appearances
 
-October 24th – [Middlesbrough FrontEnd](https://middlesbroughfe.co.uk/) – [Impostor Syndrome](/talks/imposter-syndrome/)
+October 24th – [Middlesbrough FrontEnd](https://middlesbroughfe.co.uk/) – [Impostor Syndrome](/imposter-syndrome/)
 
 October 16th – SODA Social – Service Led Design
 
