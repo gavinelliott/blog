@@ -5,7 +5,7 @@ subtitle:
 ---
 ![impostor-syndrome](/images/impostor-syndrome-talk.jpg)
 
-#### Talk Description
+#### Talk Descriptio
 
 When impostor syndrome got to be too much for Gavin Elliott, he had to confront his own deep, sophisticated mental health challenges. In a personal talk, Gavin shares how he learned to handle anxiety and imposter syndrome in a society that’s uncomfortable discussing it. As he says: “Being honest about how we feel doesn’t make us weak — we can overcome our impostor.”
 

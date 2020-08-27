@@ -24,7 +24,6 @@ body {
   background-color: $page-color;
   color: mix($text-color, $page-color, 90%);
   font-weight: 300;
-  font-size: 19px;
   line-height: 1.8;
   min-height: 100vh;
 
@@ -106,8 +105,9 @@ p {
   margin-top: 1.4em;
   margin-bottom: 1.4em;
   font-family: "Sentinel A", "Sentinel B";
-font-style: normal;
-font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
 .subtitle {
@@ -124,6 +124,7 @@ ul, ol {
   font-family: "Sentinel A", "Sentinel B";
 font-style: normal;
 font-weight: 400;
+font-size: 1.2em;
 }
 
 a:link,
@@ -152,6 +153,7 @@ a:focus {
   font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   font-style: normal;
   font-weight: 700;
+  font-size: 1em;
 
   li {
     display: inline;
@@ -226,10 +228,11 @@ pre {
 
 blockquote {
   font-style: italic;
-  padding: 5px 0px 5px 15px;
+  padding: 5px 0px 5px 20px;
   border-left: solid 10px;
   border-color: #cecece;
   margin-bottom: 20px;
+  background: #fff;
 }
 
 footer {

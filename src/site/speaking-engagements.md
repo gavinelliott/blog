@@ -8,65 +8,65 @@ subtitle: A list of my recent speaking appearances is below. Want me to speak at
 
 ### Past Speaking Appearances
 
-October 24th – [Middlesbrough FrontEnd](https://middlesbroughfe.co.uk/) – [Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)
+October 24th – [Middlesbrough FrontEnd](https://middlesbroughfe.co.uk/) – [Impostor Syndrome](/talks/imposter-syndrome/)
 
 October 16th – SODA Social – Service Led Design
 
-October 14th – Dynamo Newcastle – [Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)
+October 14th – Dynamo Newcastle – [Impostor Syndrome](/imposter-syndrome/)
 
 October 7th – FutureGov Manchester – Designing 21st Century Government – “Lightning Talk”
 
 October 4th – [NUX8](https://2019.nuxconf.uk/) – Compere
 
-October 2nd – Chester Devs – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+October 2nd – Chester Devs – “[Impostor Syndrome](/imposter-syndrome/)”
 
 #### 2018
 
-October – [DXN](https://www.dxnevent.com/) – Nottingham – “[Professional Progression](https://www.gavinelliott.co.uk/talks/coming-soon-professional-progression/)”
+October – [DXN](https://www.dxnevent.com/) – Nottingham – “[Professional Progression](/professional-progression/)”
 
-May 2018 – [Camp Digital](https://www.wearesigma.com/campdigital/2018/) – Manchester – “[Professional Progression](https://www.gavinelliott.co.uk/talks/professional-progression/)”
+May 2018 – [Camp Digital](https://www.wearesigma.com/campdigital/2018/) – Manchester – “[Professional Progression](/professional-progression/)”
 
-March 2018 – [50:50 Day](https://upfrontconf.com/) – Newcastle – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+March 2018 – [50:50 Day](https://upfrontconf.com/) – Newcastle – “[Impostor Syndrome](/imposter-syndrome/)”
 
-March 2018 – [UpFront Conf](https://upfrontconf.com/) – Manchester – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+March 2018 – [UpFront Conf](https://upfrontconf.com/) – Manchester – “[Impostor Syndrome](/imposter-syndrome/)”
 
-March 2018 – International Womens Day – Manchester – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+March 2018 – International Womens Day – Manchester – “[Impostor Syndrome](/imposter-syndrome/)”
 
-January 2018 – DWP BA Community Event – Leeds – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+January 2018 – DWP BA Community Event – Leeds – “[Impostor Syndrome](/imposter-syndrome/)”
 
-January 2018 – ACAS – London – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+January 2018 – ACAS – London – “[Impostor Syndrome](/imposter-syndrome/)”
 
-January 2018 – Government Digital Service – London – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+January 2018 – Government Digital Service – London – “[Impostor Syndrome](/imposter-syndrome/)”
 
-December 2017 – Sky Bet &amp; Gaming – Leeds – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+December 2017 – Sky Bet &amp; Gaming – Leeds – “[Impostor Syndrome](/imposter-syndrome/)”
 
 November 2017 – [DIBI Conf](https://www.dibiconference.com/) – Newcastle – “Compering”
 
 October 2017 – [NUX6](https://2017.nuxconf.uk/) – Manchester – “Compering”
 
-October 2017 – ConCon Conf – London – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+October 2017 – ConCon Conf – London – “[Impostor Syndrome](/imposter-syndrome/)”
 
-September 2017 – Staffs Web Meetup – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+September 2017 – Staffs Web Meetup – “[Impostor Syndrome](/imposter-syndrome/)”
 
-September 2017 – Code Computerlove – Manchester – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+September 2017 – Code Computerlove – Manchester – “[Impostor Syndrome](/imposter-syndrome/)”
 
-September 2017 – Home Office Digital – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+September 2017 – Home Office Digital – “[Impostor Syndrome](/imposter-syndrome/)”
 
-August 2017 – Sunderland Digital – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+August 2017 – Sunderland Digital – “[Impostor Syndrome](/imposter-syndrome/)”
 
-August 2017 – Government Digital Service – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+August 2017 – Government Digital Service – “[Impostor Syndrome](/imposter-syndrome/)”
 
-August 2017 – HMRC Digital – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+August 2017 – HMRC Digital – “[Impostor Syndrome](/imposter-syndrome/)”
 
-August 2017 – Disclosure Scotland – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+August 2017 – Disclosure Scotland – “[Impostor Syndrome](/imposter-syndrome/)”
 
-July 2017 – Parliamentary Digital Service – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+July 2017 – Parliamentary Digital Service – “[Impostor Syndrome](/imposter-syndrome/)”
 
-July 2017 – BBC – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+July 2017 – BBC – “[Impostor Syndrome](/imposter-syndrome/)”
 
-July 2017 – Coop Digital – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+July 2017 – Coop Digital – “[Impostor Syndrome](/imposter-syndrome/)”
 
-June 2017 – DWP Digital – “[Impostor Syndrome](https://www.gavinelliott.co.uk/talks/imposter-syndrome/)”
+June 2017 – DWP Digital – “[Impostor Syndrome](/imposter-syndrome/)”
 
 Oct 2016 – [NUX5](https://2016.nuxconf.uk/) – Manchester, UK
 

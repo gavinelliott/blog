@@ -3,6 +3,9 @@ title: Professional Progression
 layout: layouts/base.njk
 subtitle:
 ---
+
+![professional-progression](/images/professional-progression.jpg)
+
 ### Talk Description
 
 We join the design industry with little experience, but we’re never destined to stay at that level.
