@@ -104,9 +104,9 @@ Under the leadership of charismatic CEO Alan Mulally, Ford had already put toget
 
 ### How Google Works
 
-<img align="left" src="/images/how-google-works.jpg" style="padding: 10px; margin-top: 20px;"> At the end of 2008, Ford Motor Company was just months away from running out of cash. With the auto industry careening toward ruin, Congress offered all three Detroit automakers a bailout. General Motors and Chrysler grabbed the taxpayer lifeline, but Ford decided to save itself.
+<img align="left" src="/images/how-google-works.jpg" style="padding: 10px; margin-top: 20px;"> Both Eric Schmidt and Jonathan Rosenberg came to Google as seasoned Silicon Valley business executives, but over the course of a decade they came to see the wisdom in Coach John Wooden's observation that 'it's what you learn after you know it all that counts'. As they helped grow Google from a young start-up to a global icon, they relearned everything they knew about management. How Google Works is the sum of those experiences distilled into a fun, easy-to-read primer on corporate culture, strategy, talent, decision-making, communication, innovation, and dealing with disruption.
 
-Under the leadership of charismatic CEO Alan Mulally, Ford had already put together a bold plan to unify its divided global operations, transform its lackluster product lineup, and overcome a dys-functional culture of infighting, backstabbing, and excuses. It was an extraordinary risk, but it was the only way the Ford family--America's last great industrial dynasty--could hold on to their company.
+The authors explain how the confluence of three seismic changes - the internet, mobile, and cloud computing - has shifted the balance of power from companies to consumers. The companies that will thrive in this ever-changing landscape will be the ones that create superior products and attract a new breed of multifaceted employees whom the authors dub 'smart creatives'. The management maxims ('Consensus requires dissension', 'Exile knaves but fight for divas', 'Think 10X, not 10%') are illustrated with previously unreported anecdotes from Google's corporate history.
 
 [Buy it on Amazon](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
 
@@ -114,7 +114,7 @@ Under the leadership of charismatic CEO Alan Mulally, Ford had already put toget
 
 ### Onward
 
-<img align="left" src="/images/onward.jpg" style="padding: 10px; margin-top: 20px;"> In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. Concerned that Starbucks had lost its way, Schultz was determined to help it return to its core values and restore not only its financial health, but also its soul. In Onward, he shares the remarkable story of his return and the company's ongoing transformation under his leadership, revealing how, during one of the most tumultuous economic times in history, Starbucks again achieved profitability and sustainability without sacrificing humanity. 
+<img align="left" src="/images/onward.jpg" style="padding: 10px; margin-top: 20px;"> In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. Concerned that Starbucks had lost its way, Schultz was determined to help it return to its core values and restore not only its financial health, but also its soul. In Onward, he shares the remarkable story of his return and the company's ongoing transformation under his leadership, revealing how, during one of the most tumultuous economic times in history, Starbucks again achieved profitability and sustainability without sacrificing humanity.
 
 [Buy it on Amazon](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
 
