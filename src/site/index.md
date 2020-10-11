@@ -1,6 +1,6 @@
 ---
 title: Gavin Elliott
-subtitle: Head of Interaction and Service Design at @DigitalDWP.
+subtitle: Design Lead at @DigitalDWP.
 layout: layouts/base.njk
 ---
 
