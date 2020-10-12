@@ -1,6 +1,6 @@
 ---
 title: Change and grow
-date: 2020-10-05
+date: 2020-10-11
 ---
 
 5 years ago I wrote '[It's time for something new](https://www.gavinelliott.co.uk/posts/its-time-for-something-new/)'.
