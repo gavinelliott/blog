@@ -11,7 +11,11 @@ When impostor syndrome got to be too much for Gavin Elliott, he had to confront 
 
 This talk will discuss mental health support, recognising impostor syndrome, the effect it has on our personal and professional lives, how to deal with it and ultimately overcome your impostor.
 
-#### Feedback
+#### Feedback and Ratings
+
+In his last talk, Gavin scored 5/5 Average Rating for the presentation.
+
+>The best presentation on Impostor Syndrome I've seen, and I've looked in to it a lot. Gavin literally covered every aspect from a personal point of view and talked through how to work towards a better outcome.
 
 >Gavin was amazing today: open, frank, moving. You should totally ask him to come and talk to your teams about imposter syndrome. <https://t.co/4vrEguQx8v>
 >
