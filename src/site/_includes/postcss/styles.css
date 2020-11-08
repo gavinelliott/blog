@@ -108,7 +108,7 @@ p {
   font-family: "Decimal A", "Decimal B";
   font-style: normal;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .subtitle {
@@ -125,7 +125,7 @@ ul, ol {
   font-family: "Decimal A", "Decimal B";
   font-style: normal;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 a:link,
@@ -154,7 +154,8 @@ a:focus {
   font-family: "Decimal A", "Decimal B";
 font-style: normal;
 font-weight: 700;
-  font-size: 1em;
+  font-size: 0.9em;
+  text-transform: uppercase;
 
   li {
     display: inline;
@@ -185,11 +186,12 @@ font-weight: 700;
 
   small {
     display: block;
-    font-size: 0.7em;
+    font-size: 0.6em;
     color: mix($text-color,$accent-color, 60%);
     font-family: "Decimal A", "Decimal B";
-  font-style: normal;
-  font-weight: 300;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: lowercase;
   }
 }
 
