@@ -11,11 +11,7 @@ Over the years I’ve read many books which I’ve found incredibly valuable. Al
   <li><a href="#management-and-leadership">Management and Leadership books</a></li>
 </ul>
 
-<a name="designbooks">Design Books</a>
-
-
-
----
+## <a name="designbooks">Design Books</a>
 
 The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Design or Product Designer.
 
@@ -80,8 +76,10 @@ The key, says Kolko, is empathy. You need to deeply understand customer needs an
 
 - - - - - -
 
-<a name="management-and-leadership">Management and Leadership Books</a>
--------------------------------
+## <a name="management-and-leadership">Management and Leadership Books</a>
+
+The collection of books below cover everything for you if you're an aspiring manager or leader or whether you've been doing it for a while and what to investigate different types of management and leadership.
+
 
 ### Turn the Ship Around!
 
