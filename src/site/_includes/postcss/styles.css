@@ -199,6 +199,25 @@ font-weight: 700;
   }
 }
 
+a.button {
+  padding: 10px 12px;
+  color: #ffffff;
+  font-family: "Decimal A", "Decimal B";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+  background-color: #2a4eb9;
+  border-bottom: 3px solid;
+  border-bottom-color: #12204a;
+}
+
+a.button:hover {
+  border-bottom-color: #2a4eb9;
+  background-color: #12204a;
+}
+
 
 code {
   font-size: 0.8em;

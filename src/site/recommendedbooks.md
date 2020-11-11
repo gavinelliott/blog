@@ -12,6 +12,9 @@ Over the years I’ve read many books which I’ve found incredibly valuable. Al
 </ul>
 
 <a name="designbooks">Design Books</a>
+
+
+
 ---
 
 The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Design or Product Designer.
@@ -25,7 +28,7 @@ It’s the little things that turn a good digital product into a great one. With
 
 Through vivid, real-world examples from today’s devices and applications, author Dan Saffer walks you through a microinteraction’s essential parts, then shows you how to use them in a mobile app, a web widget, and an appliance. You’ll quickly discover how microinteractions can change a product from one that’s tolerated into one that’s treasured.
 
-[Buy It on Amazon](https://amzn.to/36N0qkZ)
+<a href="https://amzn.to/36N0qkZ" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -37,7 +40,7 @@ Talking to people about your designs might seem like a basic skill, but it can b
 
 This practical guide focuses on principles, tactics, and actionable methods for presenting your designs. Whether you design UX, websites, or products, you’ll learn how to win over anyone who has influence over the project—with the goal of creating the best experience for the end user.
 
-[Buy It on Amazon](https://amzn.to/2NRMBJn)
+<a href="https://amzn.to/2NRMBJn" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -45,7 +48,7 @@ This practical guide focuses on principles, tactics, and actionable methods for 
 
 <img align="left" src="/images/product-design-for-the-web.jpg" style="padding: 10px; margin-top: 20px;">Web designers are no longer just web designers. To create a successful web product that’s as large as Etsy, Facebook, Twitter, or Pinterest–or even as small as a tiny app–you need to know more than just HTML and CSS. You need to understand how to create meaningful online experiences so that users want to come back again and again.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH)
+<a href="https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321929039&linkCode=as2&tag=gaelmywo-21&linkId=TWAW6XQ2LGU64SLH" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -53,7 +56,7 @@ This practical guide focuses on principles, tactics, and actionable methods for 
 
 <img align="left" src="/images/more-human.jpg" style="padding: 10px; margin-top: 20px;"> In this powerful manifesto, Steve Hilton argues that the frustrations people feel with government, politics, their economic circumstances and their daily lives are caused by deep structural problems with the systems that dominate our modern world – systems that have become too big, bureaucratic and distant from the human scale. He shows how change is possible, offering us a more human way of living.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT)
+<a href="https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0753556782&linkCode=as2&tag=gaelmywo-21&linkId=HGDFGUZUMGIXIKHT" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -63,7 +66,7 @@ This practical guide focuses on principles, tactics, and actionable methods for 
 
 Author Jeff Patton shows you how changeable story maps enable your team to hold better conversations about the project throughout the development process. Your team will learn to come away with a shared understanding of what you’re attempting to build and why.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP)
+<a href="https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&camp=1634&creative=19450&creativeASIN=1491904909&linkCode=as2&tag=gaelmywo-21&linkId=ZF5DWGZAP7DOJRWP" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -73,7 +76,7 @@ Author Jeff Patton shows you how changeable story maps enable your team to hold 
 
 The key, says Kolko, is empathy. You need to deeply understand customer needs and feelings, and this understanding must be reflected in the product. In successive chapters of the book, we see how leading companies use a design process of storytelling and iteration that evokes positive emotions, changes behavior, and creates deep engagement.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU)
+<a href="https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1625274793&linkCode=as2&tag=gaelmywo-21&linkId=VBRI577F3KTCMOIU" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -88,7 +91,7 @@ Marquet took matters into his own hands and pushed for leadership at every level
 
 No matter your business or position, you can apply Marquet’s approach to create a workplace where everyone takes responsibility for their actions, people are healthier and happier – and everyone is a leader.
 
-[Buy it on Amazon](https://amzn.to/2CuKJRi)
+<a href="https://amzn.to/2CuKJRi" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -98,7 +101,7 @@ No matter your business or position, you can apply Marquet’s approach to creat
 
 Under the leadership of charismatic CEO Alan Mulally, Ford had already put together a bold plan to unify its divided global operations, transform its lackluster product lineup, and overcome a dys-functional culture of infighting, backstabbing, and excuses. It was an extraordinary risk, but it was the only way the Ford family--America's last great industrial dynasty--could hold on to their company.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF)
+<a href="https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0307886050&linkCode=as2&tag=gaelmywo-21&linkId=ETLKA4OQTIFQACFF" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -108,7 +111,7 @@ Under the leadership of charismatic CEO Alan Mulally, Ford had already put toget
 
 The authors explain how the confluence of three seismic changes - the internet, mobile, and cloud computing - has shifted the balance of power from companies to consumers. The companies that will thrive in this ever-changing landscape will be the ones that create superior products and attract a new breed of multifaceted employees whom the authors dub 'smart creatives'. The management maxims ('Consensus requires dissension', 'Exile knaves but fight for divas', 'Think 10X, not 10%') are illustrated with previously unreported anecdotes from Google's corporate history.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z)
+<a href="https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00J379F3O&linkCode=as2&tag=gaelmywo-21&linkId=27BUM4ABWBNTVU5Z" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
 
@@ -116,6 +119,6 @@ The authors explain how the confluence of three seismic changes - the internet, 
 
 <img align="left" src="/images/onward.jpg" style="padding: 10px; margin-top: 20px;"> In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. Concerned that Starbucks had lost its way, Schultz was determined to help it return to its core values and restore not only its financial health, but also its soul. In Onward, he shares the remarkable story of his return and the company's ongoing transformation under his leadership, revealing how, during one of the most tumultuous economic times in history, Starbucks again achieved profitability and sustainability without sacrificing humanity.
 
-[Buy it on Amazon](https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B "Onward")
+<a href="https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
