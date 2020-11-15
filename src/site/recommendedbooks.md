@@ -7,13 +7,94 @@ subtitle: Recommended books for design, business and product management.
 Over the years I’ve read many books which I’ve found incredibly valuable. All of my recommended books cover topics of design, product management and business.
 
 <ul>
-  <li><a href="#designbooks">Design books</a></li>
+  <li><a href="#service-design-books">Service Design books</a></li>
+  <li><a href="#designbooks">Interaction / Product Design books</a></li>
+  <li><a href="#accessibility-books">Accessibility Books</a></li>
   <li><a href="#management-and-leadership">Management and Leadership books</a></li>
+  <li><a href="#innovation-books">Innovation books</a></li>
 </ul>
 
-## <a name="designbooks">Design Books</a>
+## <a name="service-design-books">Service Design Books</a>
 
-The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Design or Product Designer.
+The collection of books below cover everything for you, your business or organisation when aiming to design better services.
+
+### This is Service Design Thinking: Basics-Tools-Cases
+
+<img align="left" src="/images/this-is-service-design-thinking-book-cover.jpg" alt="This is Service Design Thinking Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+This is Service Design Thinking introduces an inter-disciplinary approach to designing services. Service design is a bit of a buzzword these days and has gained a lot of interest from various fields. This book, assembled to describe and illustrate the emerging field of service design, was brought together using exactly the same co-creative and user-centred approaches you can read and learn about inside. The boundaries between products and services are blurring and it is time for a different way of thinking: this is service design thinking.
+
+A set of 23 international authors and even more online contributors from the global service design community invested their knowledge, experience and passion together to create this book. It introduces service design thinking in manner accessible to beginners and students, it broadens the knowledge and can act as a resource for experienced design professionals.
+
+<a href="https://amzn.to/2IBcGxs" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Org Design for Design Orgs: Building and Managing in-House Teams: Building and Managing In-House Design Teams
+
+<img align="left" src="/images/org-design-for-design-orgs.jpg" alt="Org Design for Design Orgs Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+Design has become the key link between users and today's complex and rapidly evolving digital experiences, and designers are starting to be included in strategic conversations about the products and services that enterprises ultimately deliver. This has led to companies building in-house digital/experience design teams at unprecedented rates, but many of them don't understand how to get the most out of their investment.
+
+This practical guide provides guidelines for creating and leading design teams within your organisation, and explores ways to use design as part of broader strategic planning.
+
+<a href="https://amzn.to/3nrDRK5" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Digitizing Government: Understanding and Implementing New Digital Business Models
+
+<img align="left" src="/images/digitizing-government.jpg" alt="Digitizing Government Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+For businesses large and small, investment in digital technologies is now a priority essential for success. Digitizing Government provides practical advice for understanding and implementing digital transformation to increase business value and improve client engagement. This easy-to-read book is organized into "why", "what", and "how" sections and examines the major elements of digital transformation, with clear steps for improved execution of digital strategies.
+
+It features case studies from the private and public sectors, and a detailed chronology of digital change efforts across the UK government sector, and relates that to government efforts in the USA and around the world. It provides a practical and unique set of insights into business in the digital economy.
+
+<a href="https://amzn.to/36zJnUh" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Digitizing Government: Understanding and Implementing New Digital Business Models
+
+<img align="left" src="/images/digitizing-government.jpg" alt="Digitizing Government Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+For businesses large and small, investment in digital technologies is now a priority essential for success. Digitizing Government provides practical advice for understanding and implementing digital transformation to increase business value and improve client engagement. This easy-to-read book is organized into "why", "what", and "how" sections and examines the major elements of digital transformation, with clear steps for improved execution of digital strategies.
+
+It features case studies from the private and public sectors, and a detailed chronology of digital change efforts across the UK government sector, and relates that to government efforts in the USA and around the world. It provides a practical and unique set of insights into business in the digital economy.
+
+<a href="https://amzn.to/36zJnUh" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### This is Service Design Doing
+
+<img align="left" src="/images/this-is-service-design-doing.jpg" alt="This is Service Design Doing Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+How can you establish a customer-centric culture in an organization? This is the first comprehensive book on how to actually do service design to improve the quality and the interaction between service providers and customers. You’ll learn specific facilitation guidelines on how to run workshops, perform all of the main service design methods, implement concepts in reality, and embed service design successfully in an organization.
+
+Service design requires a common language across disciplines to break down silos within an organization. This book provides a consistent model for accomplishing this and offers hands-on descriptions of every single step, tool, and method used. You’ll be able to focus on your customers and iteratively improve their experience.
+
+Move from theory to practice and build sustainable business success.
+
+<a href="https://amzn.to/38X2oD1" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### The Service Innovation Handbook: Action-oriented Creative Thinking Toolkit for Service Organizations
+
+<img align="left" src="/images/the-service-innovation-handbook.jpg" alt="The Service Innovation Handbook Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
+
+This is an action-oriented book for managers and entrepreneurs searching ways to tackle issues they face in terms of developing and delivering services. The book focuses on service organizations, but has a broad interpretation of what services are. Directed to the business world and combines inspirational text that is full of examples, with the features of a useful handbook of practical methods with associated templates.
+
+The central argument is that managers and entrepreneurs designing service offerings will benefit from using approaches and methods from design and the arts, especially at the early stages of projects. Sometimes called “design thinking” or “design innovation”, such approaches help organizations explore and create new configurations of people and things that support users, customers, staff and partners in creating value together.
+
+<a href="https://amzn.to/3lyLNbY" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+## <a name="designbooks">Interaction / Product Design Books</a>
+
+The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Designer, Service Designer or Product Designer.
 
 ### Microinteractions
 
@@ -76,10 +157,91 @@ The key, says Kolko, is empathy. You need to deeply understand customer needs an
 
 - - - - - -
 
+### The Laws of Simplicity
+
+<img align="left" src="/images/the-laws-of-simplicity-book.jpg" alt="The Laws of Simplicity Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;"> Ten laws of simplicity for business, technology, and design that teach us how to need less but get more. Finally, we are learning that simplicity equals sanity. We're rebelling against technology that's too complicated, DVD players with too many menus, and software accompanied by 75-megabyte "read me" manuals. The iPod's clean gadgetry has made simplicity hip. But sometimes we find ourselves caught up in the simplicity paradox: we want something that's simple and easy to use, but also does all the complex things we might ever want it to do.
+
+In The Laws of Simplicity, John Maeda offers ten laws for balancing simplicity and complexity in business, technology, and design-guidelines for needing less and actually getting more. Maeda-a professor in MIT's Media Lab and a world-renowned graphic designer-explores the question of how we can redefine the notion of "improved" so that it doesn't always mean something more, something added on.
+
+<a href="https://amzn.to/32KebR9" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Design Meets Disability
+
+<img align="left" src="/images/design-meets-disability.jpg" alt="Design Meets Disability Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;"> How design for disabled people and mainstream design could inspire, provoke, and radically change each other. Eyeglasses have been transformed from medical necessity to fashion accessory. This revolution has come about through embracing the design culture of the fashion industry. Why shouldn't design sensibilities also be applied to hearing aids, prosthetic limbs, and communication aids? In return, disability can provoke radical new directions in mainstream design. Charles and Ray Eames's iconic furniture was inspired by a molded plywood leg splint that they designed for injured and disabled servicemen. Designers today could be similarly inspired by disability.
+
+In Design Meets Disability, Graham Pullin shows us how design and disability can inspire each other. In the Eameses' work there was a healthy tension between cut-to-the-chase problem solving and more playful explorations. Pullin offers examples of how design can meet disability today.
+
+<a href="http://amzn.to/2jdJgoF" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Design as Politics
+
+<img align="left" src="/images/design-as-policitics.jpg" alt="Design as Politics Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;"> Design as Politics confronts the inadequacy of contemporary politics to deal with un-sustainability. Current 'solutions' to unsustainability are analysed as utterly insufficient for dealing with the problems but, further than this, the book questions the very ability of democracy to deliver a sustainable future.
+
+Design as Politics argues that finding solutions to this problem, of which climate change is only one part, demands original and radical thinking. Rather than reverting to failed political ideologies, the book proposes a post-democratic politics. In this, Design occupies a major role, not as it is but as it could be if transformed into a powerful agent of change, a force to create and extend freedom. The book does no less than position Design as a vital form of political action.
+
+<a href="https://amzn.to/38GkAk5" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### The Non-Designer's Design Book
+
+<img align="left" src="/images/the-non-designers-design-book.jpg" alt="The Non Designers Design Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;"> So you have a great concept and all the fancy digital tools you could possibly require - what is stopping you from creating beautiful pages? Namely the training to pull all of these elements together into a cohesive design that effectively communicates your message. Not to worry: This book is the one place you can turn to find quick, non-intimidating, excellent design help.
+
+In The Non-Designer's Design Book, 2nd Edition, best-selling author Robin Williams turns her attention to the basic principles of good design and typography. All you have to do is follow her clearly explained concepts, and you will begin producing more sophisticated, professional, and interesting pages immediately. Humour-infused, jargon-free prose interspersed with design exercises, quizzes, illustrations, and dozens of examples make learning a snap¿which is just what audiences have come to expect from this best-selling author.
+
+<a href="https://amzn.to/3ntJ43U" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+## <a name="accessibility-books">Accessibility Books</a>
+
+The collection of books below cover everything for you, your business or organisation when looking to learn more and understand about designing for everyone.
+
+### Accessibility for Everyone
+
+<img align="left" src="/images/accessibility-for-everyone.jpg" alt="Accessibility for Everyone" style="width: 80px; padding: 10px; margin-top: 20px;"> You make the web more inclusive for everyone, everywhere, when you design with accessibility in mind. Let Laura Kalbag guide you through the accessibility landscape: understand disability and impairment challenges; get a handle on important laws and guidelines; and learn how to plan for, evaluate, and test accessible design. Leverage tools and techniques like clear copywriting, well-structured IA, meaningful HTML, and thoughtful design, to create a solid set of best practices. Whether you're new to the field or a seasoned pro, get sure footing on the path to designing with accessibility.
+
+<a href="https://amzn.to/3pDc37F" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### A Web for Everyone: Designing Accessible User Experiences
+
+<img align="left" src="/images/a-web-for-everyone.jpg" alt="A Web for Everyone Book" style="width: 80px; padding: 10px; margin-top: 20px;"> If you are in charge of the user experience, development, or strategy for a web site, A Web for Everyone will help you make your site accessible without sacrificing design or innovation. Rooted in universal design principles, this book provides solutions: practical advice and examples of how to create sites that everyone can use.
+
+<a href="https://amzn.to/36AiU93" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Inclusive Design Patterns
+
+<img align="left" src="/images/inclusive-design-patterns.jpg" alt="Inclusive Design Patterns Book" style="width: 80px; padding: 10px; margin-top: 20px;"> We make inaccessible and unusable websites and apps all the time, but it’s not for lack of skill or talent. It’s just a case of doing things the wrong way. We try to build the best experiences we can, but we only make them for ourselves and for people like us.
+
+This book looks at common interface patterns from the perspective of an inclusive designer—someone trained in building experiences that cater to the huge diversity of abilities, preferences and circumstances out there.
+
+<a href="https://amzn.to/3kzOjNP" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
 ## <a name="management-and-leadership">Management and Leadership Books</a>
 
 The collection of books below cover everything for you if you're an aspiring manager or leader or whether you've been doing it for a while and what to investigate different types of management and leadership.
 
+### The Making of a Manager: What to Do When Everyone Looks to You
+
+<img align="left" src="/images/the-making-of-a-manager.jpg" alt="The Making of a Manager" style="width: 80px; padding: 10px; margin-top: 20px;"> Top tech executive Julie Zhuo remembers the moment when she was asked to lead a team. She felt like she’d won the golden ticket, until reality came crashing in. She was just 25 and had barely any experience being managed, let alone managing others.
+
+Her co-workers became her employees overnight, and she faced a series of anxiety-inducing firsts, including agonising over whether to hire an interviewee; seeking the respect of reports who were cleverer than her; and having to fire someone she liked. Like most first-time managers, she wasn’t given any formal training, and had no resources to turn to for help. It took her years to find her way, but now she’s offering you the short-cut to success.
+
+Whether you're new to the job, a veteran leader, or looking to be promoted, this is the handbook you need to be the kind of manager you've always wanted.
+
+<a href="https://amzn.to/3pvhZiR" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
 
 ### Turn the Ship Around!
 
@@ -120,3 +282,94 @@ The authors explain how the confluence of three seismic changes - the internet, 
 <a href="https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0470977647&linkCode=as2&tag=gaelmywo-21&linkId=VW2D5B5FPOK4UZ7B" class="button">BUY IT ON AMAZON</a>
 
 - - - - - -
+
+## <a name="innovation-books">Innovation Books</a>
+
+The collection of books below cover the topic of innovation.
+
+
+### Radical Technologies: The Design of Everyday Life
+
+<img align="left" src="/images/radical-technologies.jpg" style="padding: 10px; margin-top: 20px; width: 80px;"> Everywhere we turn, a startling new device promises to transfigure our lives. But at what cost? In this urgent and revelatory excavation of our Information Age, leading technology thinker Adam Greenfield forces us to reconsider our relationship with the networked objects, services and spaces that define us. It is time to re-evaluate the Silicon Valley consensus determining the future.
+
+<a href="http://amzn.to/2jH2jeO" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+### Change by Design: How Design Thinking Transforms Organizations and Inspires Innovation
+
+<img align="left" src="/images/change-by-design-book.jpg" alt="change by design book cover" style="padding: 10px; margin-top: 20px; width: 80px;"> In Change by Design, Tim Brown, CEO of IDEO, the celebrated innovation and design firm, shows how the techniques and strategies of design belong at every level of business. Change by Design is not a book by designers for designers; this is a book for creative leaders who seek to infuse design thinking into every level of an organization, product, or service to drive new alternatives for business and society.
+
+<a href="http://amzn.to/2jL2Yfq" class="button">BUY IT ON AMAZON</a>
+
+- - - - - -
+
+<!-- Styles your button (this is a black square with white text) -->
+<style>
+  .back-to-top {
+    background-color: #000000;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 0%;
+  }
+
+  a.back-to-top {
+    font-weight: 1000;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 14px;
+  }
+
+  .back-to-top:hover, .back-to-top:focus, .back-to-top:visited {
+    color: #FFFFFF;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+  }
+</style>
+
+<!-- Adds the back to top link to your website -->
+<a href="#" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
+
+<!-- Fades in the button when you scroll down -->
+<script>
+  var link = document.getElementById("back-to-top");
+  var amountScrolled = 250;
+
+  window.addEventListener('scroll', function(e) {
+      if ( window.pageYOffset > amountScrolled ) {
+          link.classList.add('show');
+      } else {
+          link.className = 'back-to-top';
+      }
+  });
+
+<!-- Scrolls to Top -->
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var distance = 0 - window.pageYOffset;
+      var increments = distance/(500/16);
+      function animateScroll() {
+          window.scrollBy(0, increments);
+          if (window.pageYOffset <= document.body.offsetTop) {
+              clearInterval(runAnimation);
+          }
+      };
+      // Loop the animation function
+      var runAnimation = setInterval(animateScroll, 16);
+  });
+</script>
