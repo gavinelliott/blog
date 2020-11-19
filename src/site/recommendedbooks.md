@@ -54,18 +54,6 @@ It features case studies from the private and public sectors, and a detailed chr
 
 - - - - - -
 
-### Digitizing Government: Understanding and Implementing New Digital Business Models
-
-<img align="left" src="/images/digitizing-government.jpg" alt="Digitizing Government Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
-
-For businesses large and small, investment in digital technologies is now a priority essential for success. Digitizing Government provides practical advice for understanding and implementing digital transformation to increase business value and improve client engagement. This easy-to-read book is organized into "why", "what", and "how" sections and examines the major elements of digital transformation, with clear steps for improved execution of digital strategies.
-
-It features case studies from the private and public sectors, and a detailed chronology of digital change efforts across the UK government sector, and relates that to government efforts in the USA and around the world. It provides a practical and unique set of insights into business in the digital economy.
-
-<a href="https://amzn.to/36zJnUh" class="button">BUY IT ON AMAZON</a>
-
-- - - - - -
-
 ### This is Service Design Doing
 
 <img align="left" src="/images/this-is-service-design-doing.jpg" alt="This is Service Design Doing Book Cover" style="width: 80px; padding: 10px; margin-top: 20px;">
