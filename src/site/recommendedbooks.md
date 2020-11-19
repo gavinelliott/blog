@@ -9,7 +9,7 @@ Over the years I’ve read many books which I’ve found incredibly valuable. Al
 <ul>
   <li><a href="#service-design-books">Service Design books</a></li>
   <li><a href="#designbooks">Interaction / Product Design books</a></li>
-  <li><a href="#accessibility-books">Accessibility Books</a></li>
+  <li><a href="#accessibility-books">Accessibility books</a></li>
   <li><a href="#management-and-leadership">Management and Leadership books</a></li>
   <li><a href="#innovation-books">Innovation books</a></li>
 </ul>
