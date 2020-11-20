@@ -34,4 +34,4 @@ In his last talk, Gavin scored 5/5 Average Rating for the presentation.
 
 #### Speaking near you?
 
-Take a look at my [speaking planner](https://www.gavinelliott.co.uk/speaking/) to see where I’m giving this talk. Would you like me to speak about this topic at your place of work or your event? [Get in touch](https://www.gavinelliott.co.uk/contact/).
+Take a look at my [speaking planner](https://www.gavinelliott.co.uk/speaking-engagements/) to see where I’m giving this talk. Would you like me to speak about this topic at your place of work or your event? [Get in touch](https://www.gavinelliott.co.uk/contact/).

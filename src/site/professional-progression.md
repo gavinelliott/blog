@@ -42,4 +42,4 @@ This talk will discuss seniority in design, professional and personal developmen
 
 #### Speaking near you?
 
-Take a look at my [speaking planner](https://www.gavinelliott.co.uk/speaking/) to see where I’m giving this talk. Would you like me to speak about this topic at your place of work or your event? [Get in touch](https://www.gavinelliott.co.uk/contact/).
+Take a look at my [speaking planner](https://www.gavinelliott.co.uk/speaking-engagements/) to see where I’m giving this talk. Would you like me to speak about this topic at your place of work or your event? [Get in touch](https://www.gavinelliott.co.uk/contact/).
