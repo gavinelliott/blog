@@ -101,7 +101,7 @@ Big thought;
 
 #### Day 7
 
-Sometimes showing the thing without asking for permission is better. They can create value and enable design to show its worth with very little effort. One of the reason why prototyping will always be my go to method.
+Sometimes showing the thing (work) without asking for permission is better. They can create value and enable design to show its worth with very little effort. One of the reason why prototyping will always be my go to method.
 
 Interviewing today, I still enjoy it!
 
