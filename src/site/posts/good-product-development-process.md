@@ -77,4 +77,4 @@ All parts of the team will be working in parallel. Hitting sprint goals and deli
 
 [Download the Product Development Wheel](/resources/product-development-wheel.pdf).
 
-*Hat tip to [Anna ](https://twitter.com/annarzepczynski)*Rzepcynski *who originally showed me the wheel as part of the “UR Wheel”.*
+*Hat tip to [Anna ](https://twitter.com/annarzepczynski)*Rzepczynski *who originally showed me the wheel as part of the “UR Wheel”.*
