@@ -5,7 +5,7 @@ layout: layouts/base.njk
 ---
 
 <div class="intro">
-A <span class="intro-highlight">design leader</span> who focuses on solving complex problems in simple ways at the largest UK Government Department. I spend the majority of my time <span class="intro-highlight">embedding good user-centred design</span> in the department and <span class="intro-highlight">building the capability</span> of our designers. On the side, I speak regularly about <a href="/imposter-syndrome/">impostor syndrome</a> and designing good services.
+A <span class="intro-highlight">design leader</span> who focuses on solving complex problems in simple ways. I spend the majority of my time <span class="intro-highlight">embedding good user-centred design</span> and <span class="intro-highlight">building the capability</span> of our designers. On the side, I speak regularly about <a href="/imposter-syndrome/">impostor syndrome</a> and designing good services.
 </div>
 
 ## Latest writing...
