@@ -65,7 +65,7 @@ The whole first hour is built around one enquiry…
 
 If I don’t know where the person has come from, what they’ve gone through and the relationships they’ve had with other humans I’d be hard-pressed to understand them enough to support their future personal and professional growth.
 
-I look to understand their family make-up when they were young, what Mum and Dad were like and, ethics the individual may have learned and relationships with siblings. A lot can be unpicked in that and as an adult there are a huge amount of learned behaviours that we pick up form experiences in our youth, both good and bad.
+I look to understand their family make-up when they were young, what their parents were like and, ethics the individual may have learned and relationships with siblings. A lot can be unpicked in that and as an adult there are a huge amount of learned behaviours that we pick up form experiences in our youth, both good and bad.
 
 I dig into their education, what they got excited about and what just didn’t click with them and find out the reasons why. Were there blockers in place or were certain decisions wilfully made knowing they would be sent down a specific path?
 
