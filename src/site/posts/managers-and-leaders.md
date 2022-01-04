@@ -200,4 +200,4 @@ The organisation's grade structure says so.
 
 The grade doesn't make the person a manager or leader.
 
-Training, experience and skills does.
+Training, experience and skills do.
