@@ -194,8 +194,10 @@ It doesn't matter which level you're at in your organisation. Every echelon of m
 
 ### Closing comment
 
-In some large organisations, everyone is expected to be a manager regardless of their experience.
+In some large organisations, everyone who attains a certain rank or grade is expected to be a manager or leader regardless of their experience.
 
-Their 'grade' says so.
+The organisation's grade structure says so.
 
-The grade doesn't make the person a manager. Experience does.
+The grade doesn't make the person a manager or leader.
+
+Training, experience and skills does.

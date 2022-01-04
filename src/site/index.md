@@ -1,6 +1,6 @@
 ---
 title: Gavin Elliott
-subtitle: Design Lead at @DigitalDWP.
+subtitle: Head of UX and Design Leader at UK Health Security Agency.
 layout: layouts/base.njk
 ---
 
