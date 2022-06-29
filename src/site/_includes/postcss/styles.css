@@ -141,7 +141,7 @@ a:visited {
 a:hover,
 a:focus {
   color: $text-color;
-  border-bottom-color: #2a4eb9;
+  border-bottom-color: #96bf47;
 }
 
 .nakedLink a:link,
