@@ -8,6 +8,16 @@ subtitle: A list of my recent speaking appearances is below. Want me to speak at
 
 ### Past Speaking Appearances
 
+#### 2022
+
+July 26th - Cabinet Office, UK Government - [Impostor Syndrome](/imposter-syndrome/)
+
+#### 2020 - 2021
+
+Private Audience - [Impostor Syndrome](/imposter-syndrome/)
+
+#### 2019
+
 October 24th – [Middlesbrough FrontEnd](https://middlesbroughfe.co.uk/) – [Impostor Syndrome](/imposter-syndrome/)
 
 October 16th – SODA Social – Service Led Design
