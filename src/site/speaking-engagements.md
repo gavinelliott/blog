@@ -6,7 +6,7 @@ subtitle: A list of my recent speaking appearances is below. Want me to speak at
 
 ### Future Speaking Appearances
 
-July 19, 2023 - Middlesbrough Front End Conference, Middlesbrough, UK - MC
+July 19, 2023 - [Middlesbrough Front End Conference](https://www.middlesbroughfe.co.uk/), Middlesbrough, UK - MC'ing the conference
 
 ### Past Speaking Appearances
 
