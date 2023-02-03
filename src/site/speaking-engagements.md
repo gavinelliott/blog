@@ -6,9 +6,17 @@ subtitle: A list of my recent speaking appearances is below. Want me to speak at
 
 ### Future Speaking Appearances
 
+July 19, 2023 - Middlesbrough Front End Conference, Middlesbrough, UK - MC
+
 ### Past Speaking Appearances
 
+#### 2023 
+
+January - Department for Farming and Rural Affairs, UK Government - [Impostor Syndrome](/imposter-syndrome/)
+
 #### 2022
+
+November - Department for Work and Pensions, UK Government - [Impostor Syndrome](/imposter-syndrome/)
 
 July 26th - Cabinet Office, UK Government - [Impostor Syndrome](/imposter-syndrome/)
 
