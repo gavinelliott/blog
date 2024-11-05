@@ -10,7 +10,7 @@ The <span class="intro-highlight">Chief Design Officer</span> at <span class="in
 
 ## Latest writing...
 
-I share articles about topics which I'm currently working through in my head.
+I share articles about topics which I'm currently musing on.
 
 <ul class="listing">
 {%- for page in collections.post | reverse -%}
