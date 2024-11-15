@@ -1,0 +1,85 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.blog-posts {
+				margin-top: 2rem;
+			}
+			.post-list {
+				display: grid;
+				gap: 1.5rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			.post-item a {
+				display: block;
+				text-decoration: none;
+				padding: 0.5rem 0;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1.2;
+			}
+			.date {
+				margin: 0.25rem 0 0 0;
+				color: rgb(var(--gray));
+			}
+			.description {
+				margin: 0.5rem 0 0 0;
+				color: rgb(var(--gray-dark));
+			}
+			.avatar {
+				width: 80px;
+				height: 80px;
+				margin-bottom: 1rem;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/avatar.png" alt="Avatar" class="avatar" />
+			<h1>Hello, folks!</h1>
+			<p>
+				Welcome to my home on the internet where I've been writing since 2006, sharing my journey as a chief design officer and passionate design leader. Here, you'll find insights on user-centred design, leadership strategies and tips for building exceptional design teams.
+			</p>
+			
+			<section class="blog-posts">
+				<h2>Latest Posts</h2>
+				<ul class="post-list">
+					{
+						posts.map((post) => (
+							<li class="post-item">
+								<a href={`/blog/${post.slug}/`}>
+									<h3 class="title">{post.data.title}</h3>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+									<p class="description">{post.data.description}</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
