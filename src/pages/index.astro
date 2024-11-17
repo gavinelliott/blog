@@ -50,16 +50,26 @@ const posts = (await getCollection('blog')).sort(
 				margin-bottom: 1rem;
 				border-radius: 50%;
 			}
+			.intro-container {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 1rem;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<img src="/avatar.png" alt="Avatar" class="avatar" />
-			<h1>Hello, folks!</h1>
-			<p>
-				Welcome to my home on the internet where I've been writing since 2006, sharing my journey as a chief design officer and passionate design leader. Here, you'll find insights on user-centred design, leadership strategies and tips for building exceptional design teams.
-			</p>
+			<div class="intro-container">
+				<img src="/avatar.png" alt="Avatar" class="avatar" />
+				<div>
+					<h1>Hello, folks!</h1>
+					<p>
+						Welcome to my home on the internet where I've been writing since 2006, sharing my journey as a chief design officer and passionate design leader. Here, you'll find insights on user-centred design, leadership strategies and tips for building exceptional design teams.
+					</p>
+				</div>
+			</div>
 			
 			<section class="blog-posts">
 				<h2>Latest Posts</h2>
