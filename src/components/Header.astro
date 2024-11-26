@@ -5,7 +5,10 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="title-container">
+			<img src="/avatar.png" alt="Avatar" class="avatar" />
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -73,5 +76,16 @@ import { SITE_TITLE } from '../consts';
 		.social-links {
 			display: none;
 		}
+	}
+	.title-container {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.avatar {
+		height: 40px;
+		width: auto;
+		border-radius: 50%;
 	}
 </style>
