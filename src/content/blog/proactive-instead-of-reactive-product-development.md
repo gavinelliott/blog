@@ -1,6 +1,6 @@
 ---
 title: 'Proactive instead of reactive product development'
-description: 'Why organizations need to shift from reactive to proactive product development'
+description: 'The benefits of taking a proactive approach to product development.'
 pubDate: '2017-10-31'
 ---
 

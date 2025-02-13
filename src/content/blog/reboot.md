@@ -1,6 +1,6 @@
 ---
 title: 'Reboot'
-description: 'Starting fresh after a difficult year'
+description: 'Starting fresh after a difficult year.'
 pubDate: '2016-06-29'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Time'
-description: 'Reflections on changing perspective about time and its impact on happiness'
+description: 'Managing time effectively as a design leader.'
 pubDate: '2017-11-18'
 ---
 

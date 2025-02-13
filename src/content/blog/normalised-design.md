@@ -1,6 +1,6 @@
 ---
 title: 'Normalised Design'
-description: 'Challenging conventional design constraints and encouraging creative freedom'
+description: 'Why we should challenge normalised design patterns and think differently.'
 pubDate: '2014-09-07'
 ---
 

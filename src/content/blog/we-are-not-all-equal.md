@@ -1,6 +1,6 @@
 ---
 title: 'We are not all equal'
-description: 'Understanding the diversity of user needs and digital literacy levels'
+description: 'Addressing inequality and diversity in design teams.'
 pubDate: '2015-04-06'
 ---
 

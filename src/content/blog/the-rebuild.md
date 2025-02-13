@@ -1,6 +1,6 @@
 ---
 title: 'The Rebuild'
-description: 'Personal reflections on rebuilding physical and mental health during the pandemic'
+description: 'Starting fresh and rebuilding design processes from the ground up.'
 pubDate: '2020-08-31'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Middle Ground'
-description: 'Finding the balance between over and under designing'
+description: 'Finding the balance between over and under designing.'
 pubDate: '2015-03-02'
 ---
 

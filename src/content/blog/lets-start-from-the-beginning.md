@@ -1,6 +1,6 @@
 ---
 title: "Let's start from the beginning"
-description: 'A guide to people-centered management and the importance of understanding your team'
+description: 'A guide to people-centred management and the importance of understanding your team.'
 pubDate: '2020-01-16'
 heroImage: '/images/dwp-design-team.jpeg'
 ---

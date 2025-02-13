@@ -1,6 +1,6 @@
 ---
 title: 'Design Debt'
-description: 'How to identify design debt, measure it and overcome it.'
+description: 'How to identify and manage design debt in large organisations.'
 pubDate: '2020-05-20'
 ---
 

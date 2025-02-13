@@ -1,6 +1,6 @@
 ---
 title: 'Understanding The Why'
-description: 'The importance of asking why and understanding context in both childhood and professional life'
+description: 'The importance of understanding motivations in design decisions.'
 pubDate: '2012-01-05'
 ---
 

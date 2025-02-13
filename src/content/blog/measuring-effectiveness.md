@@ -1,6 +1,6 @@
 ---
 title: 'Measuring effectiveness'
-description: 'A framework for measuring and improving effectiveness in individuals and teams'
+description: 'How to measure and improve team effectiveness in organisations.'
 pubDate: '2021-02-04'
 ---
 

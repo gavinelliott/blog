@@ -1,6 +1,6 @@
 ---
 title: 'Geek Mental Help Week Newcastle'
-description: 'Organizing Newcastle''s first Geek Mental Help Week event to discuss mental health in tech'
+description: 'Organising and running mental health awareness events in the tech community.'
 pubDate: '2017-09-11'
 ---
 

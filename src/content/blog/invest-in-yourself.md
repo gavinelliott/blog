@@ -1,6 +1,6 @@
 ---
 title: 'Invest in Yourself'
-description: 'The importance of making time for personal health, learning, and growth'
+description: 'The importance of personal and professional development.'
 pubDate: '2015-11-04'
 ---
 

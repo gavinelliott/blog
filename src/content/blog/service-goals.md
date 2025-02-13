@@ -1,6 +1,6 @@
 ---
 title: 'Service Goals'
-description: 'Reflecting on service goals and outcomes for the Get your State Pension service at DWP'
+description: 'Reflecting on service goals and outcomes for the Get your State Pension service at DWP.'
 pubDate: '2017-07-24'
 ---
 

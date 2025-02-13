@@ -1,6 +1,6 @@
 ---
 title: 'How to ask for feedback that might be hard to hear'
-description: 'A guide to seeking and receiving constructive feedback for personal growth'
+description: 'A guide to requesting and receiving constructive feedback effectively.'
 pubDate: '2017-10-04'
 ---
 

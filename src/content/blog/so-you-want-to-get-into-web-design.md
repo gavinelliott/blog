@@ -1,6 +1,6 @@
 ---
 title: 'So, you want to get into Web Design?'
-description: 'A comprehensive guide to starting a career in web design, from industry insights to career paths'
+description: 'A comprehensive guide to starting a career in web design, from industry insights to career paths.'
 pubDate: '2017-10-29'
 ---
 

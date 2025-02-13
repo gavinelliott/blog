@@ -1,6 +1,6 @@
 ---
 title: 'Designing with the future in mind'
-description: 'The importance of long-term planning in design decisions'
+description: 'The importance of long-term planning in design decisions.'
 pubDate: '2013-12-18'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Complaining is nothing without action'
-description: 'Turn complaints into positive action and engagement'
+description: 'Why complaints should be accompanied by solutions and actions.'
 pubDate: '2017-03-07'
 ---
 

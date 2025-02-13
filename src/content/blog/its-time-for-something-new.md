@@ -1,6 +1,6 @@
 ---
 title: "It's time for something new"
-description: 'Leaving traveljunction.com and joining GOV.uk services'
+description: 'Leaving traveljunction.com and joining GOV.UK services.'
 pubDate: '2015-08-04'
 ---
 

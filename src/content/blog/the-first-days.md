@@ -1,6 +1,6 @@
 ---
 title: 'The first days'
-description: 'Reflections on starting a new role within DWP Digital'
+description: 'Navigating the initial challenges of a new leadership position.'
 pubDate: '2020-11-01'
 ---
 

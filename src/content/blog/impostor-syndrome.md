@@ -1,6 +1,6 @@
 ---
 title: 'Impostor Syndrome'
-description: 'A comprehensive guide to understanding and overcoming impostor syndrome in the tech industry'
+description: 'Understanding and dealing with impostor syndrome in the design industry.'
 pubDate: '2017-11-04'
 heroImage: '/images/IMG_4898.jpg'
 ---

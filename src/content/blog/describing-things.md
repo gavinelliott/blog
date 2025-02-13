@@ -1,6 +1,6 @@
 ---
 title: 'Describing things'
-description: 'How we can improve the way we describe and communicate about services'
+description: 'How we can improve the way we describe and communicate about services.'
 pubDate: '2018-07-23'
 ---
 

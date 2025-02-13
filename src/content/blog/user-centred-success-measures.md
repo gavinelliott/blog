@@ -1,6 +1,6 @@
 ---
 title: 'User-centred success measures'
-description: 'A guide to implementing user-centered success measures alongside traditional metrics'
+description: 'A guide to implementing user-centred success measures alongside traditional metrics.'
 pubDate: '2022-09-16'
 ---
 

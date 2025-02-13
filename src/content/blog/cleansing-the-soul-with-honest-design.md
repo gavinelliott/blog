@@ -1,6 +1,6 @@
 ---
 title: 'Cleansing the soul with honest design'
-description: 'Reflecting on honest design principles and the transition to public sector work'
+description: 'Reflecting on honest design principles and the transition to public sector work.'
 pubDate: '2015-08-11'
 ---
 

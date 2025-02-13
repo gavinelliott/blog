@@ -1,6 +1,6 @@
 ---
 title: 'Change and grow'
-description: 'Reflecting on 5 years at DWP Digital and transitioning to a new role'
+description: 'Reflecting on team growth and transitioning to new opportunities.'
 pubDate: '2020-10-11'
 ---
 

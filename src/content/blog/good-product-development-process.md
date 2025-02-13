@@ -1,6 +1,6 @@
 ---
 title: 'Good product development process'
-description: 'A guide to effective product development process in government digital services'
+description: 'A guide to effective product development process in government digital services.'
 pubDate: '2017-11-10'
 ---
 

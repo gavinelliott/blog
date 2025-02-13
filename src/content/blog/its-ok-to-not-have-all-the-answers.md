@@ -1,6 +1,6 @@
 ---
 title: "It's ok to not have all the answers"
-description: 'Dealing with uncertainty and the pressure of needing to know everything'
+description: 'Why it is acceptable to not have all the answers and how to move forward.'
 pubDate: '2014-05-13'
 ---
 

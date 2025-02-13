@@ -1,6 +1,6 @@
 ---
 title: 'How to move into a more Senior Role'
-description: 'Tips and insights on progressing into senior and leadership positions'
+description: 'Practical advice for progressing into senior design positions.'
 pubDate: '2014-11-18'
 ---
 

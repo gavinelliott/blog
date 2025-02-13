@@ -1,6 +1,6 @@
 ---
 title: 'Experiences and Journeys'
-description: 'Using a nature reserve analogy to explain the importance of seamless user experiences'
+description: 'Understanding the importance of seamless user experiences and journeys.'
 pubDate: '2023-07-07'
 ---
 

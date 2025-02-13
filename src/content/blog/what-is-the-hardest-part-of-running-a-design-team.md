@@ -1,6 +1,6 @@
 ---
 title: 'What is the hardest part of running a design team?'
-description: 'Key insights on leading design teams effectively through communication and community building'
+description: 'Key insights on leading design teams effectively through communication and community building.'
 pubDate: '2017-07-01'
 ---
 

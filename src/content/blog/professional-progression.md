@@ -1,6 +1,6 @@
 ---
 title: 'Professional progression'
-description: 'A theory on career progression, skill levels and areas of focus'
+description: 'Understanding the journey from junior to director level roles in design.'
 pubDate: '2018-06-12'
 heroImage: '/images/professional-progression-talk.jpg'
 ---

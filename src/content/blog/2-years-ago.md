@@ -1,6 +1,6 @@
 ---
 title: '2 years ago'
-description: 'Reflecting on my first two years at the Department for Work and Pensions'
+description: 'Looking back on two years of working in government digital services.'
 pubDate: '2017-07-30'
 ---
 

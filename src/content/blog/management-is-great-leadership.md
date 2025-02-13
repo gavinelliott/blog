@@ -1,6 +1,6 @@
 ---
 title: 'Management is great leadership'
-description: 'Exploring the differences between management and leadership, and how to be an effective leader'
+description: 'The principles of effective leadership and people management.'
 pubDate: '2016-03-02'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Creating a mentor programme'
-description: 'How to set up an effective mentorship program in your organization'
+description: 'How to set up an effective mentorship programme in your organisation.'
 pubDate: '2017-09-20'
 ---
 

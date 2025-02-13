@@ -1,6 +1,6 @@
 ---
 title: "Managing IC's who are a similar level to yourself"
-description: 'Advice for managers on effectively managing individual contributors at the same level'
+description: 'Guidelines for managing individual contributors at your level.'
 pubDate: '2023-06-09'
 ---
 

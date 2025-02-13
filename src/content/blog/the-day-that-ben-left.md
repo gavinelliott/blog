@@ -1,6 +1,6 @@
 ---
 title: 'The day that Ben left'
-description: 'A tribute to Ben Holliday and his impact on DWP Digital'
+description: 'Reflections on leadership transitions and maintaining team momentum.'
 pubDate: '2017-08-18'
 heroImage: '/images/ben-holliday.jpg'
 ---

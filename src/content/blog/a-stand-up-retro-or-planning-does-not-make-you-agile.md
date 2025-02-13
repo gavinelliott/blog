@@ -1,6 +1,6 @@
 ---
 title: 'A stand up, retro or planning does not make you agile'
-description: 'Exploring the difference between doing agile ceremonies and truly being agile'
+description: 'Understanding the true meaning of being agile beyond ceremonies.'
 pubDate: '2016-09-20'
 ---
 

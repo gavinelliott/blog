@@ -1,6 +1,6 @@
 ---
 title: 'Design Team Ethos'
-description: 'Creating and implementing a design team ethos at traveljunction.com'
+description: 'Creating and implementing a design team ethos at traveljunction.com.'
 pubDate: '2015-02-18'
 ---
 

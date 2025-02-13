@@ -1,6 +1,6 @@
 ---
 title: 'Hello you. Hello you, this is me.'
-description: 'A personal reflection on loss and remembrance'
+description: 'An introduction to my journey and experiences in design leadership'
 pubDate: '2016-01-14'
 ---
 

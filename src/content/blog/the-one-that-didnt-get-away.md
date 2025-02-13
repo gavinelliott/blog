@@ -1,6 +1,6 @@
 ---
 title: 'The one that didn''t get away'
-description: 'A journey from almost joining Shopify in 2015 to finally joining in 2022'
+description: 'A story about persistence and success in recruitment.'
 pubDate: '2022-05-30'
 ---
 
