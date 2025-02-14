@@ -5,90 +5,184 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
+import Layout from '../layouts/Layout.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const title = "Your Site Title";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.blog-posts {
-				margin-top: 2rem;
-			}
-			.post-list {
-				display: grid;
-				gap: 1.5rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			.post-item a {
-				display: block;
-				text-decoration: none;
-				padding: 0.5rem 0;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1.2;
-			}
-			.date {
-				margin: 0.25rem 0 0 0;
-				color: rgb(var(--gray));
-			}
-			.description {
-				margin: 0.5rem 0 0 0;
-				color: rgb(var(--gray-dark));
-			}
-			.avatar {
-				width: 80px;
-				height: auto;
-				margin-bottom: 1rem;
-				border-radius: 50%;
-			}
-			.intro-container {
-				display: flex;
-				align-items: center;
-				gap: 1.5rem;
-				margin-bottom: 1rem;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="intro-container">
-				<div>
-					<h1>Hello, folks!</h1>
-					<p>
-						Welcome to my home on the internet where I've been writing since 2006, sharing my journey as a chief design officer and passionate design leader. Here, you'll find insights on user-centred design, leadership strategies and tips for building exceptional design teams.
-					</p>
-				</div>
+<Layout>
+	<div class="hero-section">
+		<div class="hero-content">
+			<img src="/avatar.png" alt="Gavin Elliott" class="avatar" />
+			<h1>Gavin Elliott</h1>
+			<p>Design Leader & Manager</p>
+		</div>
+		<div class="scroll-indicator">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12 5L12 19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</div>
+	</div>
+	<main>
+		<div class="intro-container">
+			<div>
+				<h1>Hello, folks!</h1>
+				<p>
+					Welcome to my home on the internet where I've been writing since 2006, sharing my journey as a chief design officer and passionate design leader. Here, you'll find insights on user-centred design, leadership strategies and tips for building exceptional design teams.
+				</p>
 			</div>
-			
-			<section class="blog-posts">
-				<h2>Latest Posts</h2>
-				<ul class="post-list">
-					{
-						posts.map((post) => (
-							<li class="post-item">
-								<a href={`/blog/${post.slug}/`}>
-									<h3 class="title">{post.data.title}</h3>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-									<p class="description">{post.data.description}</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+		</div>
+		
+		<section class="blog-posts">
+			<h2>Latest Posts</h2>
+			<ul class="post-list">
+				{
+					posts.map((post) => (
+						<li class="post-item">
+							<a href={`/blog/${post.slug}/`}>
+								<h3 class="title">{post.data.title}</h3>
+								<p class="date">
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+								<p class="description">{post.data.description}</p>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero-section {
+		min-height: 100vh;
+		background-color: #FFFFF8;
+		position: relative;
+		color: white;
+		padding-left: 30%;
+		padding-right: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		right: 30px;
+		bottom: 30px;
+		background-color: #051005;
+		border-radius: 3px;
+		box-shadow: 0 0 15px rgba(5, 16, 5, 0.15);
+		z-index: 0;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		text-align: left;
+		max-width: 600px;
+		color: #FFFFF8;
+	}
+
+	.hero-content h1 {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.hero-content p {
+		font-size: 1.5rem;
+		opacity: 0.8;
+		color: white;
+	}
+
+	.scroll-indicator {
+		position: absolute;
+		bottom: 2rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: white;
+		animation: bounce 2s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% {
+			transform: translateX(-50%) translateY(0);
+		}
+		50% {
+			transform: translateX(-50%) translateY(10px);
+		}
+	}
+
+	.blog-posts {
+		margin-top: 2rem;
+	}
+	.post-list {
+		display: grid;
+		gap: 1.5rem;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.post-item a {
+		display: block;
+		text-decoration: none;
+		padding: 0.5rem 0;
+	}
+	.title {
+		margin: 0;
+		color: rgb(var(--black));
+		line-height: 1.2;
+	}
+	.date {
+		margin: 0.25rem 0 0 0;
+		color: rgb(var(--gray));
+	}
+	.description {
+		margin: 0.5rem 0 0 0;
+		color: rgb(var(--gray-dark));
+	}
+	.avatar {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 2rem;
+		object-fit: contain;
+		border-radius: 0;
+	}
+	.intro-container {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 1024px) {
+		.hero-section {
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-section {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-section {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+</style>
