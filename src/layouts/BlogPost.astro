@@ -20,6 +20,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0;
 				padding-top: 5rem;
 				background-color: #FFFFF8;
+				box-sizing: border-box;
 			}
 			
 			/* Skip to main content link for keyboard users */
@@ -62,6 +63,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				max-width: 1200px;
 				margin: 0 auto;
 				padding: 0 2rem;
+				box-sizing: border-box;
 			}
 			.hero-image img {
 				display: block;
@@ -81,6 +83,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-family: "linotype-sabon", sans-serif;
 				font-size: 1.35rem;
 				line-height: 1.55;
+				box-sizing: border-box;
 			}
 			.prose p {
 				margin-bottom: 1.5rem;
@@ -238,11 +241,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			@media (max-width: 768px) {
 				.hero-image {
 					padding: 0 1.5rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
 				}
 				
 				.prose {
 					padding: 1em 1.5rem;
 					font-size: 1.2rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
 				}
 				
 				.title h1 {
@@ -265,11 +272,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			@media (max-width: 480px) {
 				.hero-image {
 					padding: 0 1rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
 				}
 				
 				.prose {
 					padding: 1em 1rem;
 					font-size: 1.1rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
 				}
 				
 				.title h1 {
