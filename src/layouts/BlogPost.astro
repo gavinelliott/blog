@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -15,51 +15,294 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
+				width: 100%;
 				max-width: 100%;
 				margin: 0;
+				padding-top: 5rem;
+				background-color: #FFFFF8;
 			}
+			
+			/* Skip to main content link for keyboard users */
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #90B090;
+				color: white;
+				padding: 8px;
+				z-index: 2000;
+				transition: top 0.3s ease;
+			}
+			
+			.skip-link:focus {
+				top: 0;
+			}
+			
+			/* Ensure keyboard-only focus styles are visible */
+			a:focus:not(:focus-visible) {
+				outline: none;
+			}
+			
+			.nav-items a:focus-visible {
+				outline: 2px solid #FFFFFF;
+				outline-offset: 2px;
+				opacity: 1;
+			}
+			
+			/* High contrast mode improvements */
+			@media (forced-colors: active) {
+				.nav-items a:hover,
+				.nav-items a:focus {
+					border: 2px solid Canvas;
+				}
+			}
+			
 			.hero-image {
 				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
 			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
+				width: 100%;
+				height: auto;
+				max-width: 1020px;
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				width: 100%;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 1em 2rem;
+				color: #051005;
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+			}
+			.prose p {
+				margin-bottom: 1.5rem;
+			}
+			.prose a {
+				color: #051005;
+				text-decoration: none;
+				background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-bottom: 0.1em;
+				transition: background-image 0.3s ease;
+			}
+			.prose a:hover {
+				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
+			}
+			.prose :is(h1, h2, h3, h4, h5, h6) {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				line-height: 1.2;
+				margin-top: 2em;
+				margin-bottom: 0.8em;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+			}
+			.prose h2 {
+				font-size: 2.25rem;
+				font-weight: 600;
+				margin-top: 2.5em;
+			}
+			.prose h3 {
+				font-size: 1.85rem;
+				font-weight: 600;
+			}
+			.prose h4 {
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+			.prose h5 {
+				font-size: 1.25rem;
+				font-weight: 500;
+			}
+			.prose h6 {
+				font-size: 1.1rem;
+				font-weight: 500;
+				letter-spacing: 0.03em;
 			}
 			.title {
 				margin-bottom: 1em;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
+				margin-top: 3em;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 3rem;
+				color: #051005;
+				line-height: 1.2;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
 			}
 			.date {
 				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+				color: rgba(5, 16, 5, 0.7);
+				font-size: 1rem;
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+			
+			/* Sticky nav styles - Removed as they're now in the Navigation component */
+
+			.prose code {
+				font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+				font-size: 0.9em;
+				padding: 0.2em 0.4em;
+				background-color: rgba(144, 176, 144, 0.1);
+				border-radius: 4px;
+				color: #0e3a0e;
+			}
+
+			.prose pre {
+				margin: 1.5em 0;
+				padding: 1.2em;
+				background-color: #f8f8f8;
+				border-radius: 6px;
+				overflow-x: auto;
+				border: 1px solid rgba(144, 176, 144, 0.2);
+			}
+
+			.prose pre code {
+				background-color: transparent;
+				padding: 0;
+				border-radius: 0;
+				font-size: 0.9em;
+				color: #0e3a0e;
+				display: block;
+				line-height: 1.5;
+			}
+
+			/* Add special styles for blockquotes to make them stand out */
+			.prose blockquote {
+				border-left: 4px solid #90B090;
+				padding: 0.5em 0 0.5em 1.5em;
+				margin: 1.5em 0;
+				background-color: rgba(144, 176, 144, 0.05);
+				border-radius: 0 4px 4px 0;
+				font-style: italic;
+			}
+
+			.prose ul, 
+			.prose ol {
+				margin: 1.5em 0;
+				padding-left: 1.8em;
+			}
+
+			.prose ul {
+				list-style-type: disc;
+			}
+
+			.prose ol {
+				list-style-type: decimal;
+			}
+
+			.prose li {
+				margin-bottom: 0.5em;
+			}
+
+			.prose li > ul,
+			.prose li > ol {
+				margin: 0.5em 0;
+			}
+
+			@media (max-width: 1024px) {
+				.prose {
+					max-width: 720px;
+					font-size: 1.25rem;
+				}
+				
+				.title h1 {
+					font-size: 2.75rem;
+				}
+				
+				.prose h2 {
+					font-size: 2rem;
+				}
+				
+				.prose h3 {
+					font-size: 1.7rem;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				.hero-image {
+					padding: 0 1.5rem;
+				}
+				
+				.prose {
+					padding: 1em 1.5rem;
+					font-size: 1.2rem;
+				}
+				
+				.title h1 {
+					font-size: 2.5rem;
+				}
+				
+				.title {
+					margin-top: 2em;
+				}
+				
+				.prose h2 {
+					font-size: 1.8rem;
+				}
+				
+				.prose h3 {
+					font-size: 1.5rem;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.hero-image {
+					padding: 0 1rem;
+				}
+				
+				.prose {
+					padding: 1em 1rem;
+					font-size: 1.1rem;
+				}
+				
+				.title h1 {
+					font-size: 2.2rem;
+				}
+				
+				.title {
+					margin-top: 1.5em;
+					padding: 0.5em 0;
+				}
+				
+				.prose h2 {
+					font-size: 1.6rem;
+					margin-top: 2em;
+				}
+				
+				.prose h3 {
+					font-size: 1.4rem;
+				}
 			}
 		</style>
 	</head>
 
 	<body>
-		<Header />
-		<main>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		
+		<!-- Main navigation bar -->
+		<Navigation />
+		
+		<main id="main-content">
 			<article>
 				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+					{heroImage && <img width={1020} height={510} src={heroImage} alt={`Header image for blog post titled "${title}"`} />}
 				</div>
 				<div class="prose">
 					<div class="title">
@@ -81,5 +324,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+		
+		<script>
+			// No need for scroll detection script since nav is always visible
+		</script>
 	</body>
 </html>

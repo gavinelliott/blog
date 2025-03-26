@@ -1,33 +1,165 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
 ---
 
-<Layout
-	title="About Me"
-	description="About Gavin Elliott - Design Leader and Speaker"
-	pubDate={new Date('August 08 2021')}
->
-	<p>
-		I'm Gavin Elliott, an experienced design leader and speaker.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About | Gavin Elliott" description="About Gavin Elliott - Design Leader and Speaker" />
+		<style>
+			main {
+				padding-top: 5rem;
+				background-color: #FFFFF8;
+				min-height: 100vh;
+				width: 100%;
+				overflow-x: hidden;
+			}
+			
+			.page-header {
+				padding: 6rem 2rem 4rem;
+				text-align: center;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			
+			.page-header h1 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 4rem;
+				color: #051005;
+				margin-bottom: 1.5rem;
+				line-height: 1;
+			}
+			
+			.page-header p {
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+				opacity: 0.8;
+			}
+			
+			.content-container {
+				max-width: 900px;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 2rem 4rem;
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+			}
+			
+			.content-container p {
+				margin-bottom: 1.5rem;
+			}
+			
+			.content-container a {
+				color: #051005;
+				text-decoration: none;
+				background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-bottom: 0.1em;
+				transition: background-image 0.3s ease;
+			}
+			
+			.content-container a:hover {
+				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
+			}
+			
+			/* Sticky nav styles - Removed as they're now in the Navigation component */
+			
+			@media (max-width: 1024px) {
+				.page-header {
+					padding: 5rem 2rem 3rem;
+				}
+				
+				.page-header h1 {
+					font-size: 3.5rem;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				.page-header {
+					padding: 4rem 1.5rem 3rem;
+				}
+				
+				.page-header h1 {
+					font-size: 3rem;
+				}
+				
+				.page-header p {
+					font-size: 1.25rem;
+				}
+				
+				.content-container {
+					padding: 0 1.5rem 3rem;
+					font-size: 1.25rem;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.page-header {
+					padding: 3rem 1rem 2rem;
+				}
+				
+				.page-header h1 {
+					font-size: 2.5rem;
+				}
+				
+				.page-header p {
+					font-size: 1.15rem;
+				}
+				
+				.content-container {
+					padding: 0 1rem 2rem;
+					font-size: 1.15rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Main navigation bar -->
+		<Navigation />
+		
+		<main>
+			<div class="page-header">
+				<h1>ABOUT</h1>
+				<p>Experienced design leader and speaker passionate about improving design systems and teams.</p>
+			</div>
+			
+			<div class="content-container">
+				<p>
+					I'm Gavin Elliott, an experienced design leader and speaker.
+				</p>
 
-	<p>
-		I currently work as the chief design officer at Scrumconnect where I spend the majority of my time leading design teams and supporting organisations to deliver great products and services.
-	</p>
+				<p>
+					I currently work as the chief design officer at Scrumconnect where I spend the majority of my time leading design teams and supporting organisations to deliver great products and services.
+				</p>
 
-	<p>
-		Before Scrumconnect I was a design leader at Shopify, the UK's Health Security Agency and the UK's Department for Work and Pensions.
-	</p>
+				<p>
+					Before Scrumconnect I was a design leader at Shopify, the UK's Health Security Agency and the UK's Department for Work and Pensions.
+				</p>
 
-	<p>
-		I enjoy using my skill and experience of solving complex problems in simple ways balancing strategy and practicality. I'm passionate about establishing, embedding and growing user-centred design within organisations as well as leading design teams on their personal and professional journeys.
-	</p>
+				<p>
+					I enjoy using my skill and experience of solving complex problems in simple ways balancing strategy and practicality. I'm passionate about establishing, embedding and growing user-centred design within organisations as well as leading design teams on their personal and professional journeys.
+				</p>
 
-	<p>
-		On the side, I speak regularly about Impostor Syndrome, good design and building design teams.
-	</p>
+				<p>
+					On the side, I speak regularly about Impostor Syndrome, good design and building design teams.
+				</p>
 
-	<p>
-		To get in touch, drop me a message through one of the icons in the top right.
-	</p>
-</Layout>
+				<p>
+					To get in touch, drop me a message through one of the icons in the top right.
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+</html>

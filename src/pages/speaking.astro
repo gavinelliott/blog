@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -11,16 +11,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				width: 960px;
-				max-width: calc(100% - 2em);
+				width: 100%;
+				max-width: 1200px;
 				margin: 0 auto;
-				padding: 3em 1em;
+				padding: 5rem 2rem 3rem;
 			}
 			.speaking-section {
 				margin: 2em 0;
 			}
 			h2, h3, h4 {
 				margin: 1em 0;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+			}
+			h1 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 4rem;
+				color: #051005;
+				margin-bottom: 1.5rem;
+				line-height: 1;
 			}
 			p {
 				margin: 1em 0;
@@ -40,11 +50,72 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			a:hover {
 				text-decoration: underline;
 			}
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #90B090;
+				color: #051005;
+				padding: 8px;
+				z-index: 100;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+			}
+
+			.skip-link:focus {
+				top: 0;
+			}
+
+			@media (max-width: 1024px) {
+				main {
+					padding: 5rem 1.5rem 3rem;
+				}
+				
+				h1 {
+					font-size: 3.5rem;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				main {
+					padding: 5rem 1.5rem 2rem;
+				}
+				
+				h1 {
+					font-size: 3rem;
+				}
+				
+				.speaking-section {
+					margin: 1.5em 0;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				main {
+					padding: 4rem 1rem 2rem;
+				}
+				
+				h1 {
+					font-size: 2.5rem;
+				}
+				
+				h2 {
+					font-size: 1.8rem;
+				}
+				
+				h3 {
+					font-size: 1.5rem;
+				}
+				
+				.speaking-section {
+					margin: 1.25em 0;
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<Navigation />
+		<main id="main-content">
 			<h1>Speaking</h1>
 
 			<section class="speaking-section">

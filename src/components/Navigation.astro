@@ -1,0 +1,159 @@
+---
+// Get the current URL to determine which link is active
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // Remove the leading slash
+---
+
+<header class="sticky-nav" id="sticky-nav" role="banner">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/" aria-label="Go to Gavin Elliott's homepage">GAVIN ELLIOTT</a>
+        </div>
+        <nav class="nav-items" role="navigation" aria-label="Main navigation">
+            <a href="/" tabindex="0" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
+            <a href="/about" tabindex="0" aria-current={currentPath === "about" ? "page" : undefined}>ABOUT</a>
+            <a href="/writing" tabindex="0" aria-current={currentPath === "writing" ? "page" : undefined}>WRITING</a>
+            <a href="/recommended-reads" tabindex="0" aria-current={currentPath === "recommended-reads" ? "page" : undefined}>READING</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* Sticky nav styles */
+    .sticky-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #051005;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        opacity: 0;
+    }
+
+    .sticky-nav.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-brand {
+        font-family: "franklin-gothic-urw-comp", sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #FFFFFF;
+    }
+
+    .nav-brand a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+    }
+    
+    .nav-brand a:hover {
+        opacity: 0.8;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .nav-items a {
+        font-family: "franklin-gothic-urw-comp", sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+    }
+    
+    .nav-items a:hover {
+        opacity: 0.8;
+    }
+
+    .nav-items a:focus-visible {
+        outline: 2px solid #FFFFFF;
+        outline-offset: 2px;
+        opacity: 1;
+    }
+
+    /* High contrast mode improvements */
+    @media (forced-colors: active) {
+        .nav-items a:hover,
+        .nav-items a:focus {
+            border: 2px solid Canvas;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .nav-container {
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-items {
+            gap: 1.5rem;
+        }
+        
+        .nav-items a {
+            font-size: 1.1rem;
+        }
+
+        .nav-container {
+            padding: 0.75rem 1.25rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-items {
+            gap: 1rem;
+        }
+        
+        .nav-items a {
+            font-size: 1rem;
+        }
+
+        .nav-container {
+            padding: 0.75rem 1rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('sticky-nav');
+        const hero = document.querySelector('.hero-section');
+        
+        if (nav && hero) {
+            // Only apply this behavior on the home page
+            window.addEventListener('scroll', () => {
+                const heroRect = hero.getBoundingClientRect();
+                const heroBottom = heroRect.height + heroRect.top;
+                
+                // Show the nav when we've scrolled past the hero section
+                if (heroBottom < 0) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+            });
+        } else if (nav && window.location.pathname === '/') {
+            // Initially hide on home page
+            nav.classList.remove('visible');
+        } else if (nav) {
+            // Always visible on other pages
+            nav.classList.add('visible');
+        }
+    });
+</script> 

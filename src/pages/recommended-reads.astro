@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 ---
@@ -9,207 +9,462 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title="Recommended Reads | Gavin Elliott" description="Books and articles recommended by Gavin Elliott" />
 		<style>
 			main {
-				width: 960px;
-				max-width: calc(100% - 2em);
+				padding-top: 5rem;
+				background-color: #FFFFF8;
+				min-height: 100vh;
+				width: 100%;
+				overflow-x: hidden;
+			}
+			
+			.page-header {
+				padding: 6rem 2rem 4rem;
+				text-align: center;
+				max-width: 800px;
 				margin: 0 auto;
-				padding: 3em 1em;
 			}
-			.book-section {
-				margin: 2em 0;
+			
+			.page-header h1 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 4rem;
+				color: #051005;
+				margin-bottom: 1.5rem;
+				line-height: 1;
 			}
-			.book {
-				margin: 2em 0;
-				padding-bottom: 2em;
-				border-bottom: 1px solid rgb(var(--gray-light));
+			
+			.page-header p {
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+				opacity: 0.8;
 			}
-			.book:last-child {
-				border-bottom: none;
+			
+			.content-container {
+				max-width: 1200px;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 2rem 4rem;
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+				box-sizing: border-box;
 			}
-			.book img {
-				max-width: 200px;
-				margin: 1em 0;
+			
+			.section-nav {
+				margin: 2rem auto 4rem;
+				max-width: 900px;
+				width: calc(100% - 2rem);
+				border-radius: 8px;
+				background-color: rgba(144, 176, 144, 0.1);
+				padding: 2rem;
+				box-sizing: border-box;
 			}
-			h2 {
+			
+			.section-nav ul {
+				list-style-type: none !important;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5rem;
+				padding: 0 !important;
+				margin: 0 !important;
+				justify-content: center;
+				width: 100%;
+			}
+			
+			.section-nav li {
+				margin-bottom: 1.5rem;
+				box-sizing: border-box;
+			}
+			
+			.section-nav a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.2rem;
+				border-radius: 8px;
+				padding: 0.2rem 1.2rem 0.4rem;
+				min-height: 2.8rem;
+				background-color: rgba(144, 176, 144, 0.3);
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+				border: 1px solid rgba(144, 176, 144, 0.5);
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				line-height: 1.2;
+				box-shadow: 0 2px 4px rgba(5, 16, 5, 0.05);
+				position: relative;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+			
+			.section-nav a:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+				opacity: 0;
+				transform: scale(0.5);
+				transition: opacity 0.4s ease, transform 0.4s ease;
+			}
+			
+			.section-nav a:hover {
+				background-color: rgba(144, 176, 144, 0.4);
+				color: #051005;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(5, 16, 5, 0.1);
+			}
+			
+			.section-nav a:hover:before {
+				opacity: 1;
+				transform: scale(1.5);
+			}
+			
+			.section-nav a:focus {
+				outline: none;
+				box-shadow: 0 0 0 3px rgba(144, 176, 144, 0.6), 0 4px 8px rgba(5, 16, 5, 0.1);
+			}
+			
+			.section-nav a:active {
+				transform: translateY(1px);
+				box-shadow: 0 2px 3px rgba(5, 16, 5, 0.1);
+				transition: all 0.1s;
+			}
+			
+			@keyframes subtlePulse {
+				0% { box-shadow: 0 2px 4px rgba(5, 16, 5, 0.05); }
+				50% { box-shadow: 0 3px 6px rgba(5, 16, 5, 0.08); }
+				100% { box-shadow: 0 2px 4px rgba(5, 16, 5, 0.05); }
+			}
+			
+			.section-nav a:hover {
+				animation: subtlePulse 2s infinite;
+			}
+			
+			.reading-section {
+				margin: 2em 0 4em;
+				max-width: 900px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.content-container h2 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 2.5rem;
+				color: #051005;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				line-height: 1;
 				margin: 2em 0 1em 0;
 			}
-			h3 {
-				margin: 1em 0;
+			
+			.content-container h3 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 2rem;
+				color: #051005;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				line-height: 1.2;
+				margin: 1.5em 0 0.8em;
 			}
-			nav ul {
-				list-style: none;
-				padding: 0;
-			}
-			nav ul li {
-				margin: 0.5em 0;
-			}
-			nav ul li a {
-				color: var(--accent);
+			
+			.content-container a {
+				color: #051005;
 				text-decoration: none;
+				background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-bottom: 0.1em;
+				transition: background-image 0.3s ease;
 			}
-			nav ul li a:hover {
-				text-decoration: underline;
+			
+			.content-container a:hover {
+				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
 			}
+			
+			.content-container .amazon-link {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.1rem;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+			}
+			
+			.content-container ul {
+				list-style-type: disc;
+				padding-left: 1.5rem;
+				margin: 1.5rem 0;
+			}
+			
+			.content-container li {
+				margin-bottom: 0.75rem;
+			}
+			
 			hr {
 				margin: 2em 0;
 				border: none;
-				border-top: 1px solid rgb(var(--gray-light));
+				border-top: 1px solid rgba(5, 16, 5, 0.1);
+			}
+			
+			/* Skip to main content link for keyboard users */
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #90B090;
+				color: #051005;
+				padding: 8px;
+				z-index: 100;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+			}
+
+			.skip-link:focus {
+				top: 0;
+			}
+			
+			/* Ensure keyboard-only focus styles are visible */
+			a:focus:not(:focus-visible) {
+				outline: none;
+			}
+			
+			/* High contrast mode improvements */
+			@media (forced-colors: active) {
+				.section-nav a:hover,
+				.section-nav a:focus {
+					border: 2px solid CanvasText;
+				}
+				
+				.nav-items a:hover,
+				.nav-items a:focus {
+					border: 2px solid Canvas;
+				}
+			}
+			
+			@media (max-width: 1200px) {
+				.content-container {
+					padding: 0 1.5rem 3rem;
+				}
+			}
+			
+			@media (max-width: 1024px) {
+				.page-header {
+					padding: 5rem 2rem 3rem;
+				}
+				
+				.page-header h1 {
+					font-size: 3.5rem;
+				}
+				
+				.content-container {
+					font-size: 1.25rem;
+				}
+				
+				.content-container h2 {
+					font-size: 2.25rem;
+				}
+				
+				.content-container h3 {
+					font-size: 1.75rem;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				.page-header {
+					padding: 4rem 1.5rem 3rem;
+				}
+				
+				.page-header h1 {
+					font-size: 3rem;
+				}
+				
+				.page-header p {
+					font-size: 1.25rem;
+				}
+				
+				.content-container {
+					padding: 0 1.25rem 2.5rem;
+					font-size: 1.2rem;
+				}
+				
+				.content-container h2 {
+					font-size: 2rem;
+				}
+				
+				.content-container h3 {
+					font-size: 1.5rem;
+				}
+				
+				.section-nav {
+					margin: 2rem auto 3rem;
+					padding: 1.5rem;
+					width: calc(100% - 3rem);
+				}
+				
+				.section-nav ul {
+					flex-direction: column;
+					gap: 0.5rem;
+				}
+				
+				.section-nav li {
+					margin-bottom: 0.5rem;
+					width: 100%;
+				}
+				
+				.section-nav a {
+					display: flex;
+					text-align: center;
+					padding: 0.2rem 1.2rem 0.4rem;
+					width: 100%;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.page-header {
+					padding: 3rem 1rem 2rem;
+				}
+				
+				.page-header h1 {
+					font-size: 2.5rem;
+				}
+				
+				.page-header p {
+					font-size: 1.15rem;
+				}
+				
+				.content-container {
+					padding: 0 1rem 2rem;
+					font-size: 1.1rem;
+					width: 100%;
+					margin: 0 auto;
+					box-sizing: border-box;
+				}
+				
+				.content-container h2 {
+					font-size: 1.8rem;
+				}
+				
+				.content-container h3 {
+					font-size: 1.4rem;
+				}
+				
+				.section-nav {
+					padding: 1.25rem 1rem;
+					margin: 1.5rem auto 2.5rem;
+					width: calc(100% - 2rem);
+				}
+				
+				.reading-section {
+					width: 100%;
+					padding: 0 0.5rem;
+					box-sizing: border-box;
+				}
+				
+				.section-nav a {
+					padding: 0.2rem 1.2rem 0.4rem;
+					min-height: 2.5rem;
+					width: 100%;
+				}
+			}
+			
+			.section-nav a:focus-visible {
+				outline: 3px solid #90B090;
+				outline-offset: 2px;
 			}
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main>
-			<h1>Good reads</h1>
-
-<p>Over the years I’ve read many books which I’ve found incredibly valuable. All of my recommended books cover topics of design, product management and business.</p>
-<ul>
-<li><a href="#service-design-books">Service Design books</a></li>
-<li><a href="#designbooks">Interaction / Product Design books</a></li>
-<li><a href="#accessibility-books">Accessibility books</a></li>
-<li><a href="#management-and-leadership">Management and Leadership books</a></li>
-<li><a href="#innovation-books">Innovation books</a></li>
-</ul>
-<h2 id="service-design-books">Service Design Books</h2>
-<p>The collection of books below cover everything for you, your business or organisation when aiming to design better services.</p>
-<h3 id="this-is-service-design-thinking-basics-tools-cases">This is Service Design Thinking: Basics-Tools-Cases</h3>
-
-<p>This is Service Design Thinking introduces an inter-disciplinary approach to designing services. Service design is a bit of a buzzword these days and has gained a lot of interest from various fields. This book, assembled to describe and illustrate the emerging field of service design, was brought together using exactly the same co-creative and user-centred approaches you can read and learn about inside. The boundaries between products and services are blurring and it is time for a different way of thinking: this is service design thinking.</p>
-<p>A set of 23 international authors and even more online contributors from the global service design community invested their knowledge, experience and passion together to create this book. It introduces service design thinking in manner accessible to beginners and students, it broadens the knowledge and can act as a resource for experienced design professionals.</p>
-<p><a href="https://amzn.to/2IBcGxs">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="org-design-for-design-orgs-building-and-managing-in-house-teams-building-and-managing-in-house-design-teams">Org Design for Design Orgs: Building and Managing in-House Teams: Building and Managing In-House Design Teams</h3>
-
-<p>Design has become the key link between users and today&#39;s complex and rapidly evolving digital experiences, and designers are starting to be included in strategic conversations about the products and services that enterprises ultimately deliver. This has led to companies building in-house digital/experience design teams at unprecedented rates, but many of them don&#39;t understand how to get the most out of their investment.</p>
-<p>This practical guide provides guidelines for creating and leading design teams within your organisation, and explores ways to use design as part of broader strategic planning.</p>
-<p><a href="https://amzn.to/3nrDRK5">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="digitizing-government-understanding-and-implementing-new-digital-business-models">Digitizing Government: Understanding and Implementing New Digital Business Models</h3>
-
-<p>For businesses large and small, investment in digital technologies is now a priority essential for success. Digitizing Government provides practical advice for understanding and implementing digital transformation to increase business value and improve client engagement. This easy-to-read book is organized into &quot;why&quot;, &quot;what&quot;, and &quot;how&quot; sections and examines the major elements of digital transformation, with clear steps for improved execution of digital strategies.</p>
-<p>It features case studies from the private and public sectors, and a detailed chronology of digital change efforts across the UK government sector, and relates that to government efforts in the USA and around the world. It provides a practical and unique set of insights into business in the digital economy.</p>
-<p><a href="https://amzn.to/36zJnUh">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="this-is-service-design-doing">This is Service Design Doing</h3>
-
-<p>How can you establish a customer-centric culture in an organization? This is the first comprehensive book on how to actually do service design to improve the quality and the interaction between service providers and customers. You’ll learn specific facilitation guidelines on how to run workshops, perform all of the main service design methods, implement concepts in reality, and embed service design successfully in an organization.</p>
-<p>Service design requires a common language across disciplines to break down silos within an organization. This book provides a consistent model for accomplishing this and offers hands-on descriptions of every single step, tool, and method used. You’ll be able to focus on your customers and iteratively improve their experience.</p>
-<p>Move from theory to practice and build sustainable business success.</p>
-<p><a href="https://amzn.to/38X2oD1">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="the-service-innovation-handbook-action-oriented-creative-thinking-toolkit-for-service-organizations">The Service Innovation Handbook: Action-oriented Creative Thinking Toolkit for Service Organizations</h3>
-
-<p>This is an action-oriented book for managers and entrepreneurs searching ways to tackle issues they face in terms of developing and delivering services. The book focuses on service organizations, but has a broad interpretation of what services are. Directed to the business world and combines inspirational text that is full of examples, with the features of a useful handbook of practical methods with associated templates.</p>
-<p>The central argument is that managers and entrepreneurs designing service offerings will benefit from using approaches and methods from design and the arts, especially at the early stages of projects. Sometimes called “design thinking” or “design innovation”, such approaches help organizations explore and create new configurations of people and things that support users, customers, staff and partners in creating value together.</p>
-<p><a href="https://amzn.to/3lyLNbY">BUY IT ON AMAZON</a></p>
-<hr>
-<h2 id="interaction-product-design-books">Interaction / Product Design Books</h2>
-<p>The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Designer, Service Designer or Product Designer.</p>
-<h3 id="microinteractions">Microinteractions</h3>
-
-<p>It’s the little things that turn a good digital product into a great one. With this full color practical book, you’ll learn how to design effective microinteractions: the small details that exist inside and around features. How can users change a setting? How do they turn on mute, or know they have a new email message?</p>
-<p>Through vivid, real-world examples from today’s devices and applications, author Dan Saffer walks you through a microinteraction’s essential parts, then shows you how to use them in a mobile app, a web widget, and an appliance. You’ll quickly discover how microinteractions can change a product from one that’s tolerated into one that’s treasured.</p>
-<p><a href="https://amzn.to/36N0qkZ">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="articulating-design-decisions">Articulating Design Decisions</h3>
-
-<p>Talking to people about your designs might seem like a basic skill, but it can be difficult to do efficiently and well. And, in many cases, how you communicate about your work with stakeholders, clients, and other non-designers is more critical than the designs themselves—simply because the most articulate person usually wins.</p>
-<p>This practical guide focuses on principles, tactics, and actionable methods for presenting your designs. Whether you design UX, websites, or products, you’ll learn how to win over anyone who has influence over the project—with the goal of creating the best experience for the end user.</p>
-<p><a href="https://amzn.to/2NRMBJn">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="product-design-for-the-web">Product Design for the Web</h3>
-<p>Web designers are no longer just web designers. To create a successful web product that’s as large as Etsy, Facebook, Twitter, or Pinterest–or even as small as a tiny app–you need to know more than just HTML and CSS. You need to understand how to create meaningful online experiences so that users want to come back again and again.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/0321929039/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=0321929039&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=TWAW6XQ2LGU64SLH">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="more-human-designing-a-world-where-people-come-first">More Human: Designing a World Where People Come First</h3>
-<p> In this powerful manifesto, Steve Hilton argues that the frustrations people feel with government, politics, their economic circumstances and their daily lives are caused by deep structural problems with the systems that dominate our modern world – systems that have become too big, bureaucratic and distant from the human scale. He shows how change is possible, offering us a more human way of living.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/0753556782/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=0753556782&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=HGDFGUZUMGIXIKHT">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="user-story-mapping-discover-the-whole-story-build-the-right-product">User Story Mapping: Discover the Whole Story, Build the Right Product</h3>
-<p> User story mapping is a valuable tool for software development, once you understand why and how to use it. This insightful book examines how this often misunderstood technique can help your team stay focused on users and their needs without getting lost in the enthusiasm for individual product features.</p>
-<p>Author Jeff Patton shows you how changeable story maps enable your team to hold better conversations about the project throughout the development process. Your team will learn to come away with a shared understanding of what you’re attempting to build and why.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/1491904909/ref=as_li_tlie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=1491904909&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=ZF5DWGZAP7DOJRWP">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="well-designed">Well-Designed</h3>
-<p>In this refreshingly jargon-free and practical book, product design expert Jon Kolko maps out this process, demonstrating how it will help you and your team conceive and build successful, emotionally resonant products again and again.</p>
-<p>The key, says Kolko, is empathy. You need to deeply understand customer needs and feelings, and this understanding must be reflected in the product. In successive chapters of the book, we see how leading companies use a design process of storytelling and iteration that evokes positive emotions, changes behavior, and creates deep engagement.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/1625274793/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=1625274793&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=VBRI577F3KTCMOIU">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="the-laws-of-simplicity">The Laws of Simplicity</h3>
-<p> Ten laws of simplicity for business, technology, and design that teach us how to need less but get more. Finally, we are learning that simplicity equals sanity. We&#39;re rebelling against technology that&#39;s too complicated, DVD players with too many menus, and software accompanied by 75-megabyte &quot;read me&quot; manuals. The iPod&#39;s clean gadgetry has made simplicity hip. But sometimes we find ourselves caught up in the simplicity paradox: we want something that&#39;s simple and easy to use, but also does all the complex things we might ever want it to do.</p>
-<p>In The Laws of Simplicity, John Maeda offers ten laws for balancing simplicity and complexity in business, technology, and design-guidelines for needing less and actually getting more. Maeda-a professor in MIT&#39;s Media Lab and a world-renowned graphic designer-explores the question of how we can redefine the notion of &quot;improved&quot; so that it doesn&#39;t always mean something more, something added on.</p>
-<p><a href="https://amzn.to/32KebR9">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="design-meets-disability">Design Meets Disability</h3>
-<p> How design for disabled people and mainstream design could inspire, provoke, and radically change each other. Eyeglasses have been transformed from medical necessity to fashion accessory. This revolution has come about through embracing the design culture of the fashion industry. Why shouldn&#39;t design sensibilities also be applied to hearing aids, prosthetic limbs, and communication aids? In return, disability can provoke radical new directions in mainstream design. Charles and Ray Eames&#39;s iconic furniture was inspired by a molded plywood leg splint that they designed for injured and disabled servicemen. Designers today could be similarly inspired by disability.</p>
-<p>In Design Meets Disability, Graham Pullin shows us how design and disability can inspire each other. In the Eameses&#39; work there was a healthy tension between cut-to-the-chase problem solving and more playful explorations. Pullin offers examples of how design can meet disability today.</p>
-<p><a href="http://amzn.to/2jdJgoF">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="design-as-politics">Design as Politics</h3>
-<p> Design as Politics confronts the inadequacy of contemporary politics to deal with un-sustainability. Current &#39;solutions&#39; to unsustainability are analysed as utterly insufficient for dealing with the problems but, further than this, the book questions the very ability of democracy to deliver a sustainable future.</p>
-<p>Design as Politics argues that finding solutions to this problem, of which climate change is only one part, demands original and radical thinking. Rather than reverting to failed political ideologies, the book proposes a post-democratic politics. In this, Design occupies a major role, not as it is but as it could be if transformed into a powerful agent of change, a force to create and extend freedom. The book does no less than position Design as a vital form of political action.</p>
-<p><a href="https://amzn.to/38GkAk5">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="the-non-designer-s-design-book">The Non-Designer&#39;s Design Book</h3>
-<p> So you have a great concept and all the fancy digital tools you could possibly require - what is stopping you from creating beautiful pages? Namely the training to pull all of these elements together into a cohesive design that effectively communicates your message. Not to worry: This book is the one place you can turn to find quick, non-intimidating, excellent design help.</p>
-<p>In The Non-Designer&#39;s Design Book, 2nd Edition, best-selling author Robin Williams turns her attention to the basic principles of good design and typography. All you have to do is follow her clearly explained concepts, and you will begin producing more sophisticated, professional, and interesting pages immediately. Humour-infused, jargon-free prose interspersed with design exercises, quizzes, illustrations, and dozens of examples make learning a snap¿which is just what audiences have come to expect from this best-selling author.</p>
-<p><a href="https://amzn.to/3ntJ43U">BUY IT ON AMAZON</a></p>
-<hr>
-<h2 id="accessibility-books">Accessibility Books</h2>
-<p>The collection of books below cover everything for you, your business or organisation when looking to learn more and understand about designing for everyone.</p>
-<h3 id="accessibility-for-everyone">Accessibility for Everyone</h3>
-<p> You make the web more inclusive for everyone, everywhere, when you design with accessibility in mind. Let Laura Kalbag guide you through the accessibility landscape: understand disability and impairment challenges; get a handle on important laws and guidelines; and learn how to plan for, evaluate, and test accessible design. Leverage tools and techniques like clear copywriting, well-structured IA, meaningful HTML, and thoughtful design, to create a solid set of best practices. Whether you&#39;re new to the field or a seasoned pro, get sure footing on the path to designing with accessibility.</p>
-<p><a href="https://amzn.to/3pDc37F">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="a-web-for-everyone-designing-accessible-user-experiences">A Web for Everyone: Designing Accessible User Experiences</h3>
-<p>If you are in charge of the user experience, development, or strategy for a web site, A Web for Everyone will help you make your site accessible without sacrificing design or innovation. Rooted in universal design principles, this book provides solutions: practical advice and examples of how to create sites that everyone can use.</p>
-<p><a href="https://amzn.to/36AiU93">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="inclusive-design-patterns">Inclusive Design Patterns</h3>
-<p> We make inaccessible and unusable websites and apps all the time, but it’s not for lack of skill or talent. It’s just a case of doing things the wrong way. We try to build the best experiences we can, but we only make them for ourselves and for people like us.</p>
-<p>This book looks at common interface patterns from the perspective of an inclusive designer—someone trained in building experiences that cater to the huge diversity of abilities, preferences and circumstances out there.</p>
-<p><a href="https://amzn.to/3kzOjNP">BUY IT ON AMAZON</a></p>
-<hr>
-<h2 id="management-and-leadership-books">Management and Leadership Books</h2>
-<p>The collection of books below cover everything for you if you&#39;re an aspiring manager or leader or whether you&#39;ve been doing it for a while and what to investigate different types of management and leadership.</p>
-<h3 id="the-making-of-a-manager-what-to-do-when-everyone-looks-to-you">The Making of a Manager: What to Do When Everyone Looks to You</h3>
-<p> Top tech executive Julie Zhuo remembers the moment when she was asked to lead a team. She felt like she’d won the golden ticket, until reality came crashing in. She was just 25 and had barely any experience being managed, let alone managing others.</p>
-<p>Her co-workers became her employees overnight, and she faced a series of anxiety-inducing firsts, including agonising over whether to hire an interviewee; seeking the respect of reports who were cleverer than her; and having to fire someone she liked. Like most first-time managers, she wasn’t given any formal training, and had no resources to turn to for help. It took her years to find her way, but now she’s offering you the short-cut to success.</p>
-<p>Whether you&#39;re new to the job, a veteran leader, or looking to be promoted, this is the handbook you need to be the kind of manager you&#39;ve always wanted.</p>
-<p><a href="https://amzn.to/3pvhZiR">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="turn-the-ship-around-">Turn the Ship Around!</h3>
-<p>Captain David Marquet was used to giving orders. In the high-stress environment of the USS <em>Santa Fe,</em> a nuclear-powered submarine, it was crucial his men did their job well. But the ship was dogged by poor morale, poor performance and the worst retention in the fleet.</p>
-<p>Marquet took matters into his own hands and pushed for leadership at every level. Before long, his crew became fully engaged and the <em>Santa Fe</em> skyrocketed from worst to the first in the fleet.</p>
-<p>No matter your business or position, you can apply Marquet’s approach to create a workplace where everyone takes responsibility for their actions, people are healthier and happier – and everyone is a leader.</p>
-<p><a href="https://amzn.to/2CuKJRi">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="american-icon">American Icon</h3>
-<p>At the end of 2008, Ford Motor Company was just months away from running out of cash. With the auto industry careening toward ruin, Congress offered all three Detroit automakers a bailout. General Motors and Chrysler grabbed the taxpayer lifeline, but Ford decided to save itself.</p>
-<p>Under the leadership of charismatic CEO Alan Mulally, Ford had already put together a bold plan to unify its divided global operations, transform its lackluster product lineup, and overcome a dys-functional culture of infighting, backstabbing, and excuses. It was an extraordinary risk, but it was the only way the Ford family--America&#39;s last great industrial dynasty--could hold on to their company.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/0307886050/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=0307886050&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=ETLKA4OQTIFQACFF">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="how-google-works">How Google Works</h3>
-<p>Both Eric Schmidt and Jonathan Rosenberg came to Google as seasoned Silicon Valley business executives, but over the course of a decade they came to see the wisdom in Coach John Wooden&#39;s observation that &#39;it&#39;s what you learn after you know it all that counts&#39;. As they helped grow Google from a young start-up to a global icon, they relearned everything they knew about management. How Google Works is the sum of those experiences distilled into a fun, easy-to-read primer on corporate culture, strategy, talent, decision-making, communication, innovation, and dealing with disruption.</p>
-<p>The authors explain how the confluence of three seismic changes - the internet, mobile, and cloud computing - has shifted the balance of power from companies to consumers. The companies that will thrive in this ever-changing landscape will be the ones that create superior products and attract a new breed of multifaceted employees whom the authors dub &#39;smart creatives&#39;. The management maxims (&#39;Consensus requires dissension&#39;, &#39;Exile knaves but fight for divas&#39;, &#39;Think 10X, not 10%&#39;) are illustrated with previously unreported anecdotes from Google&#39;s corporate history.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/B00J379F3O/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B00J379F3O&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=27BUM4ABWBNTVU5Z">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="onward">Onward</h3>
-<p>In 2008, Howard Schultz, the president and chairman of Starbucks, made the unprecedented decision to return as the CEO eight years after he stepped down from daily oversight of the company and became chairman. Concerned that Starbucks had lost its way, Schultz was determined to help it return to its core values and restore not only its financial health, but also its soul. In Onward, he shares the remarkable story of his return and the company&#39;s ongoing transformation under his leadership, revealing how, during one of the most tumultuous economic times in history, Starbucks again achieved profitability and sustainability without sacrificing humanity.</p>
-<p><a href="https://www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=0470977647&amp;linkCode=as2&amp;tag=gaelmywo-21&amp;linkId=VW2D5B5FPOK4UZ7B">BUY IT ON AMAZON</a></p>
-<hr>
-<h2 id="innovation-books">Innovation Books</h2>
-<p>The collection of books below cover the topic of innovation.</p>
-<h3 id="radical-technologies-the-design-of-everyday-life">Radical Technologies: The Design of Everyday Life</h3>
-<p>Everywhere we turn, a startling new device promises to transfigure our lives. But at what cost? In this urgent and revelatory excavation of our Information Age, leading technology thinker Adam Greenfield forces us to reconsider our relationship with the networked objects, services and spaces that define us. It is time to re-evaluate the Silicon Valley consensus determining the future.</p>
-<p><a href="http://amzn.to/2jH2jeO">BUY IT ON AMAZON</a></p>
-<hr>
-<h3 id="change-by-design-how-design-thinking-transforms-organizations-and-inspires-innovation">Change by Design: How Design Thinking Transforms Organizations and Inspires Innovation</h3>
-<p>In Change by Design, Tim Brown, CEO of IDEO, the celebrated innovation and design firm, shows how the techniques and strategies of design belong at every level of business. Change by Design is not a book by designers for designers; this is a book for creative leaders who seek to infuse design thinking into every level of an organization, product, or service to drive new alternatives for business and society.</p>
-<p><a href="http://amzn.to/2jL2Yfq">BUY IT ON AMAZON</a></p>
-
+		<!-- Skip to content for accessibility -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+	
+		<!-- Main navigation bar -->
+		<Navigation />
+		
+		<main id="main-content">
+			<div class="page-header">
+				<h1>READING</h1>
+				<p>Books I've found valuable covering design leadership, product management, and business practices.</p>
+			</div>
+			
+			<div class="content-container">
+				<div class="section-nav">
+					<nav aria-label="Content categories">
+						<ul>
+							<li><a href="#service-design-books" tabindex="0" aria-label="Jump to Service Design books section">SERVICE DESIGN</a></li>
+							<li><a href="#interaction-product-design-books" tabindex="0" aria-label="Jump to Interaction and Product Design books section">INTERACTION / PRODUCT DESIGN</a></li>
+							<li><a href="#accessibility-books" tabindex="0" aria-label="Jump to Accessibility books section">ACCESSIBILITY</a></li>
+							<li><a href="#management-and-leadership-books" tabindex="0" aria-label="Jump to Management and Leadership books section">MANAGEMENT AND LEADERSHIP</a></li>
+						</ul>
+					</nav>
+				</div>
+				
+				<section id="service-design-books" class="reading-section" tabindex="-1">
+					<h2>SERVICE DESIGN BOOKS</h2>
+					<p>The collection of books below cover everything for you, your business or organisation when aiming to design better services.</p>
+					
+					<h3>THIS IS SERVICE DESIGN THINKING: BASICS-TOOLS-CASES</h3>
+					<p>This is Service Design Thinking introduces an inter-disciplinary approach to designing services. Service design is a bit of a buzzword these days and has gained a lot of interest from various fields. This book, assembled to describe and illustrate the emerging field of service design, was brought together using exactly the same co-creative and user-centred approaches you can read and learn about inside. The boundaries between products and services are blurring and it is time for a different way of thinking: this is service design thinking.</p>
+					<p>A set of 23 international authors and even more online contributors from the global service design community invested their knowledge, experience and passion together to create this book. It introduces service design thinking in manner accessible to beginners and students, it broadens the knowledge and can act as a resource for experienced design professionals.</p>
+					<p><a href="https://amzn.to/2IBcGxs" class="amazon-link" tabindex="0" rel="noopener" aria-label="Buy 'This Is Service Design Thinking' on Amazon">BUY IT ON AMAZON</a></p>
+					<hr>
+					
+					<h3>ORG DESIGN FOR DESIGN ORGS: BUILDING AND MANAGING IN-HOUSE TEAMS</h3>
+					<p>Design has become the key link between users and today's complex and rapidly evolving digital experiences, and designers are starting to be included in strategic conversations about the products and services that enterprises ultimately deliver. This has led to companies building in-house digital/experience design teams at unprecedented rates, but many of them don't understand how to get the most out of their investment.</p>
+					<p>This practical guide provides guidelines for creating and leading design teams within your organisation, and explores ways to use design as part of broader strategic planning.</p>
+					<p><a href="https://amzn.to/3nrDRK5" class="amazon-link">BUY IT ON AMAZON</a></p>
+					<hr>
+					
+					<h3>DIGITIZING GOVERNMENT: UNDERSTANDING AND IMPLEMENTING NEW DIGITAL BUSINESS MODELS</h3>
+					<p>For businesses large and small, investment in digital technologies is now a priority essential for success. Digitizing Government provides practical advice for understanding and implementing digital transformation to increase business value and improve client engagement. This easy-to-read book is organized into "why", "what", and "how" sections and examines the major elements of digital transformation, with clear steps for improved execution of digital strategies.</p>
+					<p>It features case studies from the private and public sectors, and a detailed chronology of digital change efforts across the UK government sector, and relates that to government efforts in the USA and around the world. It provides a practical and unique set of insights into business in the digital economy.</p>
+					<p><a href="https://amzn.to/36zJnUh" class="amazon-link">BUY IT ON AMAZON</a></p>
+					<hr>
+					
+					<h3>THIS IS SERVICE DESIGN DOING</h3>
+					<p>How can you establish a customer-centric culture in an organization? This is the first comprehensive book on how to actually do service design to improve the quality and the interaction between service providers and customers. You'll learn specific facilitation guidelines on how to run workshops, perform all of the main service design methods, implement concepts in reality, and embed service design successfully in an organization.</p>
+					<p>Service design requires a common language across disciplines to break down silos within an organization. This book provides a consistent model for accomplishing this and offers hands-on descriptions of every single step, tool, and method used. You'll be able to focus on your customers and iteratively improve their experience.</p>
+					<p>Move from theory to practice and build sustainable business success.</p>
+					<p><a href="https://amzn.to/38X2oD1" class="amazon-link">BUY IT ON AMAZON</a></p>
+					<hr>
+					
+					<h3>THE SERVICE INNOVATION HANDBOOK: ACTION-ORIENTED CREATIVE THINKING TOOLKIT FOR SERVICE ORGANIZATIONS</h3>
+					<p>This is an action-oriented book for managers and entrepreneurs searching ways to tackle issues they face in terms of developing and delivering services. The book focuses on service organizations, but has a broad interpretation of what services are. Directed to the business world and combines inspirational text that is full of examples, with the features of a useful handbook of practical methods with associated templates.</p>
+					<p>The central argument is that managers and entrepreneurs designing service offerings will benefit from using approaches and methods from design and the arts, especially at the early stages of projects. Sometimes called "design thinking" or "design innovation", such approaches help organizations explore and create new configurations of people and things that support users, customers, staff and partners in creating value together.</p>
+					<p><a href="https://amzn.to/3lyLNbY" class="amazon-link">BUY IT ON AMAZON</a></p>
+				</section>
+				
+				<!-- Additional book sections would continue here following the same pattern -->
+				
+				<section id="interaction-product-design-books" class="reading-section">
+					<h2>INTERACTION / PRODUCT DESIGN BOOKS</h2>
+					<p>The collection of books below cover everything for you if you have a job title like UX Designer, Interaction Designer, Service Designer or Product Designer.</p>
+					
+					<!-- Books would be listed here -->
+				</section>
+				
+				<section id="accessibility-books" class="reading-section">
+					<h2>ACCESSIBILITY BOOKS</h2>
+					<p>The collection of books below cover everything for you, your business or organisation when looking to learn more and understand about designing for everyone.</p>
+					
+					<!-- Books would be listed here -->
+				</section>
+				
+				<section id="management-and-leadership-books" class="reading-section">
+					<h2>MANAGEMENT AND LEADERSHIP BOOKS</h2>
+					<p>The collection of books below cover everything for you if you're an aspiring manager or leader or whether you've been doing it for a while and what to investigate different types of management and leadership.</p>
+					
+					<!-- Books would be listed here -->
+				</section>
+			</div>
 		</main>
 		<Footer />
 	</body>
