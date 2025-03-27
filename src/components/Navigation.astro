@@ -7,7 +7,7 @@ const currentPath = pathname.slice(1); // Remove the leading slash
 <header class="sticky-nav" id="sticky-nav" role="banner">
     <div class="nav-container">
         <div class="nav-brand">
-            <a href="/" aria-label="Go to Gavin Elliott's homepage">GAVIN ELLIOTT</a>
+            <span aria-hidden="true">GAVIN ELLIOTT</span>
         </div>
         <nav class="nav-items" role="navigation" aria-label="Main navigation">
             <a href="/" tabindex="0" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
@@ -53,14 +53,9 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         color: #FFFFFF;
     }
 
-    .nav-brand a {
+    .nav-brand span {
         color: #FFFFFF;
-        text-decoration: none;
-        transition: opacity 0.2s ease;
-    }
-    
-    .nav-brand a:hover {
-        opacity: 0.8;
+        opacity: 0.9;
     }
 
     .nav-items {
@@ -73,12 +68,21 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         font-weight: 600;
         font-size: 1.25rem;
         color: #FFFFFF;
-        text-decoration: none;
-        transition: opacity 0.2s ease;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
     }
     
     .nav-items a:hover {
-        opacity: 0.8;
+        opacity: 0.9;
+        text-decoration-color: rgba(255, 255, 255, 1);
+    }
+    
+    .nav-items a[aria-current="page"] {
+        text-decoration-color: rgba(255, 255, 255, 1);
+        opacity: 1;
     }
 
     .nav-items a:focus-visible {
