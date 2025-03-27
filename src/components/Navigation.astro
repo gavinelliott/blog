@@ -9,12 +9,39 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         <div class="nav-brand">
             <span aria-hidden="true">GAVIN ELLIOTT</span>
         </div>
-        <nav class="nav-items" role="navigation" aria-label="Main navigation">
+        
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <!-- Desktop navigation -->
+        <nav class="nav-items desktop-nav" role="navigation" aria-label="Main navigation">
             <a href="/" tabindex="0" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
             <a href="/about" tabindex="0" aria-current={currentPath === "about" ? "page" : undefined}>ABOUT</a>
             <a href="/writing" tabindex="0" aria-current={currentPath === "writing" ? "page" : undefined}>WRITING</a>
             <a href="/recommended-reads" tabindex="0" aria-current={currentPath === "recommended-reads" ? "page" : undefined}>READING</a>
+            <a href="/speaking" tabindex="0" aria-current={currentPath === "speaking" ? "page" : undefined}>SPEAKING</a>
         </nav>
+        
+        <!-- Mobile navigation panel -->
+        <div class="mobile-menu" id="main-menu">
+            <nav class="mobile-nav-items" role="navigation" aria-label="Mobile navigation">
+                <a href="/" tabindex="-1" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
+                <a href="/about" tabindex="-1" aria-current={currentPath === "about" ? "page" : undefined}>ABOUT</a>
+                <a href="/writing" tabindex="-1" aria-current={currentPath === "writing" ? "page" : undefined}>WRITING</a>
+                <a href="/recommended-reads" tabindex="-1" aria-current={currentPath === "recommended-reads" ? "page" : undefined}>READING</a>
+                <a href="/speaking" tabindex="-1" aria-current={currentPath === "speaking" ? "page" : undefined}>SPEAKING</a>
+            </nav>
+        </div>
     </div>
 </header>
 
@@ -44,6 +71,7 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
     .nav-brand {
@@ -58,6 +86,100 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         opacity: 0.9;
     }
 
+    /* Mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1010;
+        position: relative;
+    }
+    
+    .mobile-menu-toggle svg {
+        width: 28px;
+        height: 28px;
+        stroke: #FFFFFF;
+        stroke-width: 2;
+    }
+    
+    .mobile-menu-toggle:focus-visible {
+        outline: 2px solid #FFFFFF;
+        outline-offset: 4px;
+    }
+    
+    .close-icon {
+        display: none;
+    }
+    
+    .mobile-menu-toggle.active .menu-icon {
+        display: none;
+    }
+    
+    .mobile-menu-toggle.active .close-icon {
+        display: block;
+    }
+
+    /* Mobile menu panel */
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #051005;
+        z-index: 1005;
+        padding: 4rem 0 2rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem;
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .mobile-nav-items a {
+        font-family: "franklin-gothic-urw-comp", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+        padding: 0.5rem;
+        width: auto;
+        text-align: center;
+    }
+    
+    .mobile-nav-items a:hover {
+        opacity: 0.9;
+        text-decoration-color: rgba(255, 255, 255, 1);
+    }
+    
+    .mobile-nav-items a[aria-current="page"] {
+        text-decoration-color: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+
+    /* Desktop navigation */
     .nav-items {
         display: flex;
         gap: 3rem;
@@ -85,7 +207,8 @@ const currentPath = pathname.slice(1); // Remove the leading slash
         opacity: 1;
     }
 
-    .nav-items a:focus-visible {
+    .nav-items a:focus-visible,
+    .mobile-nav-items a:focus-visible {
         outline: 2px solid #FFFFFF;
         outline-offset: 2px;
         opacity: 1;
@@ -94,7 +217,9 @@ const currentPath = pathname.slice(1); // Remove the leading slash
     /* High contrast mode improvements */
     @media (forced-colors: active) {
         .nav-items a:hover,
-        .nav-items a:focus {
+        .nav-items a:focus,
+        .mobile-nav-items a:hover,
+        .mobile-nav-items a:focus {
             border: 2px solid Canvas;
         }
     }
@@ -106,39 +231,101 @@ const currentPath = pathname.slice(1); // Remove the leading slash
     }
 
     @media (max-width: 768px) {
-        .nav-items {
-            gap: 1.5rem;
+        /* Show mobile menu toggle, hide desktop nav */
+        .mobile-menu-toggle {
+            display: block;
         }
         
-        .nav-items a {
-            font-size: 1.1rem;
+        .desktop-nav {
+            display: none;
         }
-
+        
         .nav-container {
             padding: 0.75rem 1.25rem;
+        }
+        
+        .sticky-nav {
+            transform: translateY(0);
+            opacity: 1;
+            background-color: #051005;
+        }
+        
+        /* Ensure site title is visible */
+        .nav-brand {
+            position: relative;
+            z-index: 1010;
+            font-size: 1.25rem;
         }
     }
 
     @media (max-width: 480px) {
-        .nav-items {
-            gap: 1rem;
-        }
-        
-        .nav-items a {
-            font-size: 1rem;
-        }
-
         .nav-container {
             padding: 0.75rem 1rem;
+        }
+        
+        .mobile-nav-items a {
+            font-size: 1.4rem;
         }
     }
 </style>
 
 <script>
+    // Wait for the DOM to be fully loaded
     document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('sticky-nav');
         const hero = document.querySelector('.hero-section');
         
+        // Mobile menu functionality
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-items a');
+        
+        if (menuToggle && mobileMenu) {
+            // Toggle menu when hamburger is clicked
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Toggle tabindex for mobile links
+                mobileLinks.forEach(link => {
+                    link.setAttribute('tabindex', isExpanded ? '-1' : '0');
+                });
+                
+                // Prevent body scrolling when menu is open
+                if (!isExpanded) {
+                    document.body.style.overflow = 'hidden';
+                    document.body.style.overflowX = 'hidden';
+                    document.documentElement.style.overflowX = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                    document.body.style.overflowX = '';
+                    document.documentElement.style.overflowX = '';
+                }
+            });
+            
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.body.style.overflowX = '';
+                    document.documentElement.style.overflowX = '';
+                });
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                    menuToggle.dispatchEvent(new Event('click'));
+                }
+            });
+        }
+        
+        // Sticky nav functionality
         if (nav && hero) {
             // Only apply this behavior on the home page
             window.addEventListener('scroll', () => {
