@@ -8,48 +8,92 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title="Speaking | Gavin Elliott" description="Speaking engagements and appearances by Gavin Elliott" />
 		<style>
 			main {
+				padding-top: 5rem;
+				background-color: #FFFFF8;
+				min-height: 100vh;
 				width: 100%;
-				max-width: 1200px;
+				overflow-x: hidden;
+			}
+			
+			.page-header {
+				padding: 6rem 2rem 4rem;
+				text-align: center;
+				max-width: 800px;
 				margin: 0 auto;
-				padding: 5rem 2rem 3rem;
 			}
-			.speaking-section {
-				margin: 2em 0;
-			}
-			h2, h3, h4 {
-				margin: 1em 0;
-				font-family: "franklin-gothic-urw-comp", sans-serif;
-				font-weight: 600;
-			}
-			h1 {
+			
+			.page-header h1 {
 				font-family: "franklin-gothic-urw-comp", sans-serif;
 				font-weight: 600;
 				font-size: 4rem;
 				color: #051005;
 				margin-bottom: 1.5rem;
 				line-height: 1;
+				text-transform: uppercase;
 			}
+			
+			.page-header p {
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+				opacity: 0.8;
+			}
+			
+			.content-container {
+				max-width: 900px;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 2rem 4rem;
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				color: #051005;
+			}
+			
+			.speaking-section {
+				margin: 3em 0;
+			}
+			
+			h2, h3, h4 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				margin: 1.5em 0 0.8em;
+				color: #051005;
+			}
+			
+			h2 {
+				font-size: 2.25rem;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+			}
+			
+			h3 {
+				font-size: 1.85rem;
+			}
+			
 			p {
-				margin: 1em 0;
+				margin-bottom: 1.2rem;
 			}
-			ul {
-				list-style-type: none;
-				padding: 0;
-			}
-			li {
-				margin-bottom: 1em;
-				line-height: 1.6;
-			}
+			
 			a {
-				color: var(--accent);
+				color: #051005;
+				text-decoration: none;
+				background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-bottom: 0.1em;
+				transition: background-image 0.3s ease;
+			}
+			
+			a:hover {
+				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
 				text-decoration: none;
 			}
-			a:hover {
-				text-decoration: underline;
-			}
+			
 			.skip-link {
 				position: absolute;
 				top: -40px;
@@ -57,8 +101,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				background: #90B090;
 				color: #051005;
 				padding: 8px;
-				z-index: 100;
+				z-index: 2000;
 				font-family: "franklin-gothic-urw-comp", sans-serif;
+				transition: top 0.3s ease;
 			}
 
 			.skip-link:focus {
@@ -66,36 +111,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 
 			@media (max-width: 1024px) {
-				main {
-					padding: 5rem 1.5rem 3rem;
+				.page-header {
+					padding: 5rem 2rem 3rem;
 				}
 				
-				h1 {
+				.page-header h1 {
 					font-size: 3.5rem;
+				}
+				
+				h2 {
+					font-size: 2rem;
+				}
+				
+				h3 {
+					font-size: 1.7rem;
 				}
 			}
 			
 			@media (max-width: 768px) {
-				main {
-					padding: 5rem 1.5rem 2rem;
+				.page-header {
+					padding: 4rem 1.5rem 3rem;
 				}
 				
-				h1 {
+				.page-header h1 {
 					font-size: 3rem;
 				}
 				
+				.page-header p {
+					font-size: 1.25rem;
+				}
+				
+				.content-container {
+					padding: 0 1.5rem 3rem;
+					font-size: 1.25rem;
+				}
+				
 				.speaking-section {
-					margin: 1.5em 0;
+					margin: 2em 0;
 				}
 			}
 			
 			@media (max-width: 480px) {
-				main {
-					padding: 4rem 1rem 2rem;
+				.page-header {
+					padding: 3rem 1rem 2rem;
 				}
 				
-				h1 {
+				.page-header h1 {
 					font-size: 2.5rem;
+				}
+				
+				.page-header p {
+					font-size: 1.15rem;
+				}
+				
+				.content-container {
+					padding: 0 1rem 2rem;
+					font-size: 1.15rem;
 				}
 				
 				h2 {
@@ -107,7 +178,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				}
 				
 				.speaking-section {
-					margin: 1.25em 0;
+					margin: 1.5em 0;
 				}
 			}
 		</style>
@@ -115,83 +186,88 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<Navigation />
-		<main id="main-content">
-			<h1>Speaking</h1>
+		<main id="main-content" tabindex="-1">
+			<div class="page-header">
+				<h1>Speaking</h1>
+				<p>Past and upcoming speaking engagements on design, leadership, and impostor syndrome.</p>
+			</div>
+			
+			<div class="content-container">
+				<section class="speaking-section">
+					<h2>Future Speaking Appearances</h2>
+					<p>July 19, 2023 - <a href="https://www.middlesbroughfe.co.uk/">Middlesbrough Front End Conference</a>, Middlesbrough, UK - MC'ing the conference</p>
+				</section>
 
-			<section class="speaking-section">
-				<h2>Future Speaking Appearances</h2>
-				<p>July 19, 2023 - <a href="https://www.middlesbroughfe.co.uk/">Middlesbrough Front End Conference</a>, Middlesbrough, UK - MC'ing the conference</p>
-			</section>
+				<section class="speaking-section">
+					<h2>Past Speaking Appearances</h2>
 
-			<section class="speaking-section">
-				<h2>Past Speaking Appearances</h2>
+					<h3>2023</h3>
+					<p>January - Department for Farming and Rural Affairs, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
 
-				<h3>2023</h3>
-				<p>January - Department for Farming and Rural Affairs, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<h3>2022</h3>
+					<p>November - Department for Work and Pensions, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<p>July 26th - Cabinet Office, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
 
-				<h3>2022</h3>
-				<p>November - Department for Work and Pensions, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
-				<p>July 26th - Cabinet Office, UK Government - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<h3>2020 - 2021</h3>
+					<p>Private Audience - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
 
-				<h3>2020 - 2021</h3>
-				<p>Private Audience - <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<h3>2019</h3>
+					<p>October 24th – <a href="https://middlesbroughfe.co.uk/">Middlesbrough FrontEnd</a> – <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<p>October 16th – SODA Social – Service Led Design</p>
+					<p>October 14th – Dynamo Newcastle – <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
+					<p>October 7th – FutureGov Manchester – Designing 21st Century Government – "Lightning Talk"</p>
+					<p>October 4th – <a href="https://2019.nuxconf.uk/">NUX8</a> – Compere</p>
+					<p>October 2nd – Chester Devs – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
 
-				<h3>2019</h3>
-				<p>October 24th – <a href="https://middlesbroughfe.co.uk/">Middlesbrough FrontEnd</a> – <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
-				<p>October 16th – SODA Social – Service Led Design</p>
-				<p>October 14th – Dynamo Newcastle – <a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a></p>
-				<p>October 7th – FutureGov Manchester – Designing 21st Century Government – "Lightning Talk"</p>
-				<p>October 4th – <a href="https://2019.nuxconf.uk/">NUX8</a> – Compere</p>
-				<p>October 2nd – Chester Devs – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<h3>2018</h3>
+					<p>October – <a href="https://www.dxnevent.com/">DXN</a> – Nottingham – "<a href="https://gavinelliott.co.uk/professional-progression/">Professional Progression</a>"</p>
+					<p>May 2018 – <a href="https://www.wearesigma.com/campdigital/2018/">Camp Digital</a> – Manchester – "<a href="https://gavinelliott.co.uk/professional-progression/">Professional Progression</a>"</p>
+					<p>March 2018 – <a href="https://upfrontconf.com/">50:50 Day</a> – Newcastle – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>March 2018 – <a href="https://upfrontconf.com/">UpFront Conf</a> – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>March 2018 – International Womens Day – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>January 2018 – DWP BA Community Event – Leeds – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>January 2018 – ACAS – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>January 2018 – Government Digital Service – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>December 2017 – Sky Bet & Gaming – Leeds – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>November 2017 – <a href="https://www.dibiconference.com/">DIBI Conf</a> – Newcastle – "Compering"</p>
+					<p>October 2017 – <a href="https://2017.nuxconf.uk/">NUX6</a> – Manchester – "Compering"</p>
+					<p>October 2017 – ConCon Conf – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>September 2017 – Staffs Web Meetup – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>September 2017 – Code Computerlove – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>September 2017 – Home Office Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>August 2017 – Sunderland Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>August 2017 – Government Digital Service – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>August 2017 – HMRC Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>August 2017 – Disclosure Scotland – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>July 2017 – Parliamentary Digital Service – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>July 2017 – BBC – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>July 2017 – Coop Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<p>June 2017 – DWP Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
 
-				<h3>2018</h3>
-				<p>October – <a href="https://www.dxnevent.com/">DXN</a> – Nottingham – "<a href="https://gavinelliott.co.uk/professional-progression/">Professional Progression</a>"</p>
-				<p>May 2018 – <a href="https://www.wearesigma.com/campdigital/2018/">Camp Digital</a> – Manchester – "<a href="https://gavinelliott.co.uk/professional-progression/">Professional Progression</a>"</p>
-				<p>March 2018 – <a href="https://upfrontconf.com/">50:50 Day</a> – Newcastle – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>March 2018 – <a href="https://upfrontconf.com/">UpFront Conf</a> – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>March 2018 – International Womens Day – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>January 2018 – DWP BA Community Event – Leeds – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>January 2018 – ACAS – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>January 2018 – Government Digital Service – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>December 2017 – Sky Bet & Gaming – Leeds – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>November 2017 – <a href="https://www.dibiconference.com/">DIBI Conf</a> – Newcastle – "Compering"</p>
-				<p>October 2017 – <a href="https://2017.nuxconf.uk/">NUX6</a> – Manchester – "Compering"</p>
-				<p>October 2017 – ConCon Conf – London – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>September 2017 – Staffs Web Meetup – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>September 2017 – Code Computerlove – Manchester – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>September 2017 – Home Office Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>August 2017 – Sunderland Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>August 2017 – Government Digital Service – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>August 2017 – HMRC Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>August 2017 – Disclosure Scotland – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>July 2017 – Parliamentary Digital Service – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>July 2017 – BBC – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>July 2017 – Coop Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
-				<p>June 2017 – DWP Digital – "<a href="https://gavinelliott.co.uk/imposter-syndrome/">Impostor Syndrome</a>"</p>
+					<h3>2016</h3>
+					<p>Oct 2016 – <a href="https://2016.nuxconf.uk/">NUX5</a> – Manchester, UK</p>
+					<p>April 2016 – <a href="https://2016.industryconf.com/">Industry Conference</a> – Gateshead, UK</p>
 
-				<h3>2016</h3>
-				<p>Oct 2016 – <a href="https://2016.nuxconf.uk/">NUX5</a> – Manchester, UK</p>
-				<p>April 2016 – <a href="https://2016.industryconf.com/">Industry Conference</a> – Gateshead, UK</p>
+					<h3>2015</h3>
+					<p>Nov 2015 – NUX4 – Manchester, UK</p>
+					<p>April 2015 – <a href="https://www.industryconf.com/">Industry Conference</a> – Gateshead, UK</p>
 
-				<h3>2015</h3>
-				<p>Nov 2015 – NUX4 – Manchester, UK</p>
-				<p>April 2015 – <a href="https://www.industryconf.com/">Industry Conference</a> – Gateshead, UK</p>
+					<h3>2014</h3>
+					<p>November 2014 – MK Geek Night: "Invisible Challenges" – <a href="https://soundcloud.com/mkgn/mental-help-gavin-elliott">Listen on Soundcloud</a></p>
+					<p>April 2014 – <a href="https://vimeo.com/industryconf">Industry Conference</a> – Organiser</p>
 
-				<h3>2014</h3>
-				<p>November 2014 – MK Geek Night: "Invisible Challenges" – <a href="https://soundcloud.com/mkgn/mental-help-gavin-elliott">Listen on Soundcloud</a></p>
-				<p>April 2014 – <a href="https://vimeo.com/industryconf">Industry Conference</a> – Organiser</p>
+					<h3>2013</h3>
+					<p>2013 – Speak The Web – F&%k Failure!</p>
+					<p>April 2013 – <a href="https://vimeo.com/industryconf">Industry Conference</a> – Organiser</p>
 
-				<h3>2013</h3>
-				<p>2013 – Speak The Web – F&%k Failure!</p>
-				<p>April 2013 – <a href="https://vimeo.com/industryconf">Industry Conference</a> – Organiser</p>
+					<h3>2011</h3>
+					<p>June 2011 – DIBI 2011 – Producer and Compere</p>
+					<p>June 2011 – Interlink Conference – <a href="https://www.gavinelliott.co.uk/2011/07/a-better-process-the-talk/">A Better Process</a></p>
 
-				<h3>2011</h3>
-				<p>June 2011 – DIBI 2011 – Producer and Compere</p>
-				<p>June 2011 – Interlink Conference – <a href="https://www.gavinelliott.co.uk/2011/07/a-better-process-the-talk/">A Better Process</a></p>
-
-				<h3>2010</h3>
-				<p>April 2010 – DIBI 2010 – Producer and Compere</p>
-			</section>
+					<h3>2010</h3>
+					<p>April 2010 – DIBI 2010 – Producer and Compere</p>
+				</section>
+			</div>
 		</main>
 		<Footer />
 	</body>
