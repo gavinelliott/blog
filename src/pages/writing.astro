@@ -16,6 +16,18 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title="Writing | Gavin Elliott" description="Articles, essays and thoughts by Gavin Elliott" />
 		<style>
+			*, *::before, *::after {
+				box-sizing: border-box;
+			}
+			
+			html, body {
+				overflow-x: hidden;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			
 			main {
 				padding-top: 5rem;
 				background-color: #FFFFF8;
@@ -241,7 +253,7 @@ const posts = (await getCollection('blog')).sort(
 		<!-- Main navigation bar -->
 		<Navigation />
 		
-		<main>
+		<main id="main-content" tabindex="-1">
 			<div class="page-header">
 				<h1>WRITING</h1>
 				<p>Articles, essays and thoughts on design leadership, team management, and navigating complex design challenges.</p>

@@ -78,6 +78,18 @@ const title = "Gavin Elliott";
 </Layout>
 
 <style>
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	
+	html, body {
+		overflow-x: hidden;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	
 	@keyframes zoomIn {
 		from {
 			transform: scale(0.5);

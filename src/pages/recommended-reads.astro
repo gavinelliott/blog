@@ -11,6 +11,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title="Recommended Reads | Gavin Elliott" description="Books and articles recommended by Gavin Elliott" />
 		<style>
+			*, *::before, *::after {
+				box-sizing: border-box;
+			}
+			
+			html, body {
+				overflow-x: hidden;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			
 			main {
 				padding-top: 5rem;
 				background-color: #FFFFF8;
@@ -389,7 +401,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<!-- Main navigation bar -->
 		<Navigation />
 		
-		<main id="main-content">
+		<main id="main-content" tabindex="-1">
 			<div class="page-header">
 				<h1>READING</h1>
 				<p>Books I've found valuable covering design leadership, product management, and business practices.</p>
