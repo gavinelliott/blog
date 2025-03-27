@@ -1,0 +1,284 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts to include in the sitemap
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Sitemap | Gavin Elliott" description="A complete table of contents for Gavin Elliott's website" />
+		<style>
+			main {
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+				padding-top: 5rem;
+				background-color: #FFFFF8;
+				box-sizing: border-box;
+			}
+			
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #90B090;
+				color: #051005;
+				padding: 8px;
+				z-index: 2000;
+				transition: top 0.3s ease;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+			}
+			
+			.skip-link:focus {
+				top: 0;
+			}
+			
+			.prose {
+				width: 100%;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 1em 2rem;
+				color: #051005;
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.35rem;
+				line-height: 1.55;
+				box-sizing: border-box;
+			}
+			
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+				margin-top: 3em;
+			}
+			
+			.title h1 {
+				margin: 0 0 0.5em 0;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 3rem;
+				color: #051005;
+				line-height: 1.2;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+			}
+			
+			.sitemap-section {
+				margin-bottom: 2.5rem;
+			}
+			
+			.prose h2 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 2.25rem;
+				margin-top: 2.5em;
+				margin-bottom: 0.8em;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				color: #051005;
+				line-height: 1.2;
+			}
+			
+			.prose h3 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.85rem;
+				margin-top: 1.5em;
+				margin-bottom: 0.5em;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				color: #051005;
+				line-height: 1.2;
+			}
+			
+			.prose a {
+				color: #051005;
+				text-decoration: none;
+				background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-bottom: 0.1em;
+				transition: background-image 0.3s ease;
+			}
+			
+			.prose a:hover {
+				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
+			}
+			
+			ul {
+				padding-left: 0;
+				list-style-type: none;
+			}
+			
+			li {
+				margin-bottom: 1rem;
+			}
+			
+			.date {
+				font-size: 0.9rem;
+				color: rgba(5, 16, 5, 0.7);
+				margin-left: 0.5rem;
+			}
+			
+			.section-title {
+				border-bottom: 1px solid rgba(5, 16, 5, 0.1);
+				padding-bottom: 0.5rem;
+				margin-bottom: 1.5rem;
+			}
+			
+			@media (max-width: 1024px) {
+				.prose {
+					max-width: 720px;
+					font-size: 1.25rem;
+				}
+				
+				.title h1 {
+					font-size: 2.75rem;
+				}
+				
+				.prose h2 {
+					font-size: 2rem;
+				}
+				
+				.prose h3 {
+					font-size: 1.7rem;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				.prose {
+					padding: 1em 1.5rem;
+					font-size: 1.2rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
+				}
+				
+				.title h1 {
+					font-size: 2.5rem;
+				}
+				
+				.title {
+					margin-top: 2em;
+				}
+				
+				.prose h2 {
+					font-size: 1.8rem;
+				}
+				
+				.prose h3 {
+					font-size: 1.5rem;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.prose {
+					padding: 1em 1rem;
+					font-size: 1.1rem;
+					width: calc(100% - 1rem);
+					margin: 0 auto;
+				}
+				
+				.title h1 {
+					font-size: 2.2rem;
+				}
+				
+				.title {
+					margin-top: 1.5em;
+					padding: 0.5em 0;
+				}
+				
+				.prose h2 {
+					font-size: 1.6rem;
+					margin-top: 2em;
+				}
+				
+				.prose h3 {
+					font-size: 1.4rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		
+		<!-- Main navigation bar -->
+		<Navigation />
+		
+		<main id="main-content" tabindex="-1">
+			<article>
+				<div class="prose">
+					<div class="title">
+						<h1>Sitemap</h1>
+						<hr />
+					</div>
+					
+					<div class="sitemap-section">
+						<h2 class="section-title">Main Pages</h2>
+						<ul>
+							<li><a href="/">Home</a> - Introduction and latest blog posts</li>
+							<li><a href="/about">About</a> - Information about Gavin Elliott</li>
+							<li><a href="/writing">Writing</a> - Articles and blog posts</li>
+							<li><a href="/speaking">Speaking</a> - Speaking engagements and appearances</li>
+							<li><a href="/recommended-reads">Recommended Reads</a> - Book recommendations</li>
+							<li><a href="/sitemap">Sitemap</a> - This page</li>
+						</ul>
+					</div>
+					
+					<div class="sitemap-section">
+						<h2 class="section-title">Writing</h2>
+						<p>All blog posts and articles organized by most recent first:</p>
+						<ul>
+							{posts.map((post) => (
+								<li>
+									<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+									<span class="date">{new Date(post.data.pubDate).toLocaleDateString('en-US', {
+										year: 'numeric',
+										month: 'short',
+										day: 'numeric',
+									})}</span>
+								</li>
+							))}
+						</ul>
+					</div>
+					
+					<div class="sitemap-section">
+						<h2 class="section-title">Reading Recommendations</h2>
+						<p>Book recommendations organized by category:</p>
+						<ul>
+							<li><a href="/recommended-reads#service-design-books">Service Design Books</a></li>
+							<li><a href="/recommended-reads#interaction-product-design-books">Interaction & Product Design Books</a></li>
+							<li><a href="/recommended-reads#accessibility-books">Accessibility Books</a></li>
+							<li><a href="/recommended-reads#management-and-leadership-books">Management & Leadership Books</a></li>
+						</ul>
+					</div>
+					
+					<div class="sitemap-section">
+						<h2 class="section-title">Speaking</h2>
+						<p>Information about speaking engagements:</p>
+						<ul>
+							<li><a href="/speaking">All Speaking Engagements</a> - Past and future talks</li>
+							<li><a href="/speaking#future-speaking-appearances">Future Speaking Appearances</a></li>
+							<li><a href="/speaking#past-speaking-appearances">Past Speaking Appearances</a> (by year)</li>
+						</ul>
+					</div>
+					
+					<div class="sitemap-section">
+						<h2 class="section-title">Other Resources</h2>
+						<ul>
+							<li><a href="/rss.xml">RSS Feed</a> - Subscribe to the latest content</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html> 
