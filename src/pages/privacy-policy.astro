@@ -1,0 +1,252 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title="Privacy Policy | Gavin Elliott" description="Privacy Policy for Gavin Elliott's website" />
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+            
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+            
+            main {
+                padding-top: 5rem;
+                background-color: #FFFFF8;
+                min-height: 100vh;
+                width: 100%;
+                max-width: 100vw;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skip-link {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                background: #90B090;
+                color: #051005;
+                padding: 8px;
+                z-index: 2000;
+                transition: top 0.3s ease;
+                font-family: "franklin-gothic-urw-comp", sans-serif;
+            }
+            
+            .skip-link:focus {
+                top: 0;
+            }
+            
+            .page-header {
+                padding: 6rem 2rem 4rem;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            .page-header h1 {
+                font-family: "franklin-gothic-urw-comp", sans-serif;
+                font-weight: 600;
+                font-size: 4rem;
+                color: #051005;
+                margin-bottom: 1.5rem;
+                line-height: 1;
+                text-transform: uppercase;
+            }
+            
+            .content-container {
+                max-width: 900px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 2rem 4rem;
+                font-family: "linotype-sabon", sans-serif;
+                font-size: 1.35rem;
+                line-height: 1.55;
+                color: #051005;
+            }
+            
+            .content-container p {
+                margin-bottom: 1.5rem;
+            }
+            
+            .content-container h2 {
+                font-family: "franklin-gothic-urw-comp", sans-serif;
+                font-weight: 600;
+                font-size: 2.25rem;
+                margin-top: 2.5em;
+                margin-bottom: 0.8em;
+                letter-spacing: 0.02em;
+                color: #051005;
+                line-height: 1.2;
+            }
+            
+            .content-container ul {
+                padding-left: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .content-container li {
+                margin-bottom: 0.8rem;
+            }
+            
+            .content-container a {
+                color: #051005;
+                text-decoration: none;
+                background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                padding-bottom: 0.1em;
+                transition: background-image 0.3s ease;
+            }
+            
+            .content-container a:hover {
+                background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
+            }
+            
+            .last-updated {
+                color: rgba(5, 16, 5, 0.7);
+                font-style: italic;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+            }
+            
+            @media (max-width: 1024px) {
+                .page-header {
+                    padding: 5rem 2rem 3rem;
+                }
+                
+                .page-header h1 {
+                    font-size: 3.5rem;
+                }
+                
+                .content-container {
+                    padding: 0 2rem 3rem;
+                    font-size: 1.25rem;
+                }
+                
+                .content-container h2 {
+                    font-size: 2rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .page-header {
+                    padding: 4rem 1.5rem 3rem;
+                }
+                
+                .page-header h1 {
+                    font-size: 3rem;
+                }
+                
+                .content-container {
+                    padding: 0 1.5rem 3rem;
+                    font-size: 1.25rem;
+                }
+                
+                .content-container h2 {
+                    font-size: 1.8rem;
+                    margin-top: 2em;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .page-header {
+                    padding: 3rem 1rem 2rem;
+                }
+                
+                .page-header h1 {
+                    font-size: 2.5rem;
+                }
+                
+                .content-container {
+                    padding: 0 1rem 2rem;
+                    font-size: 1.15rem;
+                }
+                
+                .content-container h2 {
+                    font-size: 1.6rem;
+                    margin-top: 1.8em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <!-- Main navigation bar -->
+        <Navigation />
+        
+        <main id="main-content" tabindex="-1">
+            <div class="page-header">
+                <h1>Privacy Policy</h1>
+            </div>
+            
+            <div class="content-container">
+                <p class="last-updated">Last Updated: {new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'})}</p>
+                
+                <h2>Let's be honest</h2>
+                <p>I believe in honest design and clear communication. This privacy policy is a straightforward explanation of how I handle information when you visit my blog. No dark patterns, no hidden catches—just transparency about what happens when you're here.</p>
+                
+                <h2>What I collect (it's minimal)</h2>
+                <p>I'm not in the business of collecting your personal data. My site only collects the bare minimum information needed to function properly:</p>
+                <ul>
+                    <li><strong>Basic analytics:</strong> I use simple, privacy-focused analytics to understand which posts are being read and how people find my site. This helps me create more relevant content. The analytics are anonymized and don't track you across websites.</li>
+                    <li><strong>Cookies:</strong> My site uses minimal cookies, primarily to remember your preferences and provide basic functionality. These aren't used to build profiles or track you across the web.</li>
+                </ul>
+                
+                <h2>What I don't do</h2>
+                <p>It's important to know what I don't do with your information:</p>
+                <ul>
+                    <li>I don't sell your data to third parties</li>
+                    <li>I don't use intrusive tracking across websites</li>
+                    <li>I don't build profiles about you or your browsing habits</li>
+                    <li>I don't use dark patterns to trick you into sharing more than you intend</li>
+                    <li>I don't use your data for targeted advertising</li>
+                </ul>
+                
+                <h2>Why I'm collecting this information</h2>
+                <p>As someone who's worked in design leadership and cares deeply about user experience, I want to:</p>
+                <ul>
+                    <li>Understand which content resonates with readers</li>
+                    <li>Improve the blog's usability and accessibility</li>
+                    <li>Ensure the site functions properly for everyone</li>
+                    <li>Make informed decisions about future content</li>
+                </ul>
+                
+                <h2>Social media and external links</h2>
+                <p>My site links to social platforms like Twitter (X), LinkedIn, and Bluesky. When you click these links, you'll be subject to their privacy policies. I recommend checking those policies if you're concerned about how they handle your information.</p>
+                <p>I also link to other websites in my blog posts. I don't control these sites, so their own privacy policies will apply when you visit them.</p>
+                
+                <h2>Making choices about your data</h2>
+                <p>You have control over your information while using my site:</p>
+                <ul>
+                    <li>Most modern browsers allow you to block cookies if you prefer</li>
+                    <li>You can use browser extensions that block analytics if you'd rather not be counted in site statistics</li>
+                    <li>The site works fine with privacy-focused browsers and extensions</li>
+                </ul>
+                
+                <h2>Changes to this approach</h2>
+                <p>If I change how I handle information on this site, I'll update this page and note the date of the update. I believe in being straightforward about these things—no surprises.</p>
+                
+                <h2>Get in touch</h2>
+                <p>If you have questions about how I handle privacy on this site, or just want to chat about design, leadership, or anything else I write about, you can reach me through social media or the contact details on my About page.</p>
+                
+                <p>This privacy policy isn't meant to be a legal document—it's a clear explanation of my approach to respecting your privacy while you're here. I appreciate your readership and value your trust.</p>
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html> 
