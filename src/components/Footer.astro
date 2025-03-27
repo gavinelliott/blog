@@ -6,9 +6,11 @@ const today = new Date();
 	<div class="footer-container">
 		<div class="footer-content">
 			<div class="footer-brand"><a href="/">GAVIN ELLIOTT</a></div>
-			<div class="copyright" aria-label="Copyright information">
-				&copy; {today.getFullYear()} Gavin Elliott. All rights reserved.
+			
+			<div class="footer-links" aria-label="Footer navigation">
+				<a href="/sitemap" tabindex="0" aria-label="View complete sitemap">Sitemap</a>
 			</div>
+			
 			<div class="social-links" aria-label="Social media links">
 				<a href="https://bsky.app/profile/gavinelliott.bsky.social" target="_blank" aria-label="Follow Gavin Elliott on Bluesky" rel="noopener" tabindex="0">
 					<span class="sr-only">Follow on Bluesky</span>
@@ -30,21 +32,34 @@ const today = new Date();
 				</a>
 			</div>
 		</div>
+		
+		<div class="copyright" aria-label="Copyright information">
+			&copy; {today.getFullYear()} Gavin Elliott. All rights reserved.
+		</div>
 	</div>
 </footer>
 <style>
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	
 	footer {
 		padding: 2em 1em 6em 1em;
 		background: #051005;
 		color: #FFFFFF;
 		text-align: center;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
+		position: relative;
 	}
 	
 	.footer-container {
-		max-width: 1400px;
+		max-width: 1200px;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 2rem;
+		box-sizing: border-box;
 	}
 	
 	.footer-content {
@@ -70,6 +85,42 @@ const today = new Date();
 	
 	.footer-brand a:hover {
 		opacity: 0.8;
+	}
+	
+	.footer-links {
+		display: flex;
+		gap: 1.5rem;
+	}
+	
+	.footer-links a {
+		color: #FFFFFF;
+		text-decoration: none;
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-size: 1rem;
+		letter-spacing: 0.02em;
+		transition: opacity 0.2s ease;
+		position: relative;
+	}
+	
+	.footer-links a:after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #FFFFFF;
+		opacity: 0.5;
+		transition: opacity 0.2s ease;
+	}
+	
+	.footer-links a:hover:after {
+		opacity: 1;
+	}
+	
+	.footer-links a:focus-visible {
+		outline: 2px solid #FFFFFF;
+		outline-offset: 4px;
 	}
 	
 	.copyright {
@@ -111,8 +162,27 @@ const today = new Date();
 		}
 	}
 	
+	@media (max-width: 768px) {
+		.footer-content {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.footer-container {
+			padding: 0 1.5rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.footer-container {
+			padding: 0 1rem;
+		}
+	}
+	
 	@media (forced-colors: active) {
-		.social-links a:focus-visible {
+		.social-links a:focus-visible,
+		.footer-links a:focus-visible {
 			outline: 2px solid ButtonText;
 		}
 	}
