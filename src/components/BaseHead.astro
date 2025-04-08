@@ -2,17 +2,71 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { SEO } from 'astro-seo';
 
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	article?: boolean;
+	publishDate?: Date;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { 
+	title, 
+	description, 
+	image = '/blog-placeholder-1.jpg',
+	article = false,
+	publishDate
+} = Astro.props;
+
+// Current URL for canonical links
+const currentUrl = Astro.url.toString();
 ---
+
+<!-- DNS Prefetch and Preconnect for 3rd party services -->
+<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+<link rel="dns-prefetch" href="https://use.typekit.net" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+<!-- SEO Component -->
+<SEO
+  title={title}
+  description={description}
+  canonical={canonicalURL.toString()}
+  openGraph={{
+    basic: {
+      title: title,
+      type: article ? 'article' : 'website',
+      image: new URL(image, Astro.url).toString(),
+      url: currentUrl,
+    },
+    optional: {
+      description: description,
+      siteName: "Gavin Elliott",
+      locale: "en_US",
+    },
+    image: {
+      alt: `Image for ${title}`,
+    },
+    article: article ? {
+      publishedTime: publishDate?.toISOString(),
+      authors: ["Gavin Elliott"],
+    } : undefined,
+  }}
+  twitter={{
+    card: "summary_large_image",
+    site: "@gavinelliott",
+    creator: "@gavinelliott",
+    title: title,
+    description: description,
+    image: new URL(image, Astro.url).toString(),
+    imageAlt: `Image for ${title}`,
+  }}
+/>
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
@@ -26,7 +80,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="color-scheme" content="light" />
 <meta name="theme-color" content="#FFFFF8" />
 
-<!-- Font preloads -->
+<!-- Font preloads - using woff2 which is more modern and smaller -->
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 
@@ -36,23 +90,42 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<!-- Performance hints for browser - prefetch on hover -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Prefetch pages on hover/focus for faster navigation
+  const links = document.querySelectorAll('a');
+  const prefetched = new Set();
+  
+  links.forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener('mouseenter', () => {
+        const href = link.getAttribute('href');
+        
+        if (href && !prefetched.has(href)) {
+          const linkEl = document.createElement('link');
+          linkEl.rel = 'prefetch';
+          linkEl.href = href;
+          document.head.appendChild(linkEl);
+          prefetched.add(href);
+        }
+      });
+    }
+  });
+});
+</script>
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
-<meta property="og:image:alt" content={`Image for ${title}`} />
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
-<meta property="twitter:image:alt" content={`Image for ${title}`} />
+<!-- Service worker registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.error('Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
