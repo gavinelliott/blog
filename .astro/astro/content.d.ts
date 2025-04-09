@@ -235,6 +235,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"gav-is-vibe-coding.md": {
+	id: "gav-is-vibe-coding.md";
+  slug: "gav-is-vibe-coding";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "geek-mental-help-week-newcastle.md": {
 	id: "geek-mental-help-week-newcastle.md";
   slug: "geek-mental-help-week-newcastle";

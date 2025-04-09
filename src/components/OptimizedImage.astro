@@ -1,0 +1,71 @@
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  format?: 'webp' | 'avif' | 'png' | 'jpeg';
+  quality?: number;
+  loading?: 'eager' | 'lazy';
+  densities?: number[];
+}
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height, 
+  class: className = "", 
+  format = "webp", 
+  quality = 80,
+  loading = "lazy",
+  densities = [1, 2]
+} = Astro.props;
+
+// Determine if we're dealing with a remote image
+const isRemoteImage = typeof src === 'string' && (src.startsWith('http://') || src.startsWith('https://'));
+
+// Handle both local and remote images
+let imgSrc = src;
+
+if (isRemoteImage) {
+  imgSrc = src;
+} else {
+  // For local images
+  try {
+    // First try to import as is
+    imgSrc = src;
+  } catch (e) {
+    // If that fails, prepend with /public
+    try {
+      imgSrc = `/public${src.startsWith('/') ? src : `/${src}`}`;
+    } catch (e2) {
+      // Last attempt: try with /images/
+      imgSrc = `/images/${src.replace(/^\/images\//, '')}`;
+    }
+  }
+}
+
+{isRemoteImage ? (
+  <img 
+    src={imgSrc} 
+    alt={alt} 
+    width={width} 
+    height={height} 
+    class={className}
+    loading={loading}
+  />
+) : (
+  <Image 
+    src={imgSrc} 
+    alt={alt} 
+    width={width || 800} 
+    height={height || 600} 
+    class={className}
+    format={format}
+    quality={quality}
+    loading={loading}
+  />
+)} 
