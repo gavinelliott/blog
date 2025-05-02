@@ -1,0 +1,179 @@
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+
+// Metadata for the page
+const title = "Work Case Studies | Gavin Elliott";
+const description = "Explore case studies of selected work projects by Gavin Elliott.";
+
+<CaseStudyLayout title={title} description={description} noIndex={true}>
+	<div class="case-studies-wrapper">
+		<div class="case-study-header">
+			<h1>Case Studies</h1>
+			<div class="subtitle">
+				Selected work and projects
+			</div>
+		</div>
+		
+		<div class="case-studies-grid">
+			<!-- Example case study cards - to be replaced with actual case studies -->
+			<a href="/work/project-example" class="case-study-card" tabindex="0" aria-label="View Project Example case study">
+				<div class="case-study-image">
+					<div class="image-placeholder"></div>
+				</div>
+				<div class="case-study-content">
+					<h2>Project Example</h2>
+					<p class="case-study-description">A brief overview of this case study and the work involved.</p>
+					<div class="case-study-tags">
+						<span>UX Design</span>
+						<span>Research</span>
+					</div>
+				</div>
+			</a>
+			
+			<!-- Add more case study cards as needed -->
+		</div>
+	</div>
+</CaseStudyLayout>
+
+<style>
+	.case-studies-wrapper {
+		padding: 1rem 0 4rem;
+	}
+	
+	.case-study-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	
+	.case-study-header h1 {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 3.5rem;
+		margin-bottom: 0.5rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #051005;
+		line-height: 1.1;
+	}
+	
+	.subtitle {
+		font-family: "linotype-sabon", sans-serif;
+		font-size: 1.4rem;
+		color: rgba(5, 16, 5, 0.8);
+	}
+	
+	.case-studies-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 2.5rem;
+		margin-top: 3rem;
+	}
+	
+	.case-study-card {
+		display: block;
+		text-decoration: none;
+		color: #051005;
+		background-color: rgba(144, 176, 144, 0.1);
+		border-radius: 8px;
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		height: 100%;
+	}
+	
+	.case-study-card:hover, 
+	.case-study-card:focus {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(5, 16, 5, 0.1);
+		outline: none;
+	}
+	
+	.case-study-card:focus-visible {
+		outline: 2px solid #90B090;
+		outline-offset: 4px;
+	}
+	
+	.case-study-image {
+		width: 100%;
+		height: 220px;
+		overflow: hidden;
+	}
+	
+	.image-placeholder {
+		width: 100%;
+		height: 100%;
+		background-color: #90B090;
+		opacity: 0.8;
+	}
+	
+	.case-study-content {
+		padding: 1.5rem;
+	}
+	
+	.case-study-content h2 {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 1.75rem;
+		margin: 0 0 0.75rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #051005;
+		line-height: 1.2;
+	}
+	
+	.case-study-description {
+		font-family: "linotype-sabon", sans-serif;
+		font-size: 1.1rem;
+		line-height: 1.5;
+		margin-bottom: 1.25rem;
+		color: rgba(5, 16, 5, 0.9);
+	}
+	
+	.case-study-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.case-study-tags span {
+		background-color: rgba(144, 176, 144, 0.2);
+		color: #051005;
+		padding: 0.25rem 0.75rem;
+		border-radius: 4px;
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-size: 0.9rem;
+		letter-spacing: 0.02em;
+	}
+	
+	@media (max-width: 768px) {
+		.case-studies-grid {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 2rem;
+		}
+		
+		.case-study-header h1 {
+			font-size: 2.75rem;
+		}
+		
+		.subtitle {
+			font-size: 1.25rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.case-studies-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		
+		.case-study-header h1 {
+			font-size: 2.25rem;
+		}
+		
+		.subtitle {
+			font-size: 1.1rem;
+		}
+		
+		.case-study-content h2 {
+			font-size: 1.5rem;
+		}
+	}
+</style> 

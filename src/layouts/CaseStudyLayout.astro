@@ -1,0 +1,115 @@
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import { SITE_TITLE } from '../consts';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	noIndex?: boolean;
+}
+
+const { title, description, image, noIndex = true } = Astro.props;
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+		{noIndex && (
+			<meta name="robots" content="noindex, nofollow" />
+		)}
+		<style>
+			/* Global styles to prevent horizontal scrolling */
+			html, body {
+				overflow-x: hidden;
+				position: relative;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			/* Skip to main content link for keyboard users */
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #90B090;
+				color: #051005;
+				padding: 8px;
+				z-index: 2000;
+				transition: top 0.3s ease;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+			}
+			
+			.skip-link:focus {
+				top: 0;
+			}
+			
+			/* Remove outline on main when it receives focus via skip link */
+			[id="main-content"]:focus {
+				outline: none;
+			}
+			
+			/* Case study specific styles */
+			.case-study-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 6rem 2rem 3rem;
+				color: #051005;
+				background-color: #FFFFF8;
+			}
+			
+			.case-study-header {
+				margin-bottom: 3rem;
+				text-align: center;
+			}
+			
+			.case-study-header h1 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 3.5rem;
+				margin-bottom: 1rem;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				color: #051005;
+				line-height: 1.1;
+			}
+			
+			.case-study-metadata {
+				font-family: "linotype-sabon", sans-serif;
+				margin-bottom: 2rem;
+				font-size: 1.2rem;
+				color: rgba(5, 16, 5, 0.8);
+			}
+			
+			@media (max-width: 768px) {
+				.case-study-container {
+					padding: 5rem 1.5rem 2rem;
+				}
+				
+				.case-study-header h1 {
+					font-size: 2.75rem;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.case-study-container {
+					padding: 4.5rem 1rem 1.5rem;
+				}
+				
+				.case-study-header h1 {
+					font-size: 2.25rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<Navigation />
+		<main id="main-content" tabindex="-1" class="case-study-container">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html> 

@@ -1,0 +1,366 @@
+---
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+// Metadata for the page
+const title = "Project Example | Case Study | Gavin Elliott";
+const description = "A detailed case study of the Project Example, showcasing the process, challenges, and solutions.";
+---
+
+<CaseStudyLayout title={title} description={description} noIndex={true}>
+	<article class="case-study">
+		<div class="case-study-header">
+			<h1>Project Example</h1>
+			<div class="case-study-metadata">
+				<div class="project-date">2023</div>
+				<div class="project-categories">UX Design, Research, Strategy</div>
+			</div>
+		</div>
+		
+		<div class="case-study-hero">
+			<div class="hero-placeholder"></div>
+		</div>
+		
+		<div class="case-study-content">
+			<section class="overview-section">
+				<h2>Overview</h2>
+				<div class="overview-grid">
+					<div class="overview-col">
+						<h3>The Challenge</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl eget ultricies ultricies.</p>
+					</div>
+					<div class="overview-col">
+						<h3>The Approach</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl eget ultricies ultricies.</p>
+					</div>
+					<div class="overview-col">
+						<h3>The Outcome</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl eget ultricies ultricies.</p>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<h2>The Process</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</p>
+				
+				<div class="process-step">
+					<h3>1. Research & Discovery</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</p>
+					<div class="image-grid">
+						<div class="image-placeholder"></div>
+						<div class="image-placeholder"></div>
+					</div>
+				</div>
+				
+				<div class="process-step">
+					<h3>2. Design & Iteration</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</p>
+					<div class="image-placeholder full-width"></div>
+				</div>
+				
+				<div class="process-step">
+					<h3>3. Implementation & Results</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</p>
+					<div class="stats-grid">
+						<div class="stat-card">
+							<div class="stat-value">85%</div>
+							<div class="stat-label">Increase in user engagement</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-value">42%</div>
+							<div class="stat-label">Decrease in bounce rate</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-value">30k+</div>
+							<div class="stat-label">New users acquired</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<h2>Key Learnings</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</p>
+				<ul class="key-learnings-list">
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+					<li>Nullam euismod, nisi vel consectetur euismod.</li>
+					<li>Nisi nisl consectetur nisi, euismod consectetur nisi vel consectetur euismod.</li>
+				</ul>
+			</section>
+			
+			<section class="next-case-study">
+				<h2>Next Case Study</h2>
+				<a href="/work/another-project" class="next-project-link" tabindex="0" aria-label="View Another Project case study">
+					<span class="next-project-title">Another Project</span>
+					<span class="next-project-arrow">→</span>
+				</a>
+			</section>
+		</div>
+	</article>
+</CaseStudyLayout>
+
+<style>
+	.case-study {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.case-study-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	
+	.case-study-header h1 {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #051005;
+		line-height: 1.1;
+	}
+	
+	.case-study-metadata {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		font-family: "linotype-sabon", sans-serif;
+		font-size: 1.2rem;
+		color: rgba(5, 16, 5, 0.8);
+	}
+	
+	.case-study-hero {
+		margin-bottom: 4rem;
+		width: 100%;
+	}
+	
+	.hero-placeholder {
+		width: 100%;
+		height: 500px;
+		background-color: #90B090;
+		opacity: 0.8;
+		border-radius: 8px;
+	}
+	
+	.case-study-content {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		font-family: "linotype-sabon", sans-serif;
+		font-size: 1.25rem;
+		line-height: 1.6;
+		color: rgba(5, 16, 5, 0.9);
+	}
+	
+	.case-study-content h2 {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 2.5rem;
+		margin: 3rem 0 1.5rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #051005;
+		line-height: 1.2;
+	}
+	
+	.case-study-content h3 {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 1.75rem;
+		margin: 2rem 0 1rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #051005;
+		line-height: 1.2;
+	}
+	
+	.case-study-content p {
+		margin-bottom: 1.5rem;
+	}
+	
+	.overview-section {
+		margin-bottom: 3rem;
+	}
+	
+	.overview-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	
+	.process-step {
+		margin-bottom: 4rem;
+	}
+	
+	.image-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+	
+	.image-placeholder {
+		width: 100%;
+		height: 300px;
+		background-color: rgba(144, 176, 144, 0.3);
+		border-radius: 8px;
+	}
+	
+	.image-placeholder.full-width {
+		margin: 2rem 0;
+	}
+	
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+	
+	.stat-card {
+		background-color: rgba(144, 176, 144, 0.1);
+		padding: 2rem 1.5rem;
+		text-align: center;
+		border-radius: 8px;
+	}
+	
+	.stat-value {
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 2.5rem;
+		color: #051005;
+		margin-bottom: 0.5rem;
+	}
+	
+	.stat-label {
+		font-size: 1.1rem;
+	}
+	
+	.key-learnings-list {
+		margin-left: 1.5rem;
+		margin-bottom: 3rem;
+	}
+	
+	.key-learnings-list li {
+		margin-bottom: 1rem;
+	}
+	
+	.next-case-study {
+		margin: 5rem 0 2rem;
+		text-align: center;
+	}
+	
+	.next-project-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 1rem;
+		font-family: "franklin-gothic-urw-comp", sans-serif;
+		font-weight: 600;
+		font-size: 1.75rem;
+		color: #051005;
+		text-decoration: none;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		transition: transform 0.3s ease;
+		padding: 0.5rem 1rem;
+	}
+	
+	.next-project-link:hover,
+	.next-project-link:focus {
+		transform: translateX(10px);
+		outline: none;
+	}
+	
+	.next-project-link:focus-visible {
+		outline: 2px solid #90B090;
+		outline-offset: 4px;
+	}
+	
+	.next-project-arrow {
+		font-size: 1.5rem;
+	}
+	
+	@media (max-width: 960px) {
+		.overview-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		
+		.stats-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		
+		.hero-placeholder {
+			height: 400px;
+		}
+		
+		.case-study-header h1 {
+			font-size: 3rem;
+		}
+		
+		.case-study-content h2 {
+			font-size: 2.25rem;
+		}
+		
+		.case-study-content h3 {
+			font-size: 1.5rem;
+		}
+	}
+	
+	@media (max-width: 768px) {
+		.image-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.hero-placeholder {
+			height: 300px;
+		}
+		
+		.case-study-header h1 {
+			font-size: 2.75rem;
+		}
+		
+		.case-study-content {
+			font-size: 1.2rem;
+		}
+		
+		.case-study-content h2 {
+			font-size: 2rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.case-study-header h1 {
+			font-size: 2.25rem;
+		}
+		
+		.case-study-metadata {
+			gap: 1rem;
+			font-size: 1.1rem;
+		}
+		
+		.hero-placeholder {
+			height: 200px;
+		}
+		
+		.case-study-content {
+			font-size: 1.1rem;
+		}
+		
+		.case-study-content h2 {
+			font-size: 1.8rem;
+		}
+		
+		.case-study-content h3 {
+			font-size: 1.4rem;
+		}
+		
+		.next-project-link {
+			font-size: 1.5rem;
+		}
+	}
+</style> 
