@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import { SITE_TITLE } from '../consts';
+import '../styles/case-study.css';
 
 interface Props {
 	title: string;
@@ -53,55 +54,25 @@ const { title, description, image, noIndex = true } = Astro.props;
 				outline: none;
 			}
 			
-			/* Case study specific styles */
+			/* Case study container only */
 			.case-study-container {
-				max-width: 1200px;
+				width: 100% !important; /* Override global CSS */
+				max-width: 1200px !important; /* Match navigation width */
 				margin: 0 auto;
 				padding: 6rem 2rem 3rem;
 				color: #051005;
 				background-color: #FFFFF8;
 			}
 			
-			.case-study-header {
-				margin-bottom: 3rem;
-				text-align: center;
-			}
-			
-			.case-study-header h1 {
-				font-family: "franklin-gothic-urw-comp", sans-serif;
-				font-weight: 600;
-				font-size: 3.5rem;
-				margin-bottom: 1rem;
-				letter-spacing: 0.02em;
-				text-transform: uppercase;
-				color: #051005;
-				line-height: 1.1;
-			}
-			
-			.case-study-metadata {
-				font-family: "linotype-sabon", sans-serif;
-				margin-bottom: 2rem;
-				font-size: 1.2rem;
-				color: rgba(5, 16, 5, 0.8);
-			}
-			
 			@media (max-width: 768px) {
 				.case-study-container {
 					padding: 5rem 1.5rem 2rem;
-				}
-				
-				.case-study-header h1 {
-					font-size: 2.75rem;
 				}
 			}
 			
 			@media (max-width: 480px) {
 				.case-study-container {
 					padding: 4.5rem 1rem 1.5rem;
-				}
-				
-				.case-study-header h1 {
-					font-size: 2.25rem;
 				}
 			}
 		</style>

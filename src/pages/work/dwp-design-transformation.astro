@@ -1,0 +1,88 @@
+---
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+
+// Metadata for the page
+const title = "Tackling design debt across large-scale services | Gavin Elliott";
+const description = "A personal account of building, scaling, and leading design at DWP—growing a community, setting standards, and transforming government services for millions.";
+---
+
+<CaseStudyLayout title={title} description={description} noIndex={true}>
+	<article class="case-study">
+		<div class="case-study-header">
+			<h1 class="case-study-title">Tackling design debt across large-scale services</h1>
+			<div class="case-study-metadata">
+				<div>2016-2022</div>
+				<div>Design Leadership, Org Design, Service Design, Community Building</div>
+			</div>
+		</div>
+		
+		<div class="case-study-hero">
+			<div class="hero-placeholder"></div>
+		</div>
+		
+		<div class="case-study-content">
+			<section class="overview-section">
+				<h2>Overview</h2>
+				<p>A few years ago, I noticed a pattern. And not the good kind.</p>
+
+				<p>Our services were starting to feel inconsistent—visually, structurally, and emotionally. The kind of inconsistency that doesn't just frustrate users but slowly erodes trust. Some components looked off. Others behaved slightly differently depending on which service you were in. Language shifted without intent. The seams were showing.</p>
+					
+				<p>And when seams show in government services, they don't fray quietly.</p>
+				
+				<div class="two-column-layout">
+					<div>
+						<h3>The Challenge</h3>
+						<p>What I was seeing—and more importantly, feeling—was design debt. The kind that builds up over time across large organisations, especially when you're delivering at pace. Different teams, timelines, tools and backlogs all feeding into the same design system, but with different understandings of how and when to use it.</p>
+
+						<p>This wasn't about bad designers or poor decisions. It was systemic. Teams were shipping features fast. Priorities were shifting weekly. And somewhere along the way, we stopped having the full picture of how consistent our user experiences really were.</p>
+					</div>
+				</div>
+				
+				<h2>The Outcome</h2>
+				<p>This is a placeholder for the outcome content. After the two-column section, we're back to a single column that spans the full width of the content area.</p>
+				
+				<div class="stats-grid">
+					<div class="stat-card">
+						<div class="stat-value">70+</div>
+						<div class="stat-label">Designers in community</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-value">£4.2M</div>
+						<div class="stat-label">Estimated savings</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-value">6+</div>
+						<div class="stat-label">Years of transformation</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Add more sections as needed -->
+			
+			<section class="next-case-study">
+				<h2>Next Case Study</h2>
+				<a href="/work/project-example" class="next-project-link" tabindex="0" aria-label="View Project Example case study">
+					<span class="next-project-title">Project Example</span>
+					<span class="next-project-arrow">→</span>
+				</a>
+			</section>
+		</div>
+	</article>
+</CaseStudyLayout>
+
+<style>
+	/* Page-specific styles only - these won't conflict with the global styles */
+	.two-column-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		margin: 2rem 0 3rem;
+	}
+	
+	@media (max-width: 768px) {
+		.two-column-layout {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+	}
+</style> 

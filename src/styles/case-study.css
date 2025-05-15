@@ -1,0 +1,270 @@
+/* Case Study Styles */
+
+.case-study {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.case-study-header {
+	text-align: left;
+	margin-bottom: 3rem;
+}
+
+/* Large case study heading */
+.case-study-title {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 700;
+	font-size: 4rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: #051005;
+	line-height: 1;
+}
+
+/* Responsive styles for the large heading */
+@media (min-width: 768px) {
+	.case-study-title {
+		font-size: 6rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.case-study-title {
+		font-size: 8rem;
+	}
+}
+
+.case-study-metadata {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 2rem;
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.2rem;
+	color: rgba(5, 16, 5, 0.8);
+}
+
+.case-study-hero {
+	margin-bottom: 4rem;
+	width: 100%;
+}
+
+.hero-placeholder {
+	width: 100%;
+	height: 500px;
+	background-color: #90B090;
+	opacity: 0.8;
+	border-radius: 8px;
+}
+
+.case-study-content {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.6;
+	color: rgba(5, 16, 5, 0.9);
+}
+
+.case-study-content h2 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 2.5rem;
+	margin: 3rem 0 1.5rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #051005;
+	line-height: 1.2;
+}
+
+.case-study-content h3 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.75rem;
+	margin: 2rem 0 1rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #051005;
+	line-height: 1.2;
+}
+
+.case-study-content p {
+	margin-bottom: 1.5rem;
+}
+
+.case-study-content ul {
+	margin-bottom: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+.case-study-content li {
+	margin-bottom: 0.75rem;
+}
+
+.case-study-content strong {
+	font-weight: 600;
+	color: #051005;
+}
+
+.overview-section {
+	margin-bottom: 3rem;
+}
+
+.process-step {
+	margin-bottom: 4rem;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.image-placeholder {
+	width: 100%;
+	height: 300px;
+	background-color: rgba(144, 176, 144, 0.3);
+	border-radius: 8px;
+}
+
+.image-placeholder.full-width {
+	margin: 2rem 0;
+}
+
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.stat-card {
+	background-color: rgba(144, 176, 144, 0.1);
+	padding: 2rem 1.5rem;
+	text-align: left;
+	border-radius: 8px;
+}
+
+.stat-value {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 2.5rem;
+	color: #051005;
+	margin-bottom: 0.5rem;
+}
+
+.stat-label {
+	font-size: 1.1rem;
+}
+
+.key-learnings-list {
+	margin-left: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.key-learnings-list li {
+	margin-bottom: 1rem;
+}
+
+.next-case-study {
+	margin: 5rem 0 2rem;
+	text-align: left;
+}
+
+.next-project-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.75rem;
+	color: #051005;
+	text-decoration: none;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	transition: transform 0.3s ease;
+	padding: 0.5rem 1rem;
+}
+
+.next-project-link:hover,
+.next-project-link:focus {
+	transform: translateX(10px);
+	outline: none;
+}
+
+.next-project-link:focus-visible {
+	outline: 2px solid #90B090;
+	outline-offset: 4px;
+}
+
+.next-project-arrow {
+	font-size: 1.5rem;
+}
+
+@media (max-width: 960px) {
+	.stats-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	
+	.hero-placeholder {
+		height: 400px;
+	}
+	
+	.case-study-content h2 {
+		font-size: 2.25rem;
+	}
+	
+	.case-study-content h3 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.image-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.hero-placeholder {
+		height: 300px;
+	}
+	
+	.case-study-content {
+		font-size: 1.2rem;
+	}
+	
+	.case-study-content h2 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.case-study-metadata {
+		gap: 1rem;
+		font-size: 1.1rem;
+	}
+	
+	.hero-placeholder {
+		height: 200px;
+	}
+	
+	.case-study-content {
+		font-size: 1.1rem;
+	}
+	
+	.case-study-content h2 {
+		font-size: 1.8rem;
+	}
+	
+	.case-study-content h3 {
+		font-size: 1.4rem;
+	}
+	
+	.next-project-link {
+		font-size: 1.5rem;
+	}
+} 
