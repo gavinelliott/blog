@@ -1,7 +1,7 @@
 ---
 title: 'How AI Changed the Way I Lead'
 description: 'A personal reflection on the transformative impact of AI on leadership style and decision-making in a rapidly evolving technological landscape.'
-pubDate: '2025-06-02'
+pubDate: '2025-06-02T00:00:00.000Z'
 ---
 
 When I first started using AI tools about two years ago, it wasn't to replace anything. It was about exploration, trying to understand more deeply, test faster and maybe even move a little quicker when it made sense.
