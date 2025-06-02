@@ -1,5 +1,5 @@
 {
-  "name": "@example/blog",
+  "name": "gavinelliott-blog",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -22,5 +22,8 @@
     "astro-seo": "^0.8.4",
     "sharp": "^0.34.1",
     "terser": "^5.39.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
