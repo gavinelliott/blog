@@ -156,308 +156,345 @@ declare module 'astro:content' {
   slug: "2-years-ago";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "a-letter-from-the-future.md": {
 	id: "a-letter-from-the-future.md";
   slug: "a-letter-from-the-future";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "a-stand-up-retro-or-planning-does-not-make-you-agile.md": {
 	id: "a-stand-up-retro-or-planning-does-not-make-you-agile.md";
   slug: "a-stand-up-retro-or-planning-does-not-make-you-agile";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "change-and-grow.md": {
 	id: "change-and-grow.md";
   slug: "change-and-grow";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cleansing-the-soul-with-honest-design.md": {
 	id: "cleansing-the-soul-with-honest-design.md";
   slug: "cleansing-the-soul-with-honest-design";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "complaining-is-nothing-without-action.md": {
 	id: "complaining-is-nothing-without-action.md";
   slug: "complaining-is-nothing-without-action";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "creating-a-mentor-programme.md": {
 	id: "creating-a-mentor-programme.md";
   slug: "creating-a-mentor-programme";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "describing-things.md": {
 	id: "describing-things.md";
   slug: "describing-things";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "design-debt.md": {
 	id: "design-debt.md";
   slug: "design-debt";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "design-team-ethos.md": {
 	id: "design-team-ethos.md";
   slug: "design-team-ethos";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "designing-with-the-future-in-mind.md": {
 	id: "designing-with-the-future-in-mind.md";
   slug: "designing-with-the-future-in-mind";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "experiences-and-journeys.md": {
 	id: "experiences-and-journeys.md";
   slug: "experiences-and-journeys";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"from-design-leadership-to-vibe-coding.md": {
+	id: "from-design-leadership-to-vibe-coding.md";
+  slug: "from-design-leadership-to-vibe-coding";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "gav-is-vibe-coding.md": {
 	id: "gav-is-vibe-coding.md";
   slug: "gav-is-vibe-coding";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "geek-mental-help-week-newcastle.md": {
 	id: "geek-mental-help-week-newcastle.md";
   slug: "geek-mental-help-week-newcastle";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "good-product-development-process.md": {
 	id: "good-product-development-process.md";
   slug: "good-product-development-process";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "hello-you-hello-you-this-is-me.md": {
 	id: "hello-you-hello-you-this-is-me.md";
   slug: "hello-you-hello-you-this-is-me";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"how-ai-changed-the-way-i-lead.md": {
+	id: "how-ai-changed-the-way-i-lead.md";
+  slug: "how-ai-changed-the-way-i-lead";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "how-to-ask-for-feedback-that-might-be-hard-to-hear.md": {
 	id: "how-to-ask-for-feedback-that-might-be-hard-to-hear.md";
   slug: "how-to-ask-for-feedback-that-might-be-hard-to-hear";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "how-to-move-into-a-more-senior-role.md": {
 	id: "how-to-move-into-a-more-senior-role.md";
   slug: "how-to-move-into-a-more-senior-role";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "impostor-syndrome.md": {
 	id: "impostor-syndrome.md";
   slug: "impostor-syndrome";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "invest-in-yourself.md": {
 	id: "invest-in-yourself.md";
   slug: "invest-in-yourself";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "its-ok-to-not-have-all-the-answers.md": {
 	id: "its-ok-to-not-have-all-the-answers.md";
   slug: "its-ok-to-not-have-all-the-answers";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "its-time-for-something-new.md": {
 	id: "its-time-for-something-new.md";
   slug: "its-time-for-something-new";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "lets-start-from-the-beginning.md": {
 	id: "lets-start-from-the-beginning.md";
   slug: "lets-start-from-the-beginning";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "management-is-great-leadership.md": {
 	id: "management-is-great-leadership.md";
   slug: "management-is-great-leadership";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "managers-and-leaders.md": {
 	id: "managers-and-leaders.md";
   slug: "managers-and-leaders";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "managing-ics-who-are-a-similar-level-to-yourself.md": {
 	id: "managing-ics-who-are-a-similar-level-to-yourself.md";
   slug: "managing-ics-who-are-a-similar-level-to-yourself";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "measuring-effectiveness.md": {
 	id: "measuring-effectiveness.md";
   slug: "measuring-effectiveness";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "middle-ground.md": {
 	id: "middle-ground.md";
   slug: "middle-ground";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "my-2014.md": {
 	id: "my-2014.md";
   slug: "my-2014";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "normalised-design.md": {
 	id: "normalised-design.md";
   slug: "normalised-design";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "proactive-instead-of-reactive-product-development.md": {
 	id: "proactive-instead-of-reactive-product-development.md";
   slug: "proactive-instead-of-reactive-product-development";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "professional-progression.md": {
 	id: "professional-progression.md";
   slug: "professional-progression";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "reboot.md": {
 	id: "reboot.md";
   slug: "reboot";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "service-goals.md": {
 	id: "service-goals.md";
   slug: "service-goals";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "so-you-want-to-get-into-web-design.md": {
 	id: "so-you-want-to-get-into-web-design.md";
   slug: "so-you-want-to-get-into-web-design";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "the-day-that-ben-left.md": {
 	id: "the-day-that-ben-left.md";
   slug: "the-day-that-ben-left";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "the-first-days.md": {
 	id: "the-first-days.md";
   slug: "the-first-days";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "the-one-that-didnt-get-away.md": {
 	id: "the-one-that-didnt-get-away.md";
   slug: "the-one-that-didnt-get-away";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "the-rebuild.md": {
 	id: "the-rebuild.md";
   slug: "the-rebuild";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "time.md": {
 	id: "time.md";
   slug: "time";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "understanding-the-why.md": {
 	id: "understanding-the-why.md";
   slug: "understanding-the-why";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "user-centred-success-measures.md": {
 	id: "user-centred-success-measures.md";
   slug: "user-centred-success-measures";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "we-are-not-all-equal.md": {
 	id: "we-are-not-all-equal.md";
   slug: "we-are-not-all-equal";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "what-is-the-hardest-part-of-running-a-design-team.md": {
 	id: "what-is-the-hardest-part-of-running-a-design-team.md";
   slug: "what-is-the-hardest-part-of-running-a-design-team";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+};
+"work": {
+"building-high-performing-design-communities.md": {
+	id: "building-high-performing-design-communities.md";
+  slug: "building-high-performing-design-communities";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"sample-case-study.md": {
+	id: "sample-case-study.md";
+  slug: "sample-case-study";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"tackling-design-debt.md": {
+	id: "tackling-design-debt.md";
+  slug: "tackling-design-debt";
+  body: string;
+  collection: "work";
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -469,5 +506,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
