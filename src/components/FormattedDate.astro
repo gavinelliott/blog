@@ -1,21 +1,24 @@
 ---
 interface Props {
-	date: Date;
+	date: Date | string;
 }
 
 const { date } = Astro.props;
+
+// Convert string to Date object if necessary
+const dateObject = typeof date === 'string' ? new Date(date) : date;
 ---
 
 <time 
-	datetime={date.toISOString()} 
-	aria-label={`Posted on ${date.toLocaleDateString('en-us', {
+	datetime={dateObject.toISOString()} 
+	aria-label={`Posted on ${dateObject.toLocaleDateString('en-us', {
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric',
 	})}`}
 >
 	{
-		date.toLocaleDateString('en-us', {
+		dateObject.toLocaleDateString('en-us', {
 			year: 'numeric',
 			month: 'long',
 			day: 'numeric',
