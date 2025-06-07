@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import Posthog from '../components/posthog.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 interface Props {
@@ -15,6 +16,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<Posthog />
 		<style>
 			/* Global styles to prevent horizontal scrolling */
 			html, body {

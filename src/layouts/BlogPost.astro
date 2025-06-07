@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Posthog from '../components/posthog.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,6 +14,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<Posthog />
 		<style>
 			*, *::before, *::after {
 				box-sizing: border-box;
