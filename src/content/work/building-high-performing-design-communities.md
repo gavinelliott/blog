@@ -25,7 +25,7 @@ At Shopify, the dynamic was different, but the challenge was familiar. Incredibl
 
 ### WHO I BROUGHT TOGETHER
 
-This wasn't about 'design-only' bubbles. At DWP, I worked across user research and interactiondesign , content design and service design, alongside heads of role and capability leads. I also looped in senior stakeholders, delivery managers and product leaders to help embed design quality conversations at the right levels.
+This wasn't about 'design-only' bubbles. At DWP, I worked across user research and interaction design, content design and service design, alongside heads of role and capability leads. I also looped in senior stakeholders, delivery managers and product leaders to help embed design quality conversations at the right levels.
 
 At Shopify, I focused on uniting design leads across Domains, Custom Storefronts, Advanced Themes and more. I created deliberate pathways for our teams to learn from each other, not just present work in isolation.
 
