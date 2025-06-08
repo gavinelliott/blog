@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const caseStudies = await getCollection('work', ({ data }) => {
+	return !data.draft;
+});
+
+const sortedCaseStudies = caseStudies.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Case Studies | Gavin Elliott" description="Selection of case studies from my work as a design leader">
+	<head>
+		<meta name="robots" content="noindex, nofollow" />
+	</head>
+	
+	<Navigation />
+	
+	<div class="work-page-container">
+		<main class="work-main-content">
+					<div class="work-page-header">
+			<h1>WHAT I'VE HELPED TEAMS ACHIEVE</h1>
+			<h2>Real stories of leadership, impact and hard lessons learned.</h2>
+			<p>This isn't a traditional portfolio. You won't find polished mockups or pixel-perfect flows. What you will find are stories, real examples of how I've led teams, shaped strategy, increased the quality bar, fixed broken processes and helped organisations deliver better services and products for the people they serve.</p>
+			<p>Each one focuses on what was happening, who was involved, what I did as a leader and what changed as a result.</p>
+		</div>
+
+					<div class="work-case-studies-grid">
+				{sortedCaseStudies.map((caseStudy) => (
+					<article class="work-case-study-card">
+						<a href={`/work/${caseStudy.slug}/`} class="work-case-link">
+							<div class="work-case-image">
+								{caseStudy.data.heroImage ? (
+									<img 
+										src={caseStudy.data.heroImage} 
+										alt={`${caseStudy.data.title} case study preview`}
+										loading="lazy"
+									/>
+								) : (
+									<div class="work-case-image-placeholder">
+										Case Study
+									</div>
+								)}
+							</div>
+							<div class="work-case-content">
+								<h3>{caseStudy.data.title}</h3>
+								<div class="work-case-meta">
+									<span class="work-case-client">{caseStudy.data.client}</span>
+								</div>
+								<p class="work-case-description">{caseStudy.data.description}</p>
+							</div>
+						</a>
+					</article>
+				))}
+			</div>
+
+			<section class="work-cta-section">
+				<h3>Interested in working together?</h3>
+				<p>I'm always open to discussing new opportunities and design challenges. Let's connect and explore how strategic design leadership can drive your next project.</p>
+			</section>
+		</main>
+	</div>
+</Layout>

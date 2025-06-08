@@ -460,6 +460,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
+"work": {
+"building-high-performing-design-communities.md": {
+	id: "building-high-performing-design-communities.md";
+  slug: "building-high-performing-design-communities";
+  body: string;
+  collection: "work";
+  data: InferEntrySchema<"work">
+} & { render(): Render[".md"] };
+"tackling-design-debt.md": {
+	id: "tackling-design-debt.md";
+  slug: "tackling-design-debt";
+  body: string;
+  collection: "work";
+  data: InferEntrySchema<"work">
+} & { render(): Render[".md"] };
+};
 
 	};
 

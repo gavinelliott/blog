@@ -130,7 +130,7 @@ body {
 	top: 0;
 }
 
-main {
+main:not(.work-main-content) {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
@@ -238,25 +238,430 @@ hr {
 	body {
 		font-size: 18px;
 	}
-	main {
+	main:not(.work-main-content) {
 		padding: 1em;
 	}
 }
 
 .sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
+	position: absolute;
 	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
+	border: 0;
+}
+
+/* WORK PAGE CUSTOM STYLES */
+.work-page-container {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #FFFFF8 0%, #F8FFF5 50%, #F5FFF8 100%);
+	position: relative;
+}
+
+.work-hero-section {
+	background: linear-gradient(135deg, #051005 0%, #0d1512 50%, #172823 100%);
+	padding: 8rem 2rem 6rem;
+	margin: 0 30px 4rem;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+}
+
+.work-hero-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(circle at 30% 70%, rgba(144, 176, 144, 0.1) 0%, transparent 50%);
+	z-index: 1;
+}
+
+.work-hero-content {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+.work-hero-content h1 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 700;
+	font-size: 3.5rem;
+	color: #FFFFFF;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+}
+
+.work-hero-content p {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.9);
+	line-height: 1.4;
+	margin: 0;
+	font-weight: 400;
+}
+
+.work-main-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem 4rem;
+}
+
+.work-page-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 3rem -2rem 2rem;
+	padding: 2rem 2rem 4rem;
+	/* Break out of main container to match navigation width */
+	width: calc(100% + 4rem);
+}
+
+@media screen and (max-width: 768px) {
+	.work-page-header {
+		margin: 2rem 0;
+		padding: 2rem 0;
+		width: 100%;
+	}
+}
+
+.work-page-header h1 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 700;
+	font-size: 9rem;
+	color: #051005;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	text-align: center;
+	line-height: 0.85;
+	padding: 3rem 0;
+}
+
+/* Responsive scaling for work page header */
+@media screen and (max-width: 1024px) {
+	.work-page-header h1 {
+		font-size: 7rem !important;
+		padding: 2.5rem 0 !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.work-page-header h1 {
+		font-size: 4rem !important;
+		padding: 2rem 0 !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.work-page-header h1 {
+		font-size: 3rem !important;
+		padding: 1.5rem 0 !important;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.work-page-header h1 {
+		font-size: 2.5rem !important;
+		padding: 1rem 0 !important;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.work-page-header h1 {
+		font-size: 2rem !important;
+		padding: 0.75rem 0 !important;
+	}
+}
+
+.work-page-header h2 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: #051005;
+	margin: 0 auto 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	text-align: center;
+	max-width: 800px;
+}
+
+.work-page-header p {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.25rem;
+	color: rgba(5, 16, 5, 0.8);
+	max-width: 800px;
+	margin: 0 auto 1.5rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.work-page-header p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+
+
+
+.work-intro-section {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.work-intro-section h2 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 2rem;
+	color: #051005;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.work-intro-section p {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.25rem;
+	color: rgba(5, 16, 5, 0.8);
+	max-width: 600px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+.work-case-studies-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	gap: 3rem;
+	margin-top: 3rem;
+}
+
+.work-case-study-card {
+	background: #FFFFFF;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	box-shadow: 0 4px 20px rgba(5, 16, 5, 0.08);
+	position: relative;
+}
+
+.work-case-study-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #90B090, #172823);
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	transform-origin: left;
+}
+
+.work-case-study-card:hover::before {
+	transform: scaleX(1);
+}
+
+.work-case-study-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 40px rgba(5, 16, 5, 0.15);
+}
+
+.work-case-link {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	height: 100%;
+}
+
+.work-case-image {
+	position: relative;
+	height: 280px;
+	overflow: hidden;
+	background: linear-gradient(135deg, #F8FFF5, #F0F8F0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.work-case-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.work-case-study-card:hover .work-case-image img {
+	transform: scale(1.05);
+}
+
+.work-case-image-placeholder {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: rgba(5, 16, 5, 0.3);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.work-case-content {
+	padding: 2rem;
+}
+
+.work-case-content h3 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.75rem;
+	color: #051005;
+	margin: 0 0 1rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+.work-case-meta {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(5, 16, 5, 0.1);
+}
+
+.work-case-client {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+	color: #90B090;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.work-case-date {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 0.9rem;
+	color: rgba(5, 16, 5, 0.6);
+}
+
+.work-case-description {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: rgba(5, 16, 5, 0.8);
+	margin: 0;
+}
+
+.work-cta-section {
+	text-align: center;
+	margin-top: 6rem;
+	padding: 3rem 2rem;
+	background: rgba(144, 176, 144, 0.05);
+	border-radius: 12px;
+}
+
+.work-cta-section h3 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: #051005;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.work-cta-section p {
+	font-family: "linotype-sabon", sans-serif;
+	font-size: 1.1rem;
+	color: rgba(5, 16, 5, 0.8);
+	margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+	.work-case-studies-grid {
+		grid-template-columns: 1fr;
+		max-width: 700px;
+		margin: 3rem auto 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.work-main-content {
+		padding: 0 1.5rem 3rem;
+	}
+	
+	.work-page-header {
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.work-hero-section {
+		padding: 6rem 1.5rem 4rem;
+		margin: 0 15px 3rem;
+	}
+	
+	.work-hero-content h1 {
+		font-size: 2.5rem;
+	}
+	
+	.work-hero-content p {
+		font-size: 1.25rem;
+	}
+	
+	.work-main-content {
+		padding: 0 1.25rem 3rem;
+	}
+	
+	.work-page-header {
+		margin-left: -1.25rem;
+		margin-right: -1.25rem;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+	
+	.work-case-studies-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	
+	.work-case-content {
+		padding: 1.5rem;
+	}
+	
+	.work-case-content h3 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.work-hero-section {
+		margin: 0 10px 2rem;
+		padding: 4rem 1rem 3rem;
+	}
+	
+	.work-hero-content h1 {
+		font-size: 2rem;
+	}
+	
+	.work-hero-content p {
+		font-size: 1.1rem;
+	}
+	
+	.work-main-content {
+		padding: 0 1rem 2rem;
+	}
+	
+	.work-page-header {
+		margin-left: -1rem;
+		margin-right: -1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
