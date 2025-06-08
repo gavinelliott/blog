@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'work'>['data'];
 
@@ -17,29 +16,74 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 		<meta name="robots" content="noindex, nofollow" />
 		<style>
 			.case-study-container {
-				max-width: 800px;
+				max-width: 1200px;
 				margin: 0 auto;
-				padding: 2rem 0;
+				padding: 0 2rem;
 			}
 			
 			.case-header {
-				margin-bottom: 2rem;
-				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				margin: 3rem -2rem 2rem;
+				padding: 2rem 2rem 4rem;
+				width: calc(100% + 4rem);
+			}
+			
+			@media screen and (max-width: 768px) {
+				.case-header {
+					margin: 2rem 0;
+					padding: 2rem 0;
+					width: 100%;
+				}
 			}
 			
 			.case-header h1 {
 				font-family: "franklin-gothic-urw-comp", sans-serif;
-				font-weight: 600;
-				font-size: 2.5rem;
+				font-weight: 700;
+				font-size: 9rem;
+				color: #051005;
 				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: -0.02em;
+				text-align: center;
+				line-height: 0.85;
+				padding: 3rem 0;
+				width: 100%;
+			}
+			
+			.case-header h2 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.5rem;
+				color: #051005;
+				margin: 0 auto 2rem;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				text-align: center;
+				max-width: 800px;
+				width: 100%;
+			}
+			
+			.case-header p {
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.25rem;
+				color: rgba(5, 16, 5, 0.8);
+				max-width: 800px;
+				margin: 0 auto 1.5rem;
+				line-height: 1.5;
+				text-align: center;
+				width: 100%;
 			}
 			
 			.case-meta {
 				display: flex;
 				justify-content: center;
 				gap: 2rem;
-				margin: 1.5rem 0;
+				margin: 1.5rem auto 0;
 				flex-wrap: wrap;
+				max-width: 800px;
+				width: 100%;
 			}
 			
 			.meta-item {
@@ -53,11 +97,13 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 				font-weight: 500;
 				font-size: 0.9rem;
 				margin-bottom: 0.25rem;
-				color: rgb(var(--gray));
+				color: rgba(5, 16, 5, 0.6);
+				text-transform: uppercase;
 			}
 			
 			.meta-value {
 				font-family: "linotype-sabon", sans-serif;
+				color: #051005;
 			}
 			
 			.hero-image {
@@ -71,6 +117,9 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 			
 			.case-content {
 				margin-top: 2rem;
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 			
 			.prose {
@@ -106,13 +155,43 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 				color: var(--accent-hover);
 			}
 			
-			@media (max-width: 768px) {
+			/* Responsive scaling for case study header */
+			@media screen and (max-width: 1024px) {
 				.case-header h1 {
-					font-size: 2rem;
+					font-size: 7rem !important;
+					padding: 2.5rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 768px) {
+				.case-header h1 {
+					font-size: 4rem !important;
+					padding: 2rem 0 !important;
 				}
 				
 				.meta-item {
 					gap: 1.5rem;
+				}
+			}
+			
+			@media screen and (max-width: 600px) {
+				.case-header h1 {
+					font-size: 3rem !important;
+					padding: 1.5rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 480px) {
+				.case-header h1 {
+					font-size: 2.5rem !important;
+					padding: 1rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 360px) {
+				.case-header h1 {
+					font-size: 2rem !important;
+					padding: 0.75rem 0 !important;
 				}
 			}
 		</style>
@@ -121,25 +200,21 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 	<body>
 		<Navigation />
 		
-		<main id="main-content">
+		<main id="main-content" class="work-main-content">
 			<div class="case-study-container">
 				<article>
 					<div class="case-header">
 						<h1>{title}</h1>
-						<p>{description}</p>
+						<h2>{description}</h2>
 						
 						<div class="case-meta">
 							<div class="meta-item">
-								<span class="meta-label">Client</span>
+								<span class="meta-label">Where</span>
 								<span class="meta-value">{client}</span>
 							</div>
 							<div class="meta-item">
 								<span class="meta-label">Role</span>
 								<span class="meta-value">{role}</span>
-							</div>
-							<div class="meta-item">
-								<span class="meta-label">Date</span>
-								<span class="meta-value"><FormattedDate date={date} /></span>
 							</div>
 						</div>
 					</div>

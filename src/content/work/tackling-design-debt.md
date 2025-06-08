@@ -2,8 +2,8 @@
 title: 'Tackling Design Debt Across Large-Scale Services'
 description: 'How I identified, communicated and resolved design inconsistencies across multiple digital services.'
 date: '2023-06-15'
-client: 'Enterprise Organisation'
-role: 'Design Leader'
+client: 'UK Government'
+role: 'Design leader'
 featured: true
 draft: false
 heroImage: '/images/design-debt-hero.jpg'
