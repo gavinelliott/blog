@@ -29,9 +29,9 @@ So I did what a leader should do, I took accountability.
 
 ### WHAT I DID
 
-I called it out—formally and informally. I made it visible. In leadership meetings, design crits, 1:1s and show-and-tells, I used real examples to frame the issue. I talked about the risk of "design drift," about hidden duplication and about the invisible cost of fixing the same things in ten different places.
+I called it out, formally and informally. I made it visible. In leadership meetings, design crits, 1:1s and show-and-tells, I used real examples to frame the issue. I talked about the risk of "design drift," about hidden duplication and about the invisible cost of fixing the same things in ten different places.
 
-I set direction. I worked with our heads of role and embedded design leads to run a full inventory of what we had. Each team started documenting their components, screens and patterns. I asked them to annotate where the experience didn't match the design system—or where the system itself was falling short.
+I set direction. I worked with our heads of role and embedded design leads to run a full inventory of what we had. Each team started documenting their components, screens and patterns. I asked them to annotate where the experience didn't match the design system, or where the system itself was falling short.
 
 I didn't just want to know what was wrong. I wanted us to understand *why* it was happening and *where* the pain was showing up for users.
 
@@ -46,6 +46,6 @@ What changed?
 - Teams had a shared language and a shared understanding of the problem.
 - Product managers saw design consistency as part of delivery quality.
 - Designers felt supported in surfacing issues early, without pushback.
-- And the design system matured with real-world examples feeding into it—not in isolation.
+- And the design system matured with real-world examples feeding into it, not in isolation.
 
 Solving design debt was done by making it visible. I gave it weight. I created the space, language and structure so others could act on it too.
