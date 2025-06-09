@@ -11,7 +11,7 @@ heroImage: '/images/design-community-hero.jpg'
 
 ## BUILDING HIGH-PERFORMING DESIGN COMMUNITIES
 
-One of the most rewarding things I've done in my career isn't just leading teams—it's building communities.
+One of the most rewarding things I've done in my career isn't just leading teams, it's building communities.
 
 That might sound fluffy, but it's not. When you're working across 70+ designers in government or dozens of cross-functional UXers at Shopify, you learn very quickly: titles don't deliver quality. Communities do.
 
