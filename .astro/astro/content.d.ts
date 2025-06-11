@@ -172,6 +172,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"augment-not-replace-how-ai-fits-into-the-way-we-work.md": {
+	id: "augment-not-replace-how-ai-fits-into-the-way-we-work.md";
+  slug: "augment-not-replace-how-ai-fits-into-the-way-we-work";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "change-and-grow.md": {
 	id: "change-and-grow.md";
   slug: "change-and-grow";
