@@ -15,7 +15,7 @@ I wanted a standard that didn't just tick boxes but actually reflected what peop
 At its core, good user experience should solve a whole problem. That means:
 
 - Accessibility by default  
-- Simplicity that's earned  
+- Trust that's earned  
 - Support that's available before someone has to ask for it  
 
 I added ideas like being **reactively proactive** — designing services that respond to life events before someone has to struggle through them. I put **vulnerability at the centre**, not off to the side as an edge case. And I created space for **cross-channel journeys** because real life doesn't always happen in a single browser tab.
