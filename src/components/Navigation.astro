@@ -28,6 +28,7 @@ const currentPath = pathname.slice(1); // Remove the leading slash
             <a href="/" tabindex="0" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
             <a href="/about" tabindex="0" aria-current={currentPath === "about" ? "page" : undefined}>ABOUT</a>
             <a href="/writing" tabindex="0" aria-current={currentPath === "writing" ? "page" : undefined}>WRITING</a>
+            <a href="/shipped" tabindex="0" aria-current={currentPath === "shipped" || currentPath.startsWith("shipped/") ? "page" : undefined}>SHIPPED</a>
             <a href="/recommended-reads" tabindex="0" aria-current={currentPath === "recommended-reads" ? "page" : undefined}>READING</a>
             <a href="/speaking" tabindex="0" aria-current={currentPath === "speaking" ? "page" : undefined}>SPEAKING</a>
         </nav>
@@ -38,6 +39,7 @@ const currentPath = pathname.slice(1); // Remove the leading slash
                 <a href="/" tabindex="-1" aria-current={currentPath === "" ? "page" : undefined}>HOME</a>
                 <a href="/about" tabindex="-1" aria-current={currentPath === "about" ? "page" : undefined}>ABOUT</a>
                 <a href="/writing" tabindex="-1" aria-current={currentPath === "writing" ? "page" : undefined}>WRITING</a>
+                <a href="/shipped" tabindex="-1" aria-current={currentPath === "shipped" || currentPath.startsWith("shipped/") ? "page" : undefined}>SHIPPED</a>
                 <a href="/recommended-reads" tabindex="-1" aria-current={currentPath === "recommended-reads" ? "page" : undefined}>READING</a>
                 <a href="/speaking" tabindex="-1" aria-current={currentPath === "speaking" ? "page" : undefined}>SPEAKING</a>
             </nav>

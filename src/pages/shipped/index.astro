@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const projects = await getCollection('shipped', ({ data }) => {
+	return !data.draft;
+});
+
+const sortedProjects = projects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Shipped Projects | Gavin Elliott" description="Collection of projects I've built and shipped using agentic coding and AI-assisted development">
+	<Navigation />
+	
+	<div class="work-page-container">
+		<main class="work-main-content">
+			<div class="work-page-header">
+				<h1>WHAT I'VE BUILT AND SHIPPED</h1>
+				<h2>Real projects, real learning, real outcomes.</h2>
+				<p>This is my collection of shipped projects - things I've actually built, launched and learned from. Each one represents a journey from idea to execution, powered by agentic coding and AI-assisted development.</p>
+				<p>You'll find the stack I used, the current status, links to see them live (when available) and the story behind each build. Some succeeded, some didn't, but all taught me something valuable.</p>
+			</div>
+
+			<div class="work-case-studies-grid">
+				{sortedProjects.map((project) => (
+					<article class="work-case-study-card">
+						<a href={`/shipped/${project.slug}/`} class="work-case-link">
+							<div class="work-case-image">
+								{project.data.heroImage ? (
+									<img 
+										src={project.data.heroImage} 
+										alt={`${project.data.title} project preview`}
+										loading="lazy"
+									/>
+								) : (
+									<div class="work-case-image-placeholder">
+										Project
+									</div>
+								)}
+							</div>
+							<div class="work-case-content">
+								<h3>{project.data.title}</h3>
+								<div class="work-case-meta">
+									<span class="work-case-client">{project.data.stack}</span>
+									<span class="work-case-status" data-status={project.data.status.toLowerCase()}>{project.data.status}</span>
+								</div>
+								<p class="work-case-description">{project.data.description}</p>
+							</div>
+						</a>
+					</article>
+				))}
+			</div>
+
+			<section class="work-cta-section">
+				<h3>Want to build something together?</h3>
+				<p>I'm always interested in collaborating on new projects and exploring what's possible with AI-assisted development. Let's connect and see what we can ship.</p>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.work-case-status {
+		padding: 0.25rem 0.5rem;
+		border-radius: 3px;
+		font-size: 0.8rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+	}
+	
+	.work-case-status[data-status="live"] {
+		background-color: #22c55e;
+		color: white;
+	}
+	
+	.work-case-status[data-status="shipped"] {
+		background-color: #3b82f6;
+		color: white;
+	}
+	
+	.work-case-status[data-status="archived"] {
+		background-color: #6b7280;
+		color: white;
+	}
+	
+	.work-case-status[data-status="in development"] {
+		background-color: #f59e0b;
+		color: white;
+	}
+	
+	.work-case-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
+	}
+</style> 

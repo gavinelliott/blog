@@ -1,0 +1,295 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'shipped'>['data'];
+
+const { title, description, date, stack, status, link, github, heroImage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.shipped-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+			
+			.shipped-header {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				margin: 3rem -2rem 2rem;
+				padding: 2rem 2rem 4rem;
+				width: calc(100% + 4rem);
+			}
+			
+			@media screen and (max-width: 768px) {
+				.shipped-header {
+					margin: 2rem 0;
+					padding: 2rem 0;
+					width: 100%;
+				}
+			}
+			
+			.shipped-header h1 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 700;
+				font-size: 9rem;
+				color: #051005;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: -0.02em;
+				text-align: center;
+				line-height: 0.85;
+				padding: 3rem 0;
+				width: 100%;
+			}
+			
+			.shipped-header h2 {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.5rem;
+				color: #051005;
+				margin: 0 auto 2rem;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				text-align: center;
+				max-width: 800px;
+				width: 100%;
+			}
+			
+			.shipped-header p {
+				font-family: "linotype-sabon", sans-serif;
+				font-size: 1.25rem;
+				color: rgba(5, 16, 5, 0.8);
+				max-width: 800px;
+				margin: 0 auto 1.5rem;
+				line-height: 1.5;
+				text-align: center;
+				width: 100%;
+			}
+			
+			.shipped-meta {
+				display: flex;
+				justify-content: center;
+				gap: 2rem;
+				margin: 1.5rem auto 0;
+				flex-wrap: wrap;
+				max-width: 800px;
+				width: 100%;
+			}
+			
+			.meta-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			.meta-label {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 500;
+				font-size: 0.9rem;
+				margin-bottom: 0.25rem;
+				color: rgba(5, 16, 5, 0.6);
+				text-transform: uppercase;
+			}
+			
+			.meta-value {
+				font-family: "linotype-sabon", sans-serif;
+				color: #051005;
+			}
+			
+			.project-links {
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				margin: 2rem auto 0;
+				flex-wrap: wrap;
+				max-width: 800px;
+				width: 100%;
+			}
+			
+			.project-link {
+				display: inline-block;
+				padding: 0.75rem 1.5rem;
+				background-color: #051005;
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 500;
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				transition: background-color 0.2s ease;
+			}
+			
+			.project-link:hover {
+				background-color: rgba(5, 16, 5, 0.8);
+			}
+			
+			.project-link.github {
+				background-color: transparent;
+				color: #051005;
+				border: 2px solid #051005;
+			}
+			
+			.project-link.github:hover {
+				background-color: #051005;
+				color: white;
+			}
+			
+			.hero-image {
+				margin: 2rem 0;
+			}
+			
+			.hero-image img {
+				width: 100%;
+				border-radius: 4px;
+			}
+			
+			.shipped-content {
+				margin-top: 2rem;
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.prose {
+				font-family: "linotype-sabon", sans-serif;
+			}
+			
+			.prose :global(h2) {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 600;
+				font-size: 1.8rem;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			
+			.prose :global(h3) {
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 500;
+				font-size: 1.4rem;
+				margin-top: 2rem;
+				margin-bottom: 0.75rem;
+			}
+			
+			.back-link {
+				display: inline-block;
+				margin-top: 3rem;
+				color: var(--accent);
+				text-decoration: underline;
+				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-weight: 500;
+			}
+			
+			.back-link:hover {
+				color: var(--accent-hover);
+			}
+			
+			/* Responsive scaling for shipped header */
+			@media screen and (max-width: 1024px) {
+				.shipped-header h1 {
+					font-size: 7rem !important;
+					padding: 2.5rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 768px) {
+				.shipped-header h1 {
+					font-size: 4rem !important;
+					padding: 2rem 0 !important;
+				}
+				
+				.meta-item {
+					gap: 1.5rem;
+				}
+			}
+			
+			@media screen and (max-width: 600px) {
+				.shipped-header h1 {
+					font-size: 3rem !important;
+					padding: 1.5rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 480px) {
+				.shipped-header h1 {
+					font-size: 2.5rem !important;
+					padding: 1rem 0 !important;
+				}
+			}
+			
+			@media screen and (max-width: 360px) {
+				.shipped-header h1 {
+					font-size: 2rem !important;
+					padding: 0.75rem 0 !important;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<Navigation />
+		
+		<main id="main-content" class="work-main-content">
+			<div class="shipped-container">
+				<article>
+					<div class="shipped-header">
+						<h1>{title}</h1>
+						<h2>{description}</h2>
+						
+						<div class="shipped-meta">
+							<div class="meta-item">
+								<span class="meta-label">Stack</span>
+								<span class="meta-value">{stack}</span>
+							</div>
+							<div class="meta-item">
+								<span class="meta-label">Status</span>
+								<span class="meta-value">{status}</span>
+							</div>
+						</div>
+						
+						{(link || github) && (
+							<div class="project-links">
+								{link && (
+									<a href={link} class="project-link" target="_blank" rel="noopener noreferrer">
+										View Live
+									</a>
+								)}
+								{github && (
+									<a href={github} class="project-link github" target="_blank" rel="noopener noreferrer">
+										View Code
+									</a>
+								)}
+							</div>
+						)}
+					</div>
+					
+					{heroImage && (
+						<div class="hero-image">
+							<img src={heroImage} alt="" />
+						</div>
+					)}
+					
+					<div class="shipped-content">
+						<div class="prose">
+							<slot />
+						</div>
+					</div>
+					
+					<a href="/shipped" class="back-link">&larr; Back to Shipped Projects</a>
+				</article>
+			</div>
+		</main>
+		
+		<Footer />
+	</body>
+</html> 

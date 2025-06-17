@@ -179,6 +179,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"building-cleanreader-one-click-to-better-reading.md": {
+	id: "building-cleanreader-one-click-to-better-reading.md";
+  slug: "building-cleanreader-one-click-to-better-reading";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "change-and-grow.md": {
 	id: "change-and-grow.md";
   slug: "change-and-grow";
@@ -196,6 +203,13 @@ declare module 'astro:content' {
 "complaining-is-nothing-without-action.md": {
 	id: "complaining-is-nothing-without-action.md";
   slug: "complaining-is-nothing-without-action";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"conversations-that-matter-reflections-from-middlesbrough-front-end.md": {
+	id: "conversations-that-matter-reflections-from-middlesbrough-front-end.md";
+  slug: "conversations-that-matter-reflections-from-middlesbrough-front-end";
   body: string;
   collection: "blog";
   data: any
@@ -492,6 +506,22 @@ declare module 'astro:content' {
   slug: "what-is-the-hardest-part-of-running-a-design-team";
   body: string;
   collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+};
+"shipped": {
+"cleanreader.md": {
+	id: "cleanreader.md";
+  slug: "cleanreader";
+  body: string;
+  collection: "shipped";
+  data: any
+} & { render(): Render[".md"] };
+"coming-soon.md": {
+	id: "coming-soon.md";
+  slug: "coming-soon";
+  body: string;
+  collection: "shipped";
   data: any
 } & { render(): Render[".md"] };
 };

@@ -28,4 +28,21 @@ const work = defineCollection({
 	}),
 });
 
-export const collections = { blog, work };
+const shipped = defineCollection({
+	type: 'content',
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		date: z.coerce.date(),
+		stack: z.string(),
+		status: z.string(),
+		link: z.string().optional(),
+		github: z.string().optional(),
+		featured: z.boolean().optional(),
+		draft: z.boolean().optional(),
+		heroImage: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, work, shipped };
