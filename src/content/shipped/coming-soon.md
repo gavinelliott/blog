@@ -1,5 +1,5 @@
 ---
-title: 'BEST AIT THINGS'
+title: 'BEST AI THINGS'
 description: 'A curated AI tool directory built to fix the chaos of discovery.'
 date: '2024-12-01'
 stack: 'Next.js 14, Sanity, Typesense'
