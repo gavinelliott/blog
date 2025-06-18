@@ -49,3 +49,5 @@ Best AI Things was a stretch. Not because it was overly complex but because I ne
 It showed me what I could do with a clear focus and some consistency. And it reminded me that launching is more about momentum than polish.
 
 It now gets a few new submissions a week and I'm looking to try and automate these to a certain extent.
+
+[Go take a look.](https://bestaithings.com)
