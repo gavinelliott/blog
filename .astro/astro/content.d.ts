@@ -508,6 +508,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"why-i-believe-prototyping-in-code-beats-everything-else.md": {
+	id: "why-i-believe-prototyping-in-code-beats-everything-else.md";
+  slug: "why-i-believe-prototyping-in-code-beats-everything-else";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 };
 "shipped": {
 "bestaithings.md": {
