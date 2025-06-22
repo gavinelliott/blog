@@ -1,5 +1,5 @@
 ---
-title: 'Why I Believe Prototyping in Code Beats Everything Else'
+title: 'Why I believe prototyping in code beats everything else'
 description: 'A code prototype changes everything. When you prototype in code, the thing you are testing is real. It works in the browser. It works on any device. It responds to real-world variables.'
 pubDate: '2025-06-21'
 ---
@@ -30,8 +30,10 @@ With agentic coding and mature design systems, you can build a code prototype in
 
 Yes, someone will say, "It's not about the tool or type, it's about the learnings you gain." And I agree. But let's be honest. The speed at which you get to something real matters. The sooner you're testing the thing that's close to what users will have, the more useful that learning will be.
 
+And yes, I’ve heard you too. “It was never about the prototype tool, it was always about the assumptions.” Absolutely. Assumptions are at the core of all of this. But how you test them matters. A code prototype lets you test assumptions in a real environment with real users. It lets you see how those assumptions hold up when the conditions aren’t controlled. That’s what makes the insight richer. That’s what makes the feedback useful.
+
 I've done this multiple times. I've had my teams do it. Sometimes what is built is rough, that's fine. Sometimes it needs a reset, that's fine too. But we always learn more than we would from a static prototype. Every time.
 
-If you're serious about building good products and services and you want to learn faster, test wider and build more confidence into your delivery, code prototypes are the way forward.
+There's a tiny amount of folks doing this in comparison to the whole and if you're serious about building good products and services and you want to learn faster, test wider and build more confidence into your delivery, code prototypes are the way forward.
 
 They're not perfect. But they're real. And real beats pretty every time. 
