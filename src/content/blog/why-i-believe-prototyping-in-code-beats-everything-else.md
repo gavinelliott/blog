@@ -26,11 +26,11 @@ This isn't about writing production-level code. It's about creating something fu
 
 And the best part? It's faster now.
 
-With agentic coding and mature design systems, you can build a code prototype in less time than it takes to wire up an advanced Figma prototype. You can reuse components, scale layouts and get something interactive in front of someone in days if not hours.
+With [agentic coding](/blog/getting-into-agentic-coding/) and mature design systems, you can build a code prototype in less time than it takes to wire up an advanced Figma prototype. You can reuse components, scale layouts and get something interactive in front of someone in days if not hours.
 
 Yes, someone will say, "It's not about the tool or type, it's about the learnings you gain." And I agree. But let's be honest. The speed at which you get to something real matters. The sooner you're testing the thing that's close to what users will have, the more useful that learning will be.
 
-And yes, I’ve heard you too. “It was never about the prototype tool, it was always about the assumptions.” Absolutely. Assumptions are at the core of all of this. But how you test them matters. A code prototype lets you test assumptions in a real environment with real users. It lets you see how those assumptions hold up when the conditions aren’t controlled. That’s what makes the insight richer. That’s what makes the feedback useful.
+And yes, I have heard you too. “It was never about the prototype tool, it was always about the assumptions.” Absolutely. Assumptions are at the core of all of this. But how you test them matters. A code prototype lets you test assumptions in a real environment with real users. It lets you see how those assumptions hold up when the conditions aren’t controlled. That’s what makes the insight richer. That’s what makes the feedback useful.
 
 I've done this multiple times. I've had my teams do it. Sometimes what is built is rough, that's fine. Sometimes it needs a reset, that's fine too. But we always learn more than we would from a static prototype. Every time.
 
