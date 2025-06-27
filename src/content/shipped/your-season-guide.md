@@ -4,7 +4,7 @@ description: 'A personal colour analysis web app that helps users find their bes
 date: '2024-12-15'
 stack: 'Next.js 14, TypeScript, Tailwind CSS, Clerk, Stripe, Resend'
 status: 'Live'
-link: ''
+link: 'https://yourseasonguide.com'
 github: ''
 featured: true
 draft: false
