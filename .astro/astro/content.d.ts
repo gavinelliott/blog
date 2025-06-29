@@ -186,6 +186,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"building-your-season-guide-another-step-in-learning-by-doing.md": {
+	id: "building-your-season-guide-another-step-in-learning-by-doing.md";
+  slug: "building-your-season-guide-another-step-in-learning-by-doing";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "change-and-grow.md": {
 	id: "change-and-grow.md";
   slug: "change-and-grow";
@@ -504,6 +511,13 @@ declare module 'astro:content' {
 "what-is-the-hardest-part-of-running-a-design-team.md": {
 	id: "what-is-the-hardest-part-of-running-a-design-team.md";
   slug: "what-is-the-hardest-part-of-running-a-design-team";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"when-ai-becomes-the-expectation.md": {
+	id: "when-ai-becomes-the-expectation.md";
+  slug: "when-ai-becomes-the-expectation";
   body: string;
   collection: "blog";
   data: any
