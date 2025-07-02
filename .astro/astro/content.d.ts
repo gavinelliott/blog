@@ -529,6 +529,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"why-i-created-gpt-wrapper-app-bundles.md": {
+	id: "why-i-created-gpt-wrapper-app-bundles.md";
+  slug: "why-i-created-gpt-wrapper-app-bundles";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 };
 "shipped": {
 "bestaithings.md": {
