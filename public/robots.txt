@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /work/
 
-Sitemap: https://gavinelliott.com/sitemap-index.xml 
+Sitemap: https://gavinelliott.co.uk/sitemap-index.xml 
