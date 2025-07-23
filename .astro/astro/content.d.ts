@@ -264,6 +264,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"from-building-for-me-to-building-for-others.md": {
+	id: "from-building-for-me-to-building-for-others.md";
+  slug: "from-building-for-me-to-building-for-others";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "from-design-leadership-to-vibe-coding.md": {
 	id: "from-design-leadership-to-vibe-coding.md";
   slug: "from-design-leadership-to-vibe-coding";
