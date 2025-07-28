@@ -362,6 +362,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"leading-authentically-five-truths-about-different-leadership.md": {
+	id: "leading-authentically-five-truths-about-different-leadership.md";
+  slug: "leading-authentically-five-truths-about-different-leadership";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "lets-start-from-the-beginning.md": {
 	id: "lets-start-from-the-beginning.md";
   slug: "lets-start-from-the-beginning";
