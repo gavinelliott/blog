@@ -2,6 +2,7 @@
 title: 'Why I believe prototyping in code beats everything else'
 description: 'A code prototype changes everything. When you prototype in code, the thing you are testing is real. It works in the browser. It works on any device. It responds to real-world variables.'
 pubDate: '2025-06-21'
+socialImage: '/li-prototyping-post-image.jpg'
 ---
 
 I've been around long enough to see the rise of design tooling that promised speed, alignment and closer collaboration. Figma has become the default in most places. It's visual, collaborative and powerful. But for me, it and all the others never really delivered what mattered most — real understanding.
