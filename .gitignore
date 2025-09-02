@@ -13,3 +13,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Astro generated files
+.astro/
