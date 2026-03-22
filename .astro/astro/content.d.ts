@@ -271,9 +271,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"from-burnout-to-building-a-conversation-on-design-ai-and-leading-authentically.md": {
+	id: "from-burnout-to-building-a-conversation-on-design-ai-and-leading-authentically.md";
+  slug: "from-burnout-to-building-a-conversation-on-design-ai-and-leading-authentically";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "from-design-leadership-to-vibe-coding.md": {
 	id: "from-design-leadership-to-vibe-coding.md";
   slug: "from-design-leadership-to-vibe-coding";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"from-eleanor-to-thought-to-action.md": {
+	id: "from-eleanor-to-thought-to-action.md";
+  slug: "from-eleanor-to-thought-to-action";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -488,6 +502,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"the-problem-with-the-outcomes-first-obsession-in-ux-hiring.md": {
+	id: "the-problem-with-the-outcomes-first-obsession-in-ux-hiring.md";
+  slug: "the-problem-with-the-outcomes-first-obsession-in-ux-hiring";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "the-rebuild.md": {
 	id: "the-rebuild.md";
   slug: "the-rebuild";
@@ -570,6 +591,13 @@ declare module 'astro:content' {
 "cleanreader.md": {
 	id: "cleanreader.md";
   slug: "cleanreader";
+  body: string;
+  collection: "shipped";
+  data: InferEntrySchema<"shipped">
+} & { render(): Render[".md"] };
+"gpt-wrapper-apps.md": {
+	id: "gpt-wrapper-apps.md";
+  slug: "gpt-wrapper-apps";
   body: string;
   collection: "shipped";
   data: InferEntrySchema<"shipped">

@@ -1,0 +1,23 @@
+---
+description: Blog social / OG images must use the versioned scripts/social-image pipeline
+globs:
+  - src/content/blog/**
+  - public/images/**
+  - scripts/social-image/**
+alwaysApply: false
+---
+
+# Blog social & feature images
+
+When creating or updating **Open Graph / LinkedIn / social preview** images for this blog:
+
+1. **Do not** build one-off HTML under `/tmp` for production assets unless you are debugging. Prefer the repo pipeline.
+2. Use **[scripts/social-image/README.md](scripts/social-image/README.md)** for colours, fonts, and dimensions.
+3. Run from repo root:
+   ```bash
+   npm run social-image -- --out public/images/<slug>.png --line1 "..." --line2 "..." --line3 "..."
+   ```
+4. Style changes belong in **[scripts/social-image/template.html](scripts/social-image/template.html)** so they are versioned (avatar horizontal inset: `.avatar-container` `right`; smaller = closer to the right edge).
+5. In the post frontmatter, set **`socialImage`** to the public URL path (e.g. `'/images/<slug>.png'`) so **`BlogPost.astro`** passes it to **`BaseHead`** for Open Graph and Twitter.
+
+Requires Playwright (`playwright` is a devDependency; install Chromium with `npx playwright install chromium` if capture fails).

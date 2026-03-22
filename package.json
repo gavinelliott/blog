@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "social-image": "node scripts/social-image/capture.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "astro-seo": "^0.8.4",
+    "playwright": "^1.58.2",
     "sharp": "^0.34.1",
     "terser": "^5.39.0"
   },
