@@ -26,12 +26,6 @@ const {
 const currentUrl = Astro.url.toString();
 ---
 
-<!-- DNS Prefetch and Preconnect for 3rd party services -->
-<link rel="preconnect" href="https://use.typekit.net" crossorigin />
-<link rel="dns-prefetch" href="https://use.typekit.net" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
 <!-- SEO Component -->
 <SEO
   title={title}
@@ -80,12 +74,9 @@ const currentUrl = Astro.url.toString();
 <meta name="color-scheme" content="light" />
 <meta name="theme-color" content="#FFFFF8" />
 
-<!-- Font preloads - using woff2 which is more modern and smaller -->
+<!-- Self-hosted Atkinson Hyperlegible (Braille Institute OFL) -->
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
-
-<!-- Adobe Fonts -->
-<link rel="stylesheet" href="https://use.typekit.net/ydu6ccn.css">
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

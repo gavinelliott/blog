@@ -4,6 +4,22 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--accent: #172823;
 	--accent-dark: #0d1512;
@@ -17,7 +33,7 @@
 }
 
 body {
-	font-family: system-ui, sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -95,7 +111,7 @@ body {
 }
 
 .nav-brand {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 500;
 	font-size: 1.25rem;
 	color: #FFFFFF;
@@ -107,7 +123,7 @@ body {
 }
 
 .nav-items a {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 500;
 	font-size: 1.25rem;
 	color: #FFFFFF;
@@ -145,7 +161,7 @@ h6 {
 	margin: 2rem 0 1rem;
 	color: rgb(var(--black));
 	line-height: 1.2;
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-style: normal;
 }
@@ -291,7 +307,7 @@ hr {
 }
 
 .work-hero-content h1 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 700;
 	font-size: 3.5rem;
 	color: #FFFFFF;
@@ -301,7 +317,7 @@ hr {
 }
 
 .work-hero-content p {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 1.5rem;
 	color: rgba(255, 255, 255, 0.9);
 	line-height: 1.4;
@@ -334,7 +350,7 @@ hr {
 }
 
 .work-page-header h1 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 700;
 	font-size: 9rem;
 	color: #051005;
@@ -383,7 +399,7 @@ hr {
 }
 
 .work-page-header h2 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: #051005;
@@ -395,7 +411,7 @@ hr {
 }
 
 .work-page-header p {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 1.25rem;
 	color: rgba(5, 16, 5, 0.8);
 	max-width: 800px;
@@ -418,7 +434,7 @@ hr {
 }
 
 .work-intro-section h2 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-size: 2rem;
 	color: #051005;
@@ -428,7 +444,7 @@ hr {
 }
 
 .work-intro-section p {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 1.25rem;
 	color: rgba(5, 16, 5, 0.8);
 	max-width: 600px;
@@ -503,7 +519,7 @@ hr {
 }
 
 .work-case-image-placeholder {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: rgba(5, 16, 5, 0.3);
@@ -516,7 +532,7 @@ hr {
 }
 
 .work-case-content h3 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-size: 1.75rem;
 	color: #051005;
@@ -533,7 +549,7 @@ hr {
 }
 
 .work-case-client {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 500;
 	font-size: 0.95rem;
 	color: #90B090;
@@ -542,13 +558,13 @@ hr {
 }
 
 .work-case-date {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 0.9rem;
 	color: rgba(5, 16, 5, 0.6);
 }
 
 .work-case-description {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 1.1rem;
 	line-height: 1.6;
 	color: rgba(5, 16, 5, 0.8);
@@ -564,7 +580,7 @@ hr {
 }
 
 .work-cta-section h3 {
-	font-family: "franklin-gothic-urw-comp", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: #051005;
@@ -573,7 +589,7 @@ hr {
 }
 
 .work-cta-section p {
-	font-family: "linotype-sabon", sans-serif;
+	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 	font-size: 1.1rem;
 	color: rgba(5, 16, 5, 0.8);
 	margin: 0;

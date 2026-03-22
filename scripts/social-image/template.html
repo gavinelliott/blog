@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Atkinson Hyperlegible';
+      src: url('atkinson-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Atkinson Hyperlegible';
+      src: url('atkinson-bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 1200px;
+      height: 627px;
+      background: #F7F6F3;
+      font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      padding: 60px 50px 60px 88px;
+      overflow: hidden;
+      position: relative;
+    }
+    .content {
+      width: 100%;
+    }
+    .headline {
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 0.95;
+      color: #1a1a1a;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+    .headline-line {
+      display: inline;
+      background-image: linear-gradient(to right, #B1C8AF 0%, #B1C8AF 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 8px;
+      background-position: 0 88%;
+      padding-bottom: 4px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 45px;
+      background: #5C7C6B;
+      color: white;
+      padding: 16px 28px;
+      border-radius: 6px;
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .cta svg {
+      width: 20px;
+      height: 20px;
+    }
+    /* Matches body padding-left so right margin of avatar = left margin of text */
+    .avatar-container {
+      position: absolute;
+      right: 88px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .avatar {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1 class="headline">
+      <span class="headline-line">{{LINE1}}</span><br>
+      <span class="headline-line">{{LINE2}}</span><br>
+      <span class="headline-line">{{LINE3}}</span>
+    </h1>
+    <div class="cta">
+      {{CTA}}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </div>
+  </div>
+  <div class="avatar-container">
+    <img class="avatar" src="{{AVATAR_SRC}}" alt="">
+  </div>
+</body>
+</html>

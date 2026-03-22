@@ -4,7 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Posthog from '../components/posthog.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -14,7 +13,6 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={socialImage} />
-		<Posthog />
 		<style>
 			*, *::before, *::after {
 				box-sizing: border-box;
@@ -94,7 +92,7 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 				margin: 0 auto;
 				padding: 1em 2rem;
 				color: #051005;
-				font-family: "linotype-sabon", sans-serif;
+				font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 				font-size: 1.35rem;
 				line-height: 1.55;
 				box-sizing: border-box;
@@ -115,7 +113,7 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 				background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
 			}
 			.prose :is(h1, h2, h3, h4, h5, h6) {
-				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 				line-height: 1.2;
 				margin-top: 2em;
 				margin-bottom: 0.8em;
@@ -153,7 +151,7 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
-				font-family: "franklin-gothic-urw-comp", sans-serif;
+				font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
 				font-weight: 600;
 				font-size: 3rem;
 				color: #051005;
