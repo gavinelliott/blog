@@ -1,6 +1,6 @@
 # Blog social / feature images
 
-Branded Open Graph / LinkedIn-style cards for **gavinelliott.co.uk** blog posts. Layout and tokens match the site: Atkinson Hyperlegible (self-hosted, same as the blog), Fraunces (Google Fonts) for the CTA, sage accents.
+Branded Open Graph / LinkedIn-style cards for **gavinelliott.co.uk** blog posts. Layout and tokens match the site: Atkinson Hyperlegible (self-hosted, headline — same as UI/headings on the blog), Fraunces (Google Fonts) for the CTA, sage accents. The live site uses **Libre Baskerville** (Google Fonts) for article body text; OG cards keep Atkinson for the stacked headline.
 
 ## Spec
 

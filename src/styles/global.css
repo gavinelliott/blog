@@ -30,10 +30,12 @@
 	--gray-dark: 34, 41, 57;
 	--focus-ring-color: #90B090;
 	--focus-ring-width: 3px;
+	--font-body: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+	--font-ui: var(--font-ui);
 }
 
 body {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -111,7 +113,7 @@ body {
 }
 
 .nav-brand {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 500;
 	font-size: 1.25rem;
 	color: #FFFFFF;
@@ -123,7 +125,7 @@ body {
 }
 
 .nav-items a {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 500;
 	font-size: 1.25rem;
 	color: #FFFFFF;
@@ -161,7 +163,7 @@ h6 {
 	margin: 2rem 0 1rem;
 	color: rgb(var(--black));
 	line-height: 1.2;
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-style: normal;
 }
@@ -307,7 +309,7 @@ hr {
 }
 
 .work-hero-content h1 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 700;
 	font-size: 3.5rem;
 	color: #FFFFFF;
@@ -317,7 +319,7 @@ hr {
 }
 
 .work-hero-content p {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.5rem;
 	color: rgba(255, 255, 255, 0.9);
 	line-height: 1.4;
@@ -350,7 +352,7 @@ hr {
 }
 
 .work-page-header h1 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 700;
 	font-size: 9rem;
 	color: #051005;
@@ -399,7 +401,7 @@ hr {
 }
 
 .work-page-header h2 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: #051005;
@@ -411,7 +413,7 @@ hr {
 }
 
 .work-page-header p {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.25rem;
 	color: rgba(5, 16, 5, 0.8);
 	max-width: 800px;
@@ -434,7 +436,7 @@ hr {
 }
 
 .work-intro-section h2 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-size: 2rem;
 	color: #051005;
@@ -444,7 +446,7 @@ hr {
 }
 
 .work-intro-section p {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.25rem;
 	color: rgba(5, 16, 5, 0.8);
 	max-width: 600px;
@@ -519,7 +521,7 @@ hr {
 }
 
 .work-case-image-placeholder {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: rgba(5, 16, 5, 0.3);
@@ -532,7 +534,7 @@ hr {
 }
 
 .work-case-content h3 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-size: 1.75rem;
 	color: #051005;
@@ -549,7 +551,7 @@ hr {
 }
 
 .work-case-client {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 500;
 	font-size: 0.95rem;
 	color: #90B090;
@@ -558,13 +560,13 @@ hr {
 }
 
 .work-case-date {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-size: 0.9rem;
 	color: rgba(5, 16, 5, 0.6);
 }
 
 .work-case-description {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.1rem;
 	line-height: 1.6;
 	color: rgba(5, 16, 5, 0.8);
@@ -580,7 +582,7 @@ hr {
 }
 
 .work-cta-section h3 {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: #051005;
@@ -589,7 +591,7 @@ hr {
 }
 
 .work-cta-section p {
-	font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.1rem;
 	color: rgba(5, 16, 5, 0.8);
 	margin: 0;
