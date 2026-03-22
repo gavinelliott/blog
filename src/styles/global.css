@@ -14,7 +14,7 @@
 	--gray-dark: 34, 41, 57;
 	--focus-ring-color: #90B090;
 	--focus-ring-width: 3px;
-	--font-body: 'Noto Serif', Georgia, 'Times New Roman', serif;
+	--font-body: 'Lora', Georgia, 'Times New Roman', serif;
 	/* Bebas Neue (Google Fonts) — single weight; use size/letter-spacing for hierarchy */
 	--font-ui: 'Bebas Neue', Impact, sans-serif;
 }

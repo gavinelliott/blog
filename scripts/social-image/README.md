@@ -1,6 +1,6 @@
 # Blog social / feature images
 
-Branded Open Graph / LinkedIn-style cards for **gavinelliott.co.uk** blog posts. Layout and tokens match the site: **Bebas Neue** (Google Fonts) for the stacked headline — same as nav/headings on the blog; **Fraunces** (Google Fonts) for the CTA; **Noto Serif** on the live site for article body only.
+Branded Open Graph / LinkedIn-style cards for **gavinelliott.co.uk** blog posts. Layout and tokens match the site: **Bebas Neue** (Google Fonts) for the stacked headline — same as nav/headings on the blog; **Fraunces** (Google Fonts) for the CTA; **Lora** on the live site for article body only.
 
 ## Spec
 
