@@ -282,17 +282,20 @@ const title = "Gavin Elliott";
 		color: #051005;
 		text-transform: uppercase;
 		letter-spacing: 0.02em;
-		text-decoration: none;
+		text-decoration: underline;
+		text-decoration-color: rgba(144, 176, 144, 0.7);
+		text-decoration-thickness: 3px;
+		text-underline-offset: 0.05em;
+		text-underline-position: from-font;
 		display: inline;
-		background-image: linear-gradient(transparent calc(100% - 3px), rgba(144, 176, 144, 0.7) 3px);
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		padding-bottom: 0.1em;
-		transition: background-image 0.3s ease;
+		padding-bottom: 0;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		transition: text-decoration-color 0.3s ease;
 	}
 
 	.post-card h3 a:hover {
-		background-image: linear-gradient(transparent calc(100% - 3px), #90B090 3px);
+		text-decoration-color: #90B090;
 	}
 
 	.post-card .description {
