@@ -98,16 +98,7 @@ async function main() {
 		.replaceAll('{{CTA}}', escapeHtml(opts.cta))
 		.replaceAll('{{AVATAR_SRC}}', avatarUrl);
 
-	const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-social-'));
-	const tmpHtml = path.join(tmpDir, 'page.html');
-	for (const fontFile of ['atkinson-regular.woff', 'atkinson-bold.woff']) {
-		const srcFont = path.join(REPO_ROOT, 'public/fonts', fontFile);
-		if (!fs.existsSync(srcFont)) {
-			console.error(`Error: font not found: ${srcFont}`);
-			process.exit(1);
-		}
-		fs.copyFileSync(srcFont, path.join(tmpDir, fontFile));
-	}
+	const tmpHtml = path.join(os.tmpdir(), `blog-social-image-${Date.now()}.html`);
 	fs.writeFileSync(tmpHtml, html, 'utf8');
 	const fileUrl = pathToFileURL(tmpHtml).href;
 
@@ -128,7 +119,7 @@ async function main() {
 	} finally {
 		await browser.close();
 		try {
-			fs.rmSync(tmpDir, { recursive: true, force: true });
+			fs.unlinkSync(tmpHtml);
 		} catch {
 			// ignore
 		}

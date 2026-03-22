@@ -4,22 +4,6 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-@font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
 :root {
 	--accent: #172823;
 	--accent-dark: #0d1512;
@@ -31,7 +15,8 @@
 	--focus-ring-color: #90B090;
 	--focus-ring-width: 3px;
 	--font-body: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
-	--font-ui: var(--font-ui);
+	/* Bebas Neue (Google Fonts) — single weight; use size/letter-spacing for hierarchy */
+	--font-ui: 'Bebas Neue', Impact, sans-serif;
 }
 
 body {
@@ -114,8 +99,9 @@ body {
 
 .nav-brand {
 	font-family: var(--font-ui);
-	font-weight: 500;
-	font-size: 1.25rem;
+	font-weight: 400;
+	font-size: 1.35rem;
+	letter-spacing: 0.04em;
 	color: #FFFFFF;
 }
 
@@ -126,8 +112,9 @@ body {
 
 .nav-items a {
 	font-family: var(--font-ui);
-	font-weight: 500;
-	font-size: 1.25rem;
+	font-weight: 400;
+	font-size: 1.35rem;
+	letter-spacing: 0.04em;
 	color: #FFFFFF;
 	text-decoration: none;
 }
@@ -162,26 +149,24 @@ h5,
 h6 {
 	margin: 2rem 0 1rem;
 	color: rgb(var(--black));
-	line-height: 1.2;
+	line-height: 1.15;
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
 	font-style: normal;
+	font-synthesis: none;
+	letter-spacing: 0.02em;
 }
 h1 {
-	font-size: 2.5rem;
-	font-weight: 700;
+	font-size: 2.75rem;
 }
 h2 {
-	font-size: 2rem;
-	font-weight: 600;
+	font-size: 2.25rem;
 }
 h3 {
-	font-size: 1.75rem;
-	font-weight: 500;
+	font-size: 1.85rem;
 }
 h4 {
 	font-size: 1.5rem;
-	font-weight: 500;
 }
 h5 {
 	font-size: 1.25em;
@@ -310,11 +295,12 @@ hr {
 
 .work-hero-content h1 {
 	font-family: var(--font-ui);
-	font-weight: 700;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 3.5rem;
 	color: #FFFFFF;
 	margin-bottom: 1.5rem;
-	letter-spacing: -0.02em;
+	letter-spacing: 0.03em;
 	text-transform: uppercase;
 }
 
@@ -353,12 +339,13 @@ hr {
 
 .work-page-header h1 {
 	font-family: var(--font-ui);
-	font-weight: 700;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 9rem;
 	color: #051005;
 	margin-bottom: 1rem;
 	text-transform: uppercase;
-	letter-spacing: -0.02em;
+	letter-spacing: 0.02em;
 	text-align: center;
 	line-height: 0.85;
 	padding: 3rem 0;
@@ -402,7 +389,8 @@ hr {
 
 .work-page-header h2 {
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 1.5rem;
 	color: #051005;
 	margin: 0 auto 2rem;
@@ -437,7 +425,8 @@ hr {
 
 .work-intro-section h2 {
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 2rem;
 	color: #051005;
 	margin-bottom: 1rem;
@@ -522,7 +511,8 @@ hr {
 
 .work-case-image-placeholder {
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 1.5rem;
 	color: rgba(5, 16, 5, 0.3);
 	text-transform: uppercase;
@@ -535,7 +525,8 @@ hr {
 
 .work-case-content h3 {
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 1.75rem;
 	color: #051005;
 	margin: 0 0 1rem;
@@ -552,7 +543,8 @@ hr {
 
 .work-case-client {
 	font-family: var(--font-ui);
-	font-weight: 500;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 0.95rem;
 	color: #90B090;
 	text-transform: uppercase;
@@ -561,6 +553,8 @@ hr {
 
 .work-case-date {
 	font-family: var(--font-ui);
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 0.9rem;
 	color: rgba(5, 16, 5, 0.6);
 }
@@ -583,7 +577,8 @@ hr {
 
 .work-cta-section h3 {
 	font-family: var(--font-ui);
-	font-weight: 600;
+	font-weight: 400;
+	font-synthesis: none;
 	font-size: 1.5rem;
 	color: #051005;
 	margin-bottom: 1rem;
