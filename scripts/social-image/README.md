@@ -34,6 +34,13 @@ Optional:
 
 Requires Playwright Chromium (`npx playwright install chromium` if needed).
 
+If your shell or `npm run` splits multi-word lines, run the script directly so quotes are preserved:
+
+```bash
+node scripts/social-image/capture.mjs --out public/images/your-post-slug.png \
+  --line1 "First line with spaces" --line2 "Second" --line3 "Third"
+```
+
 ## Blog post frontmatter
 
 Set the image path so Open Graph and Twitter cards use it (see `BlogPost.astro` → `BaseHead`):
