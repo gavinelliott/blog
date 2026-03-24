@@ -34,11 +34,14 @@
     }
     .headline-line {
       display: inline;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
       background-image: linear-gradient(to right, #B1C8AF 0%, #B1C8AF 100%);
       background-repeat: no-repeat;
-      background-size: 100% 8px;
-      background-position: 0 88%;
-      padding-bottom: 4px;
+      background-size: 100% 6px;
+      /* Stripe sits just under the cap height / baseline, not at the bottom of the line box */
+      background-position: 0 calc(1em - 4px);
+      padding-bottom: 0;
     }
     .cta {
       display: inline-flex;
