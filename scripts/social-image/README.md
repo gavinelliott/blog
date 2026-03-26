@@ -28,6 +28,7 @@ npm run social-image -- --out public/images/your-post-slug.png \
 
 Optional:
 
+- `--line4 "…"` — fourth headline row; use for long titles so copy stays readable (slightly smaller type). Prefer shorter phrases per line than forcing three wrapped rows.
 - `--cta "Read now"` — button label (default: `Read now`)
 - `--avatar public/images/other.png` — path relative to repo root
 - `--wait-ms 4000` — longer wait if fonts look wrong on first capture

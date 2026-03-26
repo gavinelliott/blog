@@ -13,9 +13,9 @@ When creating or updating **Open Graph / LinkedIn / social preview** images for 
 
 1. **Do not** build one-off HTML under `/tmp` for production assets unless you are debugging. Prefer the repo pipeline.
 2. Use **[scripts/social-image/README.md](scripts/social-image/README.md)** for colours, fonts, and dimensions.
-3. Run from repo root:
+3. Run from repo root (use `node scripts/social-image/capture.mjs` if `npm run` splits quoted args). For long titles, add **`--line4`** so the headline uses four shorter rows and stays clear of the avatar.
    ```bash
-   npm run social-image -- --out public/images/<slug>.png --line1 "..." --line2 "..." --line3 "..."
+   node scripts/social-image/capture.mjs --out public/images/<slug>.png --line1 "..." --line2 "..." --line3 "..." [--line4 "..."]
    ```
 4. Style changes belong in **[scripts/social-image/template.html](scripts/social-image/template.html)** so they are versioned (avatar horizontal inset: `.avatar-container` `right`; smaller = closer to the right edge).
 5. In the post frontmatter, set **`socialImage`** to the public URL path (e.g. `'/images/<slug>.png'`) so **`BlogPost.astro`** passes it to **`BaseHead`** for Open Graph and Twitter.

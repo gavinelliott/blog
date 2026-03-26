@@ -22,6 +22,9 @@
     }
     .content {
       width: 100%;
+      /* Keep long headlines from sitting under the absolutely positioned avatar */
+      padding-right: 270px;
+      box-sizing: border-box;
     }
     .headline {
       font-size: 108px;
@@ -31,6 +34,10 @@
       color: #1a1a1a;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+    }
+    .headline.headline--four-lines {
+      font-size: 88px;
+      line-height: 0.9;
     }
     .headline-line {
       display: inline;
@@ -63,7 +70,7 @@
     /* Matches body padding-left so right margin of avatar = left margin of text */
     .avatar-container {
       position: absolute;
-      right: 88px;
+      right: 48px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -76,10 +83,10 @@
 </head>
 <body>
   <div class="content">
-    <h1 class="headline">
+    <h1 class="headline{{HEADLINE_CLASS}}">
       <span class="headline-line">{{LINE1}}</span><br>
       <span class="headline-line">{{LINE2}}</span><br>
-      <span class="headline-line">{{LINE3}}</span>
+      <span class="headline-line">{{LINE3}}</span>{{LINE4_BLOCK}}
     </h1>
     <div class="cta">
       {{CTA}}
