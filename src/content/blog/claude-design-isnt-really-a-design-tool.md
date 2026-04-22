@@ -3,7 +3,6 @@ title: 'Claude Design isn’t really a design tool'
 description: 'Claude Design collapses thinking, design, and early building into one flow—not just faster UI. What that structural shift means for teams, and where people miss the point.'
 pubDate: '2026-04-22'
 socialImage: '/images/claude-design-isnt-really-a-design-tool.png'
-heroImage: '/images/claude-design-isnt-really-a-design-tool.png'
 ---
 
 ## Claude Design isn’t really a design tool
