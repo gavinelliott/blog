@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "social-image": "node scripts/social-image/capture.mjs"
+    "social-image": "node scripts/social-image/capture.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
