@@ -127,6 +127,16 @@
   ],
   "redirects": [
     {
+      "source": "/tag/how-to",
+      "destination": "/writing/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/how-to/",
+      "destination": "/writing/",
+      "permanent": true
+    },
+    {
       "source": "/imposter-syndrome",
       "destination": "/talks/imposter-syndrome/",
       "permanent": true
