@@ -3,26 +3,27 @@ import Layout from '../layouts/Layout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import Footer from '../components/Footer.astro';
+import { topics } from '../data/topics';
 import Navigation from '../components/Navigation.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const title = "Gavin Elliott";
+const latestPosts = posts.slice(0, 6);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<!-- Sticky navigation bar that appears on scroll -->
 	<Navigation />
 
-	<div id="main-content" tabindex="-1" class="hero-section">
+	<main id="main-content" class="home-main" tabindex="-1">
+	<div class="hero-section">
 		<div class="glow-effect"></div>
 		<div class="hero-content">
-			<img src="/avatar.png" alt="Gavin Elliott" class="avatar" />
+			<img src="/avatar.webp" alt="Gavin Elliott" class="avatar" width="479" height="609" fetchpriority="high" />
 			<h1>GAVIN ELLIOTT</h1>
-			<p>Helping teams ship user-first products at scale by leading with strategy, coaching and hands-on delivery.</p>
+			<p>Lead Product Designer at Deel. I write about design leadership, growing teams and building products with AI.</p>
 		</div>
 		<div class="scroll-indicator">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,22 +39,29 @@ const title = "Gavin Elliott";
 
 	<div class="blog-posts-section">
 		<div class="blog-posts-container">
-			<div class="section-title">
-				<h2>
-					<span>WRITING</span>
-				</h2>
-			</div>
-			<div class="posts-grid">
-				{posts.map((post) => (
+            <aside class="writing-intro">
+                <div class="section-title"><h2>Latest writing</h2></div>
+                <p class="writing-summary">Thoughts on design, leadership and building products.</p>
+                <nav class="topic-nav" aria-label="Writing topics">
+                    <p class="topic-label">Explore by topic</p>
+                    <ul>{topics.map(topic => <li><a href={`/writing/${topic.slug}/`}>{topic.title}</a></li>)}</ul>
+                </nav>
+                <a class="all-writing" href="/writing/">All writing <span aria-hidden="true">→</span></a>
+            </aside>
+            <div class="posts-grid">
+				{latestPosts.map((post) => (
 					<article class="post-card">
-						<h3><a href={`/blog/${post.slug}/`}>{post.data.title.toUpperCase()}</a></h3>
+						<h3><a href={`/blog/${post.id}/`}>{post.data.title.toUpperCase()}</a></h3>
 						<p class="date"><FormattedDate date={post.data.pubDate} /></p>
 						<p class="description">{post.data.description}</p>
 					</article>
 				))}
 			</div>
+
 		</div>
 	</div>
+
+	</main>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
@@ -78,6 +86,7 @@ const title = "Gavin Elliott";
 </Layout>
 
 <style>
+	main.home-main { width: 100%; max-width: none; margin: 0; padding: 0; }
 	*, *::before, *::after {
 		box-sizing: border-box;
 	}
@@ -91,16 +100,8 @@ const title = "Gavin Elliott";
 	}
 	
 	@keyframes zoomIn {
-		from {
-			transform: scale(0.5);
-			opacity: 0;
-			filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-		}
-		to {
-			transform: scale(1);
-			opacity: 1;
-			filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
-		}
+		from { transform: scale(0.96); }
+		to { transform: scale(1); }
 	}
 
 	.hero-section {
@@ -123,7 +124,6 @@ const title = "Gavin Elliott";
 		pointer-events: none;
 		z-index: 1;
 		animation: moveGlow 20s ease-in-out infinite;
-		filter: blur(40px);
 	}
 
 	@keyframes moveGlow {
@@ -171,8 +171,8 @@ const title = "Gavin Elliott";
 		height: 60px;
 		margin-bottom: 0.15rem;
 		object-fit: contain;
-		animation: zoomIn 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-		will-change: transform, opacity, filter;
+		animation: zoomIn 300ms ease-out;
+		filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 	}
 
 	.hero-content h1 {
@@ -226,7 +226,8 @@ const title = "Gavin Elliott";
 		max-width: 1200px;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+        align-items: start;
 		gap: 3rem;
 	}
 
@@ -248,15 +249,29 @@ const title = "Gavin Elliott";
 		display: block;
 	}
 
+    .writing-intro { padding-top: 1.5rem; }
+    .writing-intro .section-title { padding: 0; }
+    .writing-intro h2 { margin: 0 0 1rem; }
+    .writing-summary { font-size: 1rem; line-height: 1.6; margin: 0 0 2rem; }
+    .topic-label { font-family: var(--font-ui); font-size: .95rem; letter-spacing: .06em; text-transform: uppercase; opacity: .65; margin: 0 0 .75rem; }
+    .topic-nav ul { list-style: none; padding: 0; margin: 0; }
+    .topic-nav li { margin: 0; border-bottom: 1px solid rgba(5,16,5,.12); }
+    .topic-nav a { display: block; padding: .8rem 0; color: #051005; font-size: .95rem; line-height: 1.5; text-decoration: none; }
+    .topic-nav a:hover { text-decoration: underline; text-underline-offset: .2em; }
+    .all-writing { display: inline-flex; gap: 1rem; align-items: center; margin-top: 1.5rem; color: #051005; font-family: var(--font-ui); font-size: 1.15rem; text-decoration: none; border-bottom: 2px solid #90B090; padding-bottom: .25rem; }
+    .writing-intro a:focus-visible { outline: 2px solid #051005; outline-offset: 4px; }
+
 	.posts-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 2rem;
 	}
 
 	.post-card {
 		padding: 1.5rem;
-		border-bottom: 1px solid rgba(5, 16, 5, 0.1);
+        min-width: 0;
+		border: none;
+        border-radius: 12px;
 		transition: background-color 0.3s ease;
 	}
 	
@@ -272,7 +287,8 @@ const title = "Gavin Elliott";
 	}
 
 	.post-card h3 {
-		margin-bottom: 0.5rem;
+		margin: 0 0 0.5rem;
+        line-height: 1.2;
 	}
 
 	.post-card h3 a {
@@ -522,4 +538,9 @@ const title = "Gavin Elliott";
 	}
 
 	/* Navigation styles are now handled by the Navigation component */
+	@media (prefers-reduced-motion: reduce) {
+		.avatar, .glow-effect, .scroll-indicator, .scroll-arrow {
+			animation: none;
+		}
+	}
 </style>

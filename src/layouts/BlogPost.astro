@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
+import { topics } from '../data/topics';
+import { getCollection } from 'astro:content';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -8,11 +10,25 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, socialImage } = Astro.props;
+const currentId = Astro.url.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+const topic = topics.find(topic => topic.articles.includes(currentId));
+const allPosts = topic ? await getCollection('blog') : [];
+const relatedPosts = topic ? topic.articles.filter(id => id !== currentId).slice(0, 3).map(id => allPosts.find(post => post.id === id)).filter(Boolean) : [];
+const articleSchema = {
+ '@context': 'https://schema.org', '@type': 'BlogPosting',
+ headline: title, description,
+ datePublished: pubDate.toISOString(),
+ ...(updatedDate ? { dateModified: updatedDate.toISOString() } : {}),
+ url: new URL(Astro.url.pathname, Astro.site).toString(),
+ author: { '@type': 'Person', name: 'Gavin Elliott', url: new URL('/about/', Astro.site).toString() },
+ ...((socialImage || heroImage) ? { image: new URL(socialImage || heroImage, Astro.site).toString() } : {}),
+};
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={socialImage} />
+		<BaseHead title={title} description={description} image={socialImage || heroImage} article={true} publishDate={pubDate} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema).replace(/</g, '\\u003c')} />
 		<style>
 			*, *::before, *::after {
 				box-sizing: border-box;
@@ -41,7 +57,7 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 				top: -40px;
 				left: 0;
 				background: #90B090;
-				color: white;
+				color: #051005;
 				padding: 8px;
 				z-index: 2000;
 				transition: top 0.3s ease;
@@ -340,9 +356,11 @@ const { title, description, pubDate, updatedDate, heroImage, socialImage } = Ast
 							}
 						</div>
 						<h1>{title}</h1>
+<p class="byline">By <a href="/about/">Gavin Elliott</a></p>
 						<hr />
 					</div>
 					<slot />
+{topic && <aside aria-label="Related writing"><h2>Keep reading</h2><ul>{relatedPosts.map(post => <li><a href={`/blog/${post!.id}/`}>{post!.data.title}</a></li>)}</ul><p><a href={`/writing/${topic.slug}/`}>Explore {topic.title.toLowerCase()}</a></p></aside>}
 				</div>
 			</article>
 		</main>

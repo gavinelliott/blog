@@ -7,15 +7,16 @@ interface Props {
 	title?: string;
 	description?: string;
 	image?: string;
+	noindex?: boolean;
 }
 
-const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, image, noindex = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={image} />
+		<BaseHead title={title} description={description} image={image} noindex={noindex} />
 		<style>
 			/* Global styles to prevent horizontal scrolling */
 			html, body {

@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+export async function getStaticPaths() {
+ return (await getCollection('talks')).map(talk => ({params: {slug: talk.id}, props: {talk}}));
+}
+const { talk } = Astro.props;
+const { Content } = await render(talk);
+---
+<Layout title={`${talk.data.title} | Gavin Elliott`} description={talk.data.description} image="/impostor-syndrome-talk.jpg">
+ <Navigation />
+ <main id="main-content">
+  <p><a href="/speaking/">Speaking</a> / Talk</p>
+  <h1>{talk.data.title}</h1>
+  <Content />
+ </main>
+</Layout>
+<style>
+main { max-width: 800px; margin: 0 auto; padding: 8rem 1.5rem 3rem; }
+main :global(img) { max-width: 100%; height: auto; }
+main :global(blockquote) { border-left: 4px solid #90B090; margin: 2rem 0; padding-left: 1.5rem; }
+</style>

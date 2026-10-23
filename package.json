@@ -9,24 +9,25 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
+    "test:security": "npm run build && node --test tests/security.test.mjs",
     "social-image": "node scripts/social-image/capture.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/markdown-remark": "^7.2.2",
     "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.2.0",
-    "astro": "^5.13.8",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.2.1",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "astro-seo": "^0.8.4",
+    "astro-seo": "^1.2.0",
     "playwright": "^1.58.2",
-    "sharp": "^0.34.1",
     "terser": "^5.39.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "24.x"
   }
 }

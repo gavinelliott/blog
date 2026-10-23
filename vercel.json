@@ -1,78 +1,180 @@
 {
-	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"headers": [
-		{
-			"source": "/(.*)",
-			"headers": [
-				{ "key": "X-Content-Type-Options", "value": "nosniff" },
-				{ "key": "X-Frame-Options", "value": "DENY" },
-				{ "key": "X-XSS-Protection", "value": "1; mode=block" },
-				{ "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-				{
-					"key": "Permissions-Policy",
-					"value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-				}
-			]
-		},
-		{
-			"source": "/assets/:path*",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/images/:path*",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/favicon.svg",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/sw.js",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).png",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).jpg",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).jpeg",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).webp",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).woff2",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		},
-		{
-			"source": "/(.*).woff",
-			"headers": [
-				{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-			]
-		}
-	]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "0"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://bestaithings.kit.com/d9467db9a2/index.js https://f.convertkit.com/ckjs/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://embed.filekitcdn.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://app.kit.com; frame-src https://w.soundcloud.com; form-action 'self' https://app.kit.com; worker-src 'self'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).jpeg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).woff",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/imposter-syndrome",
+      "destination": "/talks/imposter-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/imposter-syndrome/",
+      "destination": "/talks/imposter-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/talks/impostor-syndrome",
+      "destination": "/talks/imposter-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/talks/impostor-syndrome/",
+      "destination": "/talks/imposter-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/writing/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/writing/",
+      "permanent": true
+    },
+    {
+      "source": "/2011/08/responsive-and-adaptive-design-defined",
+      "destination": "/blog/responsive-and-adaptive-design-defined/",
+      "permanent": true
+    },
+    {
+      "source": "/2011/08/responsive-and-adaptive-design-defined/",
+      "destination": "/blog/responsive-and-adaptive-design-defined/",
+      "permanent": true
+    },
+    {
+      "source": "/2010/02/how-to-present-your-designs-to-the-client",
+      "destination": "/blog/how-to-present-your-designs-to-the-client/",
+      "permanent": true
+    },
+    {
+      "source": "/2010/02/how-to-present-your-designs-to-the-client/",
+      "destination": "/blog/how-to-present-your-designs-to-the-client/",
+      "permanent": true
+    }
+  ]
 }

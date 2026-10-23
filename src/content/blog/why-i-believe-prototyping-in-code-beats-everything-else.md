@@ -1,6 +1,6 @@
 ---
 title: 'Why I believe prototyping in code beats everything else'
-description: 'A code prototype changes everything. When you prototype in code, the thing you are testing is real. It works in the browser. It works on any device. It responds to real-world variables.'
+description: 'Why I use code prototypes to test real interactions, accessibility and user needs, and how AI coding tools help me get useful feedback sooner.'
 pubDate: '2025-06-21'
 socialImage: '/li-prototyping-post-image.jpg'
 ---

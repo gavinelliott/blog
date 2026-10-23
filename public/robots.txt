@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /work/
 
 Sitemap: https://gavinelliott.co.uk/sitemap-index.xml 

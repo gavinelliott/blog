@@ -1,30 +1,30 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
+import { defineConfig, passthroughImageService } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://gavinelliott.co.uk',
-	integrations: [mdx(), sitemap()],
+	output: 'static',
+	integrations: [sitemap({ filter: (page) => !new URL(page).pathname.startsWith('/work/') && !['/work', '/blog', '/blog/'].includes(new URL(page).pathname) })],
+	server: { host: '127.0.0.1' },
+	devToolbar: { enabled: false },
 	image: {
-		// Image optimization settings
-		service: {
-			entrypoint: 'astro/assets/services/sharp'
-		},
+		// Keep native image decoders unused until patched Sharp releases are available.
+		service: passthroughImageService(),
 		domains: [],
 		remotePatterns: []
 	},
 	compressHTML: true, // Compress HTML output
+	markdown: { processor: unified(), syntaxHighlight: 'prism' },
 	build: {
 		inlineStylesheets: 'auto', // Automatically inline smaller stylesheets
 		assets: 'assets', // Custom directory for generated assets
-		// Optional: Split larger CSS files
-		experimental: {
-			optimizeHoistedScript: true
-		}
 	},
 	vite: {
 		build: {
+			// External scripts let the response CSP reject all inline JavaScript.
+			assetsInlineLimit: 0,
 			// Minify JS assets for production
 			minify: 'terser',
 			// Configure terser for better compression

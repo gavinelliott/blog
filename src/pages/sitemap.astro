@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import { topics } from '../data/topics';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import { getCollection } from 'astro:content';
@@ -234,11 +235,12 @@ const posts = (await getCollection('blog')).sort(
 					
 					<div class="sitemap-section">
 						<h2 class="section-title">Writing</h2>
+<ul>{topics.map(topic => <li><a href={`/writing/${topic.slug}/`}>{topic.title}</a></li>)}</ul>
 						<p>All blog posts and articles organized by most recent first:</p>
 						<ul>
 							{posts.map((post) => (
 								<li>
-									<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
 									<span class="date">{new Date(post.data.pubDate).toLocaleDateString('en-US', {
 										year: 'numeric',
 										month: 'short',
@@ -265,8 +267,8 @@ const posts = (await getCollection('blog')).sort(
 						<p>Information about speaking engagements:</p>
 						<ul>
 							<li><a href="/speaking">All Speaking Engagements</a> - Past and future talks</li>
-							<li><a href="/speaking#future-speaking-appearances">Future Speaking Appearances</a></li>
-							<li><a href="/speaking#past-speaking-appearances">Past Speaking Appearances</a> (by year)</li>
+							<li><a href="/talks/imposter-syndrome/">Impostor Syndrome talk</a></li>
+							<li><a href="/speaking/">Past Speaking Appearances</a> (by year)</li>
 						</ul>
 					</div>
 					
@@ -281,4 +283,4 @@ const posts = (await getCollection('blog')).sort(
 		</main>
 		<Footer />
 	</body>
-</html> 
+</html>

@@ -12,8 +12,7 @@ const { title, description, date, client, role, heroImage } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
-		<meta name="robots" content="noindex, nofollow" />
+		<BaseHead title={title} description={description} noindex={true} />
 		<style>
 			.case-study-container {
 				max-width: 1200px;

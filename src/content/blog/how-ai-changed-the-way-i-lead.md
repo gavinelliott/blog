@@ -1,6 +1,6 @@
 ---
 title: 'How AI Changed the Way I Lead'
-description: 'A personal reflection on the transformative impact of AI on leadership style and decision-making in a rapidly evolving technological landscape.'
+description: 'How hands-on experience with AI changed the way I lead a design team, from encouraging experiments to knowing when to question the problem.'
 pubDate: '2025-06-02T00:00:00.000Z'
 ---
 

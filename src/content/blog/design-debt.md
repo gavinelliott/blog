@@ -14,9 +14,7 @@ It's important to understand the life cycle. An idea becomes released into a ser
 
 It is important to iterate. We should look at maintenance and improvement through design research.
 
-What is Design Debt?
-====================
-
+## What is Design Debt?
 Forward thinking organisations will encourage their teams to identify and reuse standard components and patterns. This is a no-brainer for organisations who understand the need to save resources and avoid reinventing the wheel. By doing so we can focus our effort on the trickier aspects of a service or product that make it unique.
 
 "Design Debt" are the deprecated design components, styles and patterns in the services, journeys and experiences of our users.
@@ -29,9 +27,7 @@ In a large organisation that follows a design system, design debt can still accr
 
 For instance, multiple teams in a given area may be working at a different pace and inevitably may have breakdowns in communication.
 
-The realisation of design debt
-==============================
-
+## The realisation of design debt
 When the realisation hits that you've accrued design debt it can be quite daunting to deal with, not unlike dealing with financial debt. Let's take a look at the compounding effects of design debt to you, your team and your organisation.
 
 Is the design really consistent?
@@ -56,9 +52,7 @@ As design debt mounts, there will be a point when it's surfaced and taken into a
 
 These are just a few compounding problems which can occur from a design debt build up. There will be more and you've probably felt them at some point through your career.
 
-Surfacing debt
-==============
-
+## Surfacing debt
 Accepting design debt is the right thing to do.
 
 Most importantly, surfacing the design debt is where you'll find incredible value. It gives you a place to start. This is where you will be able to understand and quantify what you're working with and begin a plan to work through and reduce it.
@@ -106,9 +100,7 @@ There are various ways you can document the above information;
 
 All of these will help visualise and describe the level of detail you need to extrapolate in order for it to be valuable.
 
-Working big scale
-=================
-
+## Working big scale
 As we've mentioned, working towards building an inventory in a large organisation is a challenge.
 
 If you think of an example like having six or more large areas of an organisation, each with their own design team, their own priorities and motivations working with a design system which may not have everything they need you can begin to understand the scale of what you might come across.
@@ -132,9 +124,7 @@ The scale of the work required might be large and it may take time to complete.
 
 The important thing is to start.
 
-Communicating with your product management colleagues
-=====================================================
-
+## Communicating with your product management colleagues
 It often feels difficult to get project leads and stakeholders to understand the importance of dealing with design debt.
 
 Their jobs are full of conflicting priorities and motivations and they are usually under pressure to deliver new features.
@@ -157,9 +147,7 @@ Product owners and managers should be recognised for releasing something back to
 
 It's about open communication with our colleagues. Helping them to recognise that this is never just change for changes sake. Consistency is only part of it. More importantly, we all want the products and services we design to be the best they can be for our users. Each team must do its part by dedicating some resource to reducing its design debt over time.
 
-How to stay on top
-==================
-
+## How to stay on top
 Once you have the process above ironed out, you will hopefully have the majority of the design debt cleared and you'll have inconsistencies made consistent and documented in your design system. It's good to iterate and revisit the process we've described over time, the scale will be smaller and you'll be much more able to build design debt into your backlogs.
 
 This article was co-authored with [Jon Greer](https://medium.com/u/948c75d1e467?source=post_page---user_mention--f8026795cc1c--------------------------------).

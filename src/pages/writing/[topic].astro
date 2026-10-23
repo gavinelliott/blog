@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import WritingArchive from '../../components/WritingArchive.astro';
+import { topics } from '../../data/topics';
+export function getStaticPaths() {
+ return topics.map(topic => ({ params: { topic: topic.slug }, props: { topic } }));
+}
+const { topic } = Astro.props;
+const posts = await getCollection('blog');
+const selected = topic.articles.map(id => {
+ const post = posts.find(post => post.id === id);
+ if (!post) throw new Error(`Missing topic article: ${id}`);
+ return post;
+});
+---
+<WritingArchive title={topic.title} description={topic.description} introduction={topic.introduction} posts={selected} topicSlug={topic.slug} />

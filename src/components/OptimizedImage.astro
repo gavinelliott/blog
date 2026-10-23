@@ -1,3 +1,4 @@
+---
 import { Image } from 'astro:assets';
 
 interface Props {
@@ -48,6 +49,8 @@ if (isRemoteImage) {
   }
 }
 
+---
+
 {isRemoteImage ? (
   <img 
     src={imgSrc} 
@@ -68,4 +71,4 @@ if (isRemoteImage) {
     quality={quality}
     loading={loading}
   />
-)} 
+)}

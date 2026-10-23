@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Shipped from '../../layouts/Shipped.astro';
 
 export async function getStaticPaths() {
@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 	});
 	
 	return projects.map((project) => ({
-		params: { slug: project.slug },
+		params: { slug: project.id },
 		props: project,
 	}));
 }
@@ -16,9 +16,9 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'shipped'>;
 
 const project = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 ---
 
 <Shipped {...project.data}>
 	<Content />
-</Shipped> 
+</Shipped>

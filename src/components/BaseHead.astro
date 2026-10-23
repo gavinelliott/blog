@@ -1,8 +1,18 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
+import '../styles/fonts.css';
 import '../styles/global.css';
 import { SEO } from 'astro-seo';
+import deploymentConfig from '../../vercel.json';
+
+// Use the deployment policy for local previews too. frame-ancestors requires a header.
+const contentSecurityPolicy = deploymentConfig.headers[0].headers
+  .find(({ key }) => key === 'Content-Security-Policy').value
+  .split(';')
+  .map(directive => directive.trim())
+  .filter(directive => !directive.startsWith('frame-ancestors '))
+  .join('; ');
 
 interface Props {
 	title: string;
@@ -10,6 +20,7 @@ interface Props {
 	image?: string;
 	article?: boolean;
 	publishDate?: Date;
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -19,16 +30,20 @@ const {
 	description, 
 	image = '/images/writing-blog-post-placeholder.jpg',
 	article = false,
-	publishDate
+	publishDate,
+	noindex = false
 } = Astro.props;
 
 // Current URL for canonical links
-const currentUrl = Astro.url.toString();
+const currentUrl = canonicalURL.toString();
 ---
+
+<meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
 
 <!-- SEO Component -->
 <SEO
   title={title}
+  noindex={noindex}
   description={description}
   canonical={canonicalURL.toString()}
   openGraph={{
@@ -41,7 +56,7 @@ const currentUrl = Astro.url.toString();
     optional: {
       description: description,
       siteName: "Gavin Elliott",
-      locale: "en_US",
+      locale: "en_GB",
     },
     image: {
       alt: `Image for ${title}`,
@@ -74,15 +89,8 @@ const currentUrl = Astro.url.toString();
 <meta name="color-scheme" content="light" />
 <meta name="theme-color" content="#FFFFF8" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
-	rel="stylesheet"
-/>
-
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<link rel="preload" href="/fonts/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/0QIvMX1D_JOuMwr7I_FMl_E.woff2" as="font" type="font/woff2" crossorigin />
 
 <!-- Performance hints for browser - prefetch on hover -->
 <script>
@@ -113,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);
       })

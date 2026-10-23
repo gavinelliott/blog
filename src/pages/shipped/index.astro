@@ -29,7 +29,7 @@ const sortedProjects = projects.sort((a, b) => b.data.date.valueOf() - a.data.da
 			<div class="work-case-studies-grid">
 				{sortedProjects.map((project) => (
 					<article class="work-case-study-card">
-						<a href={`/shipped/${project.slug}/`} class="work-case-link">
+						<a href={`/shipped/${project.id}/`} class="work-case-link">
 							<div class="work-case-image">
 								{project.data.heroImage ? (
 									<img 
@@ -101,4 +101,4 @@ const sortedProjects = projects.sort((a, b) => b.data.date.valueOf() - a.data.da
 		gap: 1rem;
 		margin-bottom: 0.5rem;
 	}
-</style> 
+</style>

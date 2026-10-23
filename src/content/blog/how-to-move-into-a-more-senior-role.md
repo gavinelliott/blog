@@ -1,6 +1,6 @@
 ---
 title: 'How to move into a more Senior Role'
-description: 'Practical advice for progressing into senior design positions.'
+description: 'Lessons from moving into senior design and leadership roles: listening, earning trust, taking responsibility and helping a team make progress.'
 pubDate: '2014-11-18'
 ---
 
