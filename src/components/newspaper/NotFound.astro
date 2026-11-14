@@ -1,12 +1,13 @@
 ---
 import Layout from './Layout.astro';
 import artwork from './assets/404-thundercats.webp?url';
+import mobileArtwork from './assets/404-thundercats-mobile.webp?url';
 ---
 <Layout noindex title="404 · Sight beyond site | Gav Elliott">
  <main id="main" tabindex="-1" class="lost-edition">
   <div class="lost-broadcast" aria-hidden="true"><span>Saturday morning. Somewhere in the 80s.</span><span>No signal / 404</span></div>
   <section class="lost-scene" aria-labelledby="lost-title">
-   <img class="lost-art" src={artwork} alt="Lion-O raises the Sword of Omens beneath a glowing ThunderCats emblem, with lightning over an alien landscape" width="1536" height="1024" fetchpriority="high"/>
+   <img class="lost-art" src={artwork} srcset={`${mobileArtwork} 768w, ${artwork} 1536w`} sizes="(max-width: 650px) calc(100vw - 36px), (max-width: 1380px) calc(100vw - 80px), 1300px" alt="Lion-O raises the Sword of Omens beneath a glowing ThunderCats emblem, with lightning over an alien landscape" width="1536" height="1024" fetchpriority="high"/>
    <div class="lost-title"><p class="lost-code" aria-label="Error 404">404</p><h1 id="lost-title">Sight <br/>beyond <br/><span>site.</span></h1><p class="lost-missing">Page not found.</p></div>
    <span class="lost-caption" aria-hidden="true">Even the sword couldn’t find this one.</span>
   </section>

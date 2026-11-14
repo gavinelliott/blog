@@ -185,6 +185,21 @@
       "source": "/2010/02/how-to-present-your-designs-to-the-client/",
       "destination": "/blog/how-to-present-your-designs-to-the-client/",
       "permanent": true
+    },
+    {
+      "source": "/blog/cleanreader",
+      "destination": "/shipped/cleanreader/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2-years-ago",
+      "destination": "/blog/2-years-ago/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/change-and-grow",
+      "destination": "/blog/change-and-grow/",
+      "permanent": true
     }
   ]
 }
