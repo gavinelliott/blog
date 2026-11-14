@@ -2,7 +2,7 @@
 title: "It's getting harder to break into tech, and I don't think we're talking about it enough"
 description: 'Junior routes are thinner, expectations stay high, and remote work made informal learning harder. Until we adapt how we develop people, the entry-level gap will stay—and building real things can be one path you control.'
 pubDate: '2026-03-28'
-socialImage: '/images/its-getting-harder-to-break-into-tech.png'
+socialImage: '/images/social/its-getting-harder-to-break-into-tech-newspaper-v1.jpg'
 ---
 
 I keep hearing the same thing from people trying to get into this industry.

@@ -2,7 +2,7 @@
 title: 'The noise, the shift and what still matters'
 description: 'AI, tooling and new ways of working create a lot of noise—and pressure to keep up. The fundamentals of the work have not changed; everything else is still settling.'
 pubDate: '2026-03-24'
-socialImage: '/images/the-noise-the-shift-and-what-still-matters.png'
+socialImage: '/images/social/the-noise-the-shift-and-what-still-matters-newspaper-v1.jpg'
 ---
 
 ## The noise, the shift and what still matters

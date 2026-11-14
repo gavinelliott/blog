@@ -2,7 +2,7 @@
 title: "I don't think about impostor syndrome in the same way anymore"
 description: 'After an autism diagnosis, the old impostor story went quieter—not because work got easier, but because I understood myself differently. What I called insecurity often had other names.'
 pubDate: '2026-03-27'
-socialImage: '/images/i-dont-think-about-impostor-syndrome-in-the-same-way-anymore.png'
+socialImage: '/images/social/i-dont-think-about-impostor-syndrome-in-the-same-way-anymore-newspaper-v1.jpg'
 ---
 
 For a long time, I thought about impostor syndrome quite a lot.

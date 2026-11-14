@@ -1,9 +1,11 @@
 ---
 import deployment from '../../../vercel.json';
 interface Props { title: string; description: string; image?: string; article?: boolean; publishDate?: Date; updatedDate?: Date; noindex?: boolean }
-const {title,description,image='/images/writing-blog-post-placeholder.jpg',article=false,publishDate,updatedDate,noindex=false}=Astro.props;
+const {title,description,image='/images/social/default-newspaper-v1.jpg',article=false,publishDate,updatedDate,noindex=false}=Astro.props;
 const site=Astro.site!;
 const url=new URL(Astro.url.pathname === '/404/' ? '/404.html' : Astro.url.pathname,site).href;
+const isSocialCard=image.startsWith('/images/social/');
+const imageAlt=article ? title.replace(/ \| Gav Elliott$/,'')+' · Gavin Elliott' : 'Gav Elliott. Designer at Deel, making apps and writing about it.';
 const imageURL=new URL(image,site).href;
 const person={'@type':'Person','@id':new URL('/about/#gav',site).href,name:'Gavin Elliott',alternateName:'Gav Elliott',url:new URL('/about/',site).href,jobTitle:'Lead Product Designer',worksFor:{'@type':'Organization',name:'Deel',url:'https://www.deel.com/'},sameAs:['https://www.linkedin.com/in/gavin-elliott-1326a741/']};
 const graph:any[]=[person,{'@type':'WebSite','@id':new URL('/#website',site).href,url:site.href,name:'Gav Elliott',publisher:{'@id':person['@id']}}];
@@ -19,6 +21,7 @@ const policy=deployment.headers[0].headers.find(h=>h.key==='Content-Security-Pol
 <link rel="canonical" href={url}/>
 <link rel="alternate" type="application/rss+xml" title="Gavin Elliott" href="/rss.xml"/>
 <meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={url}/><meta property="og:type" content={article?'article':'website'}/><meta property="og:image" content={imageURL}/><meta property="og:site_name" content="Gavin Elliott"/><meta property="og:locale" content="en_GB"/>
+{isSocialCard && <><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:type" content="image/jpeg"/><meta property="og:image:alt" content={imageAlt}/><meta name="twitter:image:alt" content={imageAlt}/></>}
 <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@gavinelliott"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={imageURL}/>
 {publishDate && <meta property="article:published_time" content={publishDate.toISOString()}/>}
 {updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()}/>}

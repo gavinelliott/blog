@@ -2,7 +2,7 @@
 title: 'Getting diagnosed as autistic as an adult'
 description: 'A late diagnosis did not change who I am, but it gave me a way to understand myself. Clarity at work, energy, communication—and working with how I think instead of against it.'
 pubDate: '2026-03-26'
-socialImage: '/images/getting-diagnosed-as-autistic-as-an-adult.png'
+socialImage: '/images/social/getting-diagnosed-as-autistic-as-an-adult-newspaper-v1.jpg'
 ---
 
 ## Getting diagnosed as autistic as an adult

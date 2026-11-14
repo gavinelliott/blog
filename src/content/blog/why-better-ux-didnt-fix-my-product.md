@@ -2,7 +2,7 @@
 title: 'Why better UX didn’t fix my product'
 description: 'Clean flows and polished interfaces are not enough when the problem is not painful enough, the value is unclear, or the positioning does not land. UX supports strong products; it cannot rescue weak ones.'
 pubDate: '2026-03-23'
-socialImage: '/images/why-better-ux-didnt-fix-my-product.png'
+socialImage: '/images/social/why-better-ux-didnt-fix-my-product-newspaper-v1.jpg'
 ---
 
 ## Why better UX didn’t fix my product

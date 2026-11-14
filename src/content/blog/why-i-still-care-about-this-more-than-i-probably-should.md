@@ -2,7 +2,7 @@
 title: 'Why I still care about this more than I probably should'
 description: 'After twenty years in design and product, what still matters is not the outputs or titles but the thinking behind the work—how decisions get made and whether we solve the right problem.'
 pubDate: '2026-03-22'
-socialImage: '/images/why-i-still-care-about-this-more-than-i-probably-should.png'
+socialImage: '/images/social/why-i-still-care-about-this-more-than-i-probably-should-newspaper-v1.jpg'
 ---
 
 ## **Why I still care about this more than I probably should**

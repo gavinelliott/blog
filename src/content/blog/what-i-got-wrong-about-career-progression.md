@@ -2,7 +2,7 @@
 title: 'What I got wrong about career progression'
 description: 'I thought progress meant more responsibility, bigger teams and broader scope. Stepping back taught me that sometimes progression is about moving closer to the work—not further away.'
 pubDate: '2026-03-25'
-socialImage: '/images/what-i-got-wrong-about-career-progression.png'
+socialImage: '/images/social/what-i-got-wrong-about-career-progression-newspaper-v1.jpg'
 ---
 
 ## What I got wrong about career progression

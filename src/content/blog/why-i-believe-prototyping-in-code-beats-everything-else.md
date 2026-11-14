@@ -2,7 +2,7 @@
 title: 'Why I believe prototyping in code beats everything else'
 description: 'Why I use code prototypes to test real interactions, accessibility and user needs, and how AI coding tools help me get useful feedback sooner.'
 pubDate: '2025-06-21'
-socialImage: '/li-prototyping-post-image.jpg'
+socialImage: '/images/social/why-i-believe-prototyping-in-code-beats-everything-else-newspaper-v1.jpg'
 ---
 
 I've been around long enough to see the rise of design tooling that promised speed, alignment and closer collaboration. Figma has become the default in most places. It's visual, collaborative and powerful. But for me, it and all the others never really delivered what mattered most — real understanding.

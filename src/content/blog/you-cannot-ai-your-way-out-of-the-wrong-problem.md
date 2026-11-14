@@ -2,7 +2,7 @@
 title: 'You cannot AI your way out of the wrong problem'
 description: 'AI tools can critique layouts, suggest improvements and generate variations. But none of that matters if you''re solving the wrong problem in the first place.'
 pubDate: '2026-03-19'
-socialImage: '/images/you-cannot-ai-your-way-out-of-the-wrong-problem.png'
+socialImage: '/images/social/you-cannot-ai-your-way-out-of-the-wrong-problem-newspaper-v1.jpg'
 ---
 
 There is a pattern starting to appear in how teams are using AI in design.

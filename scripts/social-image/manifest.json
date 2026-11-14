@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "default",
+    "title": "Gav Elliott",
+    "url": "/images/social/default-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 126
+  },
+  {
+    "slug": "claude-design-isnt-really-a-design-tool",
+    "title": "Claude Design isn’t really a design tool",
+    "url": "/images/social/claude-design-isnt-really-a-design-tool-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "getting-diagnosed-as-autistic-as-an-adult",
+    "title": "Getting diagnosed as autistic as an adult",
+    "url": "/images/social/getting-diagnosed-as-autistic-as-an-adult-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "i-dont-think-about-impostor-syndrome-in-the-same-way-anymore",
+    "title": "I don't think about impostor syndrome in the same way anymore",
+    "url": "/images/social/i-dont-think-about-impostor-syndrome-in-the-same-way-anymore-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "its-getting-harder-to-break-into-tech",
+    "title": "It's getting harder to break into tech, and I don't think we're talking about it enough",
+    "url": "/images/social/its-getting-harder-to-break-into-tech-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 61
+  },
+  {
+    "slug": "the-noise-the-shift-and-what-still-matters",
+    "title": "The noise, the shift and what still matters",
+    "url": "/images/social/the-noise-the-shift-and-what-still-matters-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "what-i-got-wrong-about-career-progression",
+    "title": "What I got wrong about career progression",
+    "url": "/images/social/what-i-got-wrong-about-career-progression-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "why-better-ux-didnt-fix-my-product",
+    "title": "Why better UX didn’t fix my product",
+    "url": "/images/social/why-better-ux-didnt-fix-my-product-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "why-i-believe-prototyping-in-code-beats-everything-else",
+    "title": "Why I believe prototyping in code beats everything else",
+    "url": "/images/social/why-i-believe-prototyping-in-code-beats-everything-else-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "why-i-still-care-about-this-more-than-i-probably-should",
+    "title": "Why I still care about this more than I probably should",
+    "url": "/images/social/why-i-still-care-about-this-more-than-i-probably-should-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  },
+  {
+    "slug": "you-cannot-ai-your-way-out-of-the-wrong-problem",
+    "title": "You cannot AI your way out of the wrong problem",
+    "url": "/images/social/you-cannot-ai-your-way-out-of-the-wrong-problem-newspaper-v1.jpg",
+    "width": 1200,
+    "height": 630,
+    "fontSize": 65
+  }
+]
