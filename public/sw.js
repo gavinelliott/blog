@@ -1,5 +1,5 @@
 // Service Worker for offline capabilities and improved caching
-const CACHE_NAME = 'gavin-elliott-blog-v2';
+const CACHE_NAME = 'gavin-elliott-blog-v3-newspaper';
 
 // Assets to cache immediately on service worker install
 const PRECACHE_ASSETS = [

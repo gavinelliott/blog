@@ -1,0 +1,15 @@
+---
+import Layout from './Layout.astro';
+interface Props { title:string; description:string; date:Date; heroImage?:string; client?:string; role?:string; stack?:string; status?:string; link?:string; github?:string; noindex?:boolean }
+const {title,description,date,heroImage,client,role,stack,status,link,github,noindex=false}=Astro.props;
+---
+<Layout title={`${title} | Gav Elliott`} {description} image={heroImage} {noindex}>
+<main id="main" tabindex="-1" class="legacy-edition">
+<nav aria-label="Breadcrumb"><a href="/work/">Work & apps</a> / {title}</nav>
+<header><p class="eyebrow">From the project archive · <time datetime={date.toISOString()}>{date.getUTCFullYear()}</time></p><h1>{title}</h1><p>{description}</p></header>
+<div class="legacy-layout"><aside>{client && <p><strong>Client</strong><br/>{client}</p>}{role && <p><strong>Role</strong><br/>{role}</p>}{stack && <p><strong>Built with</strong><br/>{stack}</p>}{status && <p><strong>Status</strong><br/>{status}</p>}{link && <p><a href={link}>Visit the project →</a></p>}{github && <p><a href={github}>View the code →</a></p>}<a href="/work/">What I’m working on now →</a></aside><article>{heroImage && <img src={heroImage} alt="" width="1020" height="510"/>}<slot/></article></div>
+</main>
+</Layout>
+<style>
+.legacy-edition{padding:25px 0 50px}.legacy-edition nav{font:700 14px/1.6 var(--ui)}header{border-block:2px solid;margin-top:22px;padding:30px 0}h1{font:400 clamp(32px,5vw,70px)/1.3 var(--display);text-transform:uppercase;margin:20px 0;overflow-wrap:normal}header>p:last-child{font-size:22px;max-width:800px}.legacy-layout{display:grid;grid-template-columns:220px minmax(0,760px);gap:45px;padding-top:35px}aside p{margin-bottom:22px}article{min-width:0;font-size:20px;line-height:1.6}article :global(p){font:inherit;margin-bottom:1em}article :global(h2),article :global(h3){font:700 28px/1.4 var(--ui);margin:1.5em 0 .8em}article :global(img){height:auto;max-width:100%}article :global(pre),article :global(table){display:block;max-width:100%;overflow:auto}article :global(a){overflow-wrap:anywhere}article :global(blockquote){border-left:5px solid var(--green);margin:25px 0;padding-left:22px}@media(max-width:760px){.legacy-layout{grid-template-columns:1fr;gap:24px}article{font-size:18px}}
+</style>

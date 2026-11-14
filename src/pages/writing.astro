@@ -1,6 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
-import WritingArchive from '../components/WritingArchive.astro';
-const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+import Page from '../components/newspaper/Archive.astro';
 ---
-<WritingArchive title="Writing" description="Articles, essays and thoughts by Gavin Elliott" introduction="Articles on design leadership, career progression and building products with AI." posts={posts} />
+<Page />

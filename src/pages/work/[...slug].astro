@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import CaseStudy from '../../components/newspaper/LegacyDetail.astro';
 
 export async function getStaticPaths() {
 	const caseStudies = await getCollection('work', ({ data }) => {
@@ -19,6 +19,6 @@ const caseStudy = Astro.props;
 const { Content } = await render(caseStudy);
 ---
 
-<CaseStudy {...caseStudy.data}>
+<CaseStudy {...caseStudy.data} noindex>
 	<Content />
 </CaseStudy>

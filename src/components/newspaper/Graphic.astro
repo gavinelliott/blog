@@ -1,0 +1,40 @@
+---
+interface Props { kind: 'bridge' | 'hanger' | 'target' | 'cassette' | 'sun' | 'document'; }
+const { kind } = Astro.props;
+---
+<svg viewBox="0 0 240 180" fill="none" aria-hidden="true" focusable="false">
+  {kind === 'bridge' && <g stroke="currentColor" stroke-width="8">
+    <path d="M8 140H232M15 128Q120 -10 225 128M15 128Q120 28 225 128" />
+    <path d="M37 104V139M62 78V139M88 62V139M116 55V139M144 61V139M170 78V139M197 104V139" stroke-width="4" />
+    <path d="M12 159H60M82 159H156M180 159H230" stroke-width="5" />
+  </g>}
+  {kind === 'hanger' && <g stroke="currentColor" stroke-width="15" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M104 48C104 15 151 17 151 48C151 65 126 65 126 83L212 139Q225 151 207 155H35Q15 151 29 139L126 83" />
+    <path d="M182 36L192 14M197 55L220 47" stroke="#e6c51c" stroke-width="10" />
+  </g>}
+  {kind === 'target' && <g>
+    <circle cx="113" cy="93" r="77" fill="currentColor" />
+    <circle cx="113" cy="93" r="55" fill="var(--paper)" />
+    <circle cx="113" cy="93" r="33" fill="currentColor" />
+    <path d="M117 93L135 43L149 56L192 13L218 39L175 82L189 96Z" fill="var(--yellow)" stroke="var(--ink)" stroke-width="7" stroke-linejoin="round" />
+  </g>}
+  {kind === 'cassette' && <g transform="rotate(-9 120 90)">
+    <rect x="12" y="28" width="216" height="132" rx="15" fill="var(--paper)" stroke="var(--ink)" stroke-width="9" />
+    <path d="M29 47H211V104H29Z" fill="var(--green)" />
+    <path d="M44 60H175M44 72H155" stroke="var(--paper)" stroke-width="7" />
+    <rect x="54" y="88" width="132" height="34" rx="17" fill="var(--ink)" />
+    <circle cx="73" cy="105" r="12" fill="var(--paper)" /><circle cx="167" cy="105" r="12" fill="var(--paper)" />
+    <path d="M78 155L88 132H153L163 155" stroke="var(--ink)" stroke-width="7" />
+    <circle cx="29" cy="143" r="3" fill="var(--ink)" /><circle cx="211" cy="143" r="3" fill="var(--ink)" />
+  </g>}
+  {kind === 'sun' && <g transform="translate(120 90)" stroke="currentColor">
+    {Array.from({length:20},(_,i)=><path d="M0 -55V-81" stroke-width="13" transform={`rotate(${i*18})`} />)}
+    <circle r="42" stroke-width="8" /><circle r="27" stroke-width="5" />
+  </g>}
+  {kind === 'document' && <g transform="rotate(9 120 90)" stroke="currentColor" stroke-width="9">
+    <rect x="57" y="12" width="127" height="157" rx="9" />
+    <circle cx="120" cy="55" r="15" fill="currentColor" stroke="none" />
+    <path d="M91 98Q92 70 120 70Q148 70 150 98Z" fill="currentColor" stroke="none" />
+    <path d="M80 118H159M80 140H136" />
+  </g>}
+</svg>

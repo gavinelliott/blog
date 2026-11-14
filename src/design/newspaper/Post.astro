@@ -1,0 +1,72 @@
+---
+import { getCollection, render } from 'astro:content';
+import { topics } from '../../data/topics';
+import Layout from './Layout.astro';
+interface Props { postId: string }
+const posts = await getCollection('blog');
+const post = posts.find(p => p.id === Astro.props.postId)!;
+const { Content, headings } = await render(post);
+const topic = topics.find(t => t.articles.includes(post.id));
+const related = posts.filter(p => p.id !== post.id && (!topic || topic.articles.includes(p.id))).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,2);
+const minutes = Math.max(1,Math.ceil((post.body ?? '').split(/\s+/).length/220));
+---
+<Layout title={`${post.data.title} | Gav Elliott`}>
+ <main id="main" tabindex="-1" class="post-edition">
+  <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/design/writing/">Writing</a>{topic && <><span aria-hidden="true">/</span><a href={`/design/writing/${topic.slug}/`}>{topic.title}</a></>}</nav>
+  <article>
+   <header class="post-header">
+    <p class="post-meta"><span>By Gav Elliott</span><time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}</time><span>{minutes} min read</span></p>
+    <h1>{post.data.title}</h1>
+    <p class="standfirst">{post.data.description}</p>
+   </header>
+   <div class="reading-layout">
+    <aside class="article-rail">
+     {headings.length > 0 && <details open class="contents"><summary>In this article</summary><nav aria-label="Article contents"><ol>{headings.map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav></details>}
+     <a class="back-link" href={topic ? `/design/writing/${topic.slug}/` : '/design/writing/'}>← Back to the writing</a>
+    </aside>
+    <div class="article-body"><Content /><div class="article-end"><span aria-hidden="true">■</span><a href="#main">Back to the top ↑</a></div></div>
+   </div>
+  </article>
+  <section class="related" aria-labelledby="related-title"><h2 id="related-title">More to read</h2><div>{related.map(p=><article><h3><a href={`/design/post/${p.id}/`}>{p.data.title}</a></h3><p>{p.data.description}</p></article>)}</div></section>
+ </main>
+</Layout>
+<script>
+ const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.contents a'));
+ const sections = links.map(link => ({link, heading: document.getElementById(decodeURIComponent(link.hash.slice(1)))})).filter(item => item.heading);
+ const rail = document.querySelector<HTMLElement>('.article-rail');
+ let pending = false;
+ let current: HTMLAnchorElement | undefined;
+ function updateSection() {
+  pending = false;
+  const marker = Math.min(160, window.innerHeight * .25);
+  let active: HTMLAnchorElement | undefined;
+  for (const section of sections) {
+   if (section.heading!.getBoundingClientRect().top <= marker) active = section.link;
+   else break;
+  }
+  if (active === current) return;
+  current?.removeAttribute('aria-current');
+  active?.setAttribute('aria-current', 'location');
+  current = active;
+  // Keep the active entry visible inside a long contents list without moving the page.
+  if (active && rail && matchMedia('(min-width: 761px)').matches) {
+   const a = active.getBoundingClientRect(), r = rail.getBoundingClientRect();
+   if (a.top < r.top + 8) rail.scrollTop += a.top - r.top - 8;
+   else if (a.bottom > r.bottom - 8) rail.scrollTop += a.bottom - r.bottom + 8;
+  }
+ }
+ function scheduleUpdate() { if (!pending) { pending = true; requestAnimationFrame(updateSection); } }
+ if (sections.length) {
+  addEventListener('scroll', scheduleUpdate, {passive:true});
+  addEventListener('resize', scheduleUpdate, {passive:true});
+  addEventListener('hashchange', scheduleUpdate);
+  document.fonts.ready.then(scheduleUpdate);
+  updateSection();
+ }
+</script>
+<style is:inline>
+.post-edition{--article-h2:30px;--article-h3:26px;--article-h4:22px}.article-breadcrumb{display:flex;flex-wrap:wrap;gap:10px;font:700 13px/1.5 var(--ui);padding:22px 0}.article-breadcrumb a{padding:5px 0}.post-header{padding:26px 0 34px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}.post-meta{display:flex;flex-wrap:wrap;gap:12px 22px;font:700 12px/1.5 var(--ui);text-transform:uppercase;letter-spacing:.04em;color:var(--green);margin-bottom:22px}.post-header h1{font:400 clamp(38px,6.3vw,86px)/1.4 var(--display);text-transform:uppercase;letter-spacing:-.025em;max-width:1200px;text-wrap:balance;overflow-wrap:normal;word-break:normal;hyphens:none}.standfirst{font:400 clamp(19px,2vw,26px)/1.5 var(--serif);max-width:880px;text-wrap:pretty;margin-top:24px}.reading-layout{display:grid;grid-template-columns:minmax(0,240px) minmax(0,700px);gap:60px;align-items:start;padding:40px 0 50px}.article-rail{min-width:0;position:sticky;top:24px;max-height:calc(100dvh - 48px);overflow-y:auto;scrollbar-width:thin;padding:0 8px 8px}.contents{border-top:6px solid var(--green);padding-top:16px}.contents summary{font:700 15px var(--ui);padding:8px 0;min-height:44px}.contents ol{list-style:none;margin:10px 0 22px;padding:0}.contents li{border-bottom:1px solid var(--rule)}.contents a{font:400 15px/1.45 var(--serif);display:block;padding:13px 0;text-decoration:none}.contents a:hover{text-decoration:underline}.contents a[aria-current="location"]{background:var(--yellow);color:var(--ink);box-shadow:inset 3px 0 var(--green);padding-left:12px;text-decoration:underline;text-decoration-thickness:2px}.back-link{font:700 12px/1.5 var(--ui);display:inline-block;padding:12px 0;color:var(--green)}.article-body{min-width:0;max-width:70ch;font:400 20px/1.6 var(--serif)}.article-body p{font:inherit;margin:0 0 1em}.article-body h2,.article-body h3,.article-body h4{font:700 var(--article-h2)/1.4 var(--ui);margin:2em 0 1em;scroll-margin-top:32px;text-wrap:balance;overflow-wrap:normal;word-break:normal;hyphens:none}.article-body h3{font-size:var(--article-h3)}.article-body h4{font-size:var(--article-h4)}.article-body strong{font-family:var(--ui);font-weight:700}.article-body h2 strong,.article-body h3 strong{font-weight:inherit}.article-body a{text-underline-position:from-font;text-decoration-thickness:from-font;text-decoration-skip-ink:auto;color:var(--green);overflow-wrap:break-word}.article-body hr{border:0;border-top:1px solid var(--rule);margin:2em 0}.article-body blockquote{margin:2em 0;border-left:6px solid var(--green);padding:8px 24px;background:#f3d33140}.article-body ul,.article-body ol{padding-left:1.4em;margin:1.5em 0}.article-body li{margin:.5em 0}.article-body img{display:block;height:auto;margin:24px auto}.article-body pre{max-width:100%;overflow:auto;padding:20px;font-size:14px;line-height:1.6}.article-body table{display:block;overflow:auto;max-width:100%;font-size:16px}.article-body td,.article-body th{padding:10px;border-bottom:1px solid var(--rule)}.article-end{display:flex;align-items:center;justify-content:space-between;border-top:2px solid;padding-top:18px;color:var(--green)}.article-end a{font:700 13px var(--ui);padding:10px 0}.related{border-top:3px solid;padding:24px 0 32px}.related>h2{font:400 36px/1 var(--display);text-transform:uppercase;margin-bottom:24px}.related>div{display:grid;grid-template-columns:1fr 1fr;gap:35px}.related article{padding-right:24px;min-width:0}.related article+article{border-left:1px solid var(--rule);padding-left:35px}.related h3{font:400 28px/1.4 var(--serif);margin-bottom:12px}.related h3 a{text-decoration:none}.related h3 a:hover{text-decoration:underline}.related p{font-size:16px;text-wrap:pretty}
+@media(max-width:1000px){.reading-layout{grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:32px}}
+@media(max-width:760px){.article-breadcrumb{font-size:12px;padding:14px 0}.post-header{padding:22px 0 26px}.post-meta{font-size:12px;gap:10px 16px;margin-bottom:18px}.post-header h1{font-size:clamp(31px,8.5vw,58px)}.standfirst{font-size:19px;margin-top:20px}.reading-layout{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:24px}.article-rail{position:static;max-height:none;overflow:visible;padding:0}.article-rail .back-link{display:none}.contents{border-top:4px solid var(--green)}.contents ol{columns:2;column-gap:22px}.contents li{break-inside:avoid}.contents a{font-size:14px}.article-body{font-size:18px;line-height:1.6}.post-edition{--article-h2:27px;--article-h3:24px;--article-h4:21px}.related>div{grid-template-columns:minmax(0,1fr);gap:24px}.related article+article{border-left:0;border-top:1px solid var(--rule);padding:24px 0 0}.related h3{font-size:26px}}
+@media(max-width:380px){.contents ol{columns:1}}
+</style>

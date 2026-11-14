@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const items = posts.map(p=>({title:p.data.title,url:`/blog/${p.id}/`,description:p.data.description,date:p.data.pubDate.toISOString().slice(0,10),label:p.data.pubDate.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})}));
+---
+<dialog id="search-dialog" aria-labelledby="search-title">
+ <div class="search-heading"><div><p class="eyebrow">The archive</p><h2 id="search-title">Find a post.</h2></div><button type="button" class="close-search" aria-label="Close search">Close ×</button></div>
+ <label for="site-search">Search titles and summaries</label>
+ <div class="search-field"><input id="site-search" type="search" placeholder="Try AI, leadership or burnout" autocomplete="off" spellcheck="false" aria-describedby="search-help"/><button type="button" id="search-clear" hidden>Clear</button></div>
+ <p id="search-help">Use a few words you remember. Results update as you type.</p>
+ <div id="search-start"><p class="search-section-label">A few places to start</p><div class="search-suggestions">{['AI','Leadership','Burnout','Design'].map(term=><button type="button" data-search-term={term}>{term} <span aria-hidden="true">→</span></button>)}</div><div class="search-latest"><p class="search-section-label">Latest writing</p>{items.slice(0,3).map(item=><a href={item.url}><time datetime={item.date}>{item.label}</time><span>{item.title}</span></a>)}</div></div>
+ <p id="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+ <div id="search-empty" hidden><span aria-hidden="true" class="search-zero">0</span><div><h3>No matches.</h3><p>Try fewer words or a different spelling.</p><a href="/writing/">Browse all the writing →</a></div></div>
+ <ol id="search-results" aria-label="Search results"></ol>
+ <button type="button" id="search-more" hidden>Show more results</button>
+ <div class="search-bottom"><a href="/writing/">All writing →</a><p>Tab to move · Enter to open · Esc to close</p></div>
+</dialog>
+<script is:inline type="application/json" id="search-data" set:html={JSON.stringify(items).replace(/</g, '\\u003c')} />
+<script>
+ import { searchWriting } from './search.mjs';
+ type Item = {title:string;url:string;description:string;date:string;label:string};
+ const dialog = document.querySelector<HTMLDialogElement>('#search-dialog')!;
+ const input = document.querySelector<HTMLInputElement>('#site-search')!;
+ const results = document.querySelector<HTMLOListElement>('#search-results')!;
+ const status = document.querySelector<HTMLElement>('#search-status')!;
+ const start = document.querySelector<HTMLElement>('#search-start')!;
+ const empty = document.querySelector<HTMLElement>('#search-empty')!;
+ const clear = document.querySelector<HTMLButtonElement>('#search-clear')!;
+ const more = document.querySelector<HTMLButtonElement>('#search-more')!;
+ const items: Item[] = JSON.parse(document.querySelector('#search-data')!.textContent!);
+ let returnFocus: HTMLElement | null = null;
+ let matches: Item[] = [];
+ let shown = 0;
+ let timer: ReturnType<typeof setTimeout>;
+ function appendResults() {
+  const batch = matches.slice(shown, shown + 12);
+  batch.forEach(item=>{
+   const li=document.createElement('li');
+   const a=document.createElement('a');a.href=item.url;
+   const time=document.createElement('time');time.dateTime=item.date;time.textContent=item.label;
+   const title=document.createElement('span');title.className='search-result-title';title.textContent=item.title;
+   const summary=document.createElement('p');summary.textContent=item.description;
+   a.append(time,title);li.append(a,summary);results.append(li);
+  });
+  shown += batch.length;
+  more.hidden = shown >= matches.length;
+  status.textContent = `${matches.length} ${matches.length===1?'post':'posts'} found.${matches.length>shown ? ` Showing ${shown}.` : ''}`;
+ }
+ function updateSearch() {
+  results.replaceChildren(); shown=0;more.hidden=true;
+  const q=input.value.trim(); clear.hidden=!input.value;start.hidden=!!q;empty.hidden=true;
+  if (!q) {status.textContent='';matches=[];return;}
+  matches=searchWriting(items,q);appendResults();empty.hidden=matches.length>0;
+ }
+ function openSearch() {if(dialog.open)return;returnFocus=document.activeElement as HTMLElement;updateSearch();dialog.showModal();document.body.classList.add('search-is-open');input.focus();}
+ document.querySelectorAll<HTMLButtonElement>('[data-open-search]').forEach(button=>button.addEventListener('click',openSearch));
+ dialog.querySelector('.close-search')!.addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){event.preventDefault();dialog.close();return;}
+  if(event.key==='Tab'){
+   const controls=Array.from(dialog.querySelectorAll<HTMLElement>('a[href],button,input')).filter(el=>!el.closest('[hidden]')&&!el.hasAttribute('disabled')&&el.getClientRects().length);
+   const first=controls[0],last=controls[controls.length-1];
+   if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+   else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+  }
+ });
+ dialog.addEventListener('close',()=>{clearTimeout(timer);document.body.classList.remove('search-is-open');returnFocus?.focus();});
+ dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+ document.addEventListener('keydown',event=>{const target=event.target as HTMLElement;if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"])')&&!dialog.open){event.preventDefault();openSearch();}});
+ input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(updateSearch,120);});
+ clear.addEventListener('click',()=>{clearTimeout(timer);input.value='';updateSearch();input.focus();});
+ more.addEventListener('click',()=>{const previous=shown;appendResults();results.children[previous]?.querySelector('a')?.focus();});
+ document.querySelectorAll<HTMLButtonElement>('[data-search-term]').forEach(button=>button.addEventListener('click',()=>{clearTimeout(timer);input.value=button.dataset.searchTerm!;updateSearch();input.focus();}));
+ document.querySelector('#surprise')?.addEventListener('click',()=>{if(items.length)location.href=items[Math.floor(Math.random()*items.length)].url;});
+</script>
+<style is:inline>
+body.search-is-open{overflow:hidden}#search-dialog{width:min(800px,calc(100% - 36px));max-height:88dvh;padding:28px;overscroll-behavior:contain;scrollbar-gutter:stable}#search-dialog [hidden]{display:none!important}#search-dialog .search-heading{align-items:flex-start}#search-dialog .search-heading h2{font-size:clamp(28px,5vw,52px);line-height:1.1}#search-dialog .eyebrow{font-size:12px;color:var(--green)}#search-dialog .close-search{flex-shrink:0}#search-dialog .search-field{display:flex;border:2px solid var(--green);background:#fffaf0}#search-dialog input{min-width:0;border:0;background:transparent;padding:16px 12px}#search-dialog input::-webkit-search-cancel-button{display:none}#search-clear{border:0;border-left:1px solid var(--rule);background:var(--yellow);padding:0 14px;font:700 13px var(--ui);min-height:48px}#search-help{font-size:14px;line-height:1.5;margin:10px 0 24px}.search-section-label{font:700 12px/1.5 var(--ui);text-transform:uppercase;margin-bottom:12px}.search-suggestions{display:flex;flex-wrap:wrap;gap:8px}.search-suggestions button{background:var(--green);color:var(--paper);border:0;padding:12px 16px;min-height:44px;font:700 14px/1.5 var(--ui);display:flex;gap:18px;justify-content:space-between}.search-latest{margin-top:28px}.search-latest>a{display:block;padding:16px 0;border-top:1px solid var(--rule);text-decoration:none}.search-latest>a>span{display:block;font:400 22px/1.4 var(--serif)}.search-latest>a:hover>span{text-decoration:underline}#search-dialog time{display:block;font:700 11px/1.5 var(--ui);margin-bottom:8px}#search-status:not(:empty){background:var(--yellow);padding:10px 12px;font:700 13px/1.6 var(--ui);margin:20px 0 0}#search-results{margin:0;padding:0;list-style:none}#search-results li{border-bottom:1px solid var(--rule);padding:20px 0}#search-results a{border:0;padding:0;text-decoration:none}#search-results a:hover .search-result-title{text-decoration:underline}.search-result-title{display:block;font:400 24px/1.4 var(--serif);word-break:normal;overflow-wrap:normal}#search-results p{font-size:16px;line-height:1.6;margin-top:10px}#search-more{display:block;margin:20px 0 0;background:var(--green);color:var(--paper);font:700 14px/1.5 var(--ui);border:0;padding:13px 18px;min-height:48px}#search-empty{display:flex;gap:25px;padding:30px 0;align-items:center}.search-zero{font:400 100px/1 var(--display);color:var(--green)}#search-empty h3{font:400 clamp(24px,4vw,38px)/1.2 var(--display);text-transform:uppercase}#search-empty p{margin:12px 0;font-size:17px;line-height:1.6}#search-empty a{font:700 14px/1.6 var(--ui)}.search-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-top:2px solid var(--ink);padding-top:18px;margin-top:22px}.search-bottom>a{font:700 13px/1.5 var(--ui)}.search-bottom p{font:400 12px/1.6 var(--serif)}
+@media(max-width:600px){#search-dialog{padding:18px;width:calc(100% - 24px);max-height:90dvh;box-shadow:5px 5px 0 var(--green)}#search-dialog .search-heading{gap:10px}#search-dialog .close-search{padding:8px;font-size:12px}#search-dialog label{font-size:14px}#search-dialog input{font-size:16px;padding:14px 8px}#search-clear{padding:0 9px}#search-help{font-size:13px}.search-suggestions{display:grid;grid-template-columns:1fr 1fr}.search-suggestions button{font-size:12px;padding:12px;gap:8px}.search-latest>a>span,.search-result-title{font-size:21px}#search-empty{gap:15px;align-items:flex-start}.search-zero{font-size:70px}#search-empty h3{font-size:23px}.search-bottom p{font-size:11px}}
+</style>

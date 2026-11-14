@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import Shipped from '../../layouts/Shipped.astro';
+import Shipped from '../../components/newspaper/LegacyDetail.astro';
 
 export async function getStaticPaths() {
 	const projects = await getCollection('shipped', ({ data }) => {

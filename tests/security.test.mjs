@@ -79,7 +79,7 @@ test('every built HTML page has a restrictive CSP and external executable script
     assert.equal(metaPolicy, policy.split(';').map(directive => directive.trim()).filter(directive => !directive.startsWith('frame-ancestors ')).join('; '), `${file}: preview policy differs from deployment`);
     assert.ok(html.toLowerCase().indexOf('http-equiv="content-security-policy"') < html.indexOf('<script'), `${file}: CSP must precede scripts`);
     for (const [, attributes, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
-      if (/type=["']application\/ld\+json["']/.test(attributes)) continue;
+      if (/type=["']application\/(?:ld\+)?json["']/.test(attributes)) continue;
       assert.equal(body.trim(), '', `${file}: executable inline script`);
       assert.match(attributes, /\bsrc=/, `${file}: script without an external URL`);
     }
@@ -96,10 +96,10 @@ test('navigation works and CSP blocks inline scripts, event handlers, foreign sc
       if (message.type() === 'error' && /content security policy/i.test(message.text())) violations.push(message.text());
     });
     await page.goto(`${base}/writing/`);
-    await page.locator('.mobile-menu-toggle').click();
-    assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'), 'true');
+    await page.locator('.mobile-menu summary').click();
+    assert.equal(await page.locator('.mobile-menu').evaluate(el=>el.open), true);
     await page.keyboard.press('Escape');
-    assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'), 'false');
+    assert.equal(await page.locator('.mobile-menu').evaluate(el=>el.open), false);
     assert.deepEqual(violations, [], 'The normal page must not violate CSP');
     await page.evaluate(() => {
       const inline = document.createElement('script');
@@ -163,7 +163,7 @@ test('service worker installs, updates without HTTP cache, and excludes private 
         ['/security-fixture/post', { method: 'POST', body: 'test' }],
       ]) await fetch(url, { ...options, headers: { Accept: 'text/html', ...options.headers } });
       const registration = await navigator.serviceWorker.getRegistration();
-      const cache = await caches.open('gavin-elliott-blog-v2');
+      const cache = await caches.open('gavin-elliott-blog-v3-newspaper');
       return {
         updateViaCache: registration.updateViaCache,
         keys: (await cache.keys()).map(request => new URL(request.url).pathname + new URL(request.url).search),

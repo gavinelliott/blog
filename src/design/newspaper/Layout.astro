@@ -1,0 +1,47 @@
+---
+import Search from './Search.astro';
+import displayFont from './assets/display.ttf?url';
+import './newspaper.css';
+interface Props { title?: string }
+const { title = 'Gav Elliott | The new edition' } = Astro.props;
+const nav = [{label:'Writing',href:'/design/writing/'},{label:'Work',href:'/design/work/'},{label:'Books',href:'/design/books/'},{label:'Talks',href:'/design/speaking/'},{label:'About',href:'/design/about/'}];
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f4ecd8" />
+    <title>{title} · Local prototype</title>
+    <meta name="description" content="Writing, work and whatever else. A local design exploration for Gavin Elliott." />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preload" href={displayFont} as="font" type="font/ttf" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="paper">
+      <header class="masthead">
+        <div class="strap"><span>Words, work & whatever else.</span><span>From the North East of England</span></div>
+        <div class="nameplate"><a href="/design/home/" aria-label="Gav Elliott home">GAV ELLIOTT</a><button class="monogram" type="button" aria-label="Open search" data-open-search><span>GE</span><i></i><i></i><i></i></button></div>
+        <div class="navigation">
+          <details class="mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation">{nav.map(item=><a href={item.href}>{item.label}</a>)}</nav></details>
+          <nav class="desktop-nav" aria-label="Main navigation">{nav.map(item=><a href={item.href}>{item.label}</a>)}</nav>
+          <button class="search-trigger" data-open-search>Search <kbd>/</kbd><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button>
+        </div>
+      </header>
+
+      <slot />
+      <footer><span>Gav Elliott.</span><a href="/design/writing/">Browse the writing →</a><a href="/design/privacy/">Privacy</a><a href="/design/sitemap/">Sitemap</a><small>Local design edition · Links open existing pages.</small></footer>
+    </div>
+
+    <Search />
+    <script>
+      document.querySelectorAll('.mobile-menu a').forEach(link=>link.addEventListener('click',()=>document.querySelector<HTMLDetailsElement>('.mobile-menu')!.open=false));
+    </script>
+  </body>
+</html>
+
+<style>
+@media(max-width:760px){.nameplate{gap:8px}.nameplate>a{font-size:8.8vw;min-width:0}.monogram{width:52px;height:52px}}
+</style>

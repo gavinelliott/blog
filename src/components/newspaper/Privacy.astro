@@ -1,0 +1,20 @@
+---
+import Layout from './Layout.astro';
+import './Utility.css';
+const sections=[['collection','What the site collects'],['use','Why I use analytics'],['storage','Cookies & storage'],['links','Links to other sites'],['choices','Your choices'],['contact','Questions & changes']];
+---
+<Layout description="How this blog uses cookieless analytics and browser storage." title="Privacy | Gav Elliott">
+ <main id="main" tabindex="-1" class="utility-edition">
+ <header class="utility-cover"><div><p class="eyebrow">The small print</p><h1>Your<br/><span>privacy.</span></h1></div><p>What happens to your information when you visit this blog.</p></header>
+ <div class="utility-layout"><nav class="utility-contents" aria-label="Privacy contents">{sections.map(([id,label])=><a href={`#${id}`}>{label}</a>)}</nav><div class="utility-prose">
+  <p class="utility-date">Privacy policy updated 24 October 2026.</p>
+  <section id="collection"><h2>What the site collects</h2><p>This is a static blog with no account system or advertising tracking. I use DataFast in cookieless mode to understand which pages people read and how they find the site.</p><p>DataFast receives information about page visits, referral sources and the browser or device used.</p><p>It uses signals such as your IP address and browser information to create a hashed identifier that changes about every 24 hours. Cookieless mode does not link visitors across different websites.</p><p>Read more about <a href="https://datafa.st/docs/gdpr-cookieless-tracking">DataFast’s cookieless tracking</a> and its <a href="https://datafa.st/privacy-policy">privacy policy</a>.</p></section>
+  <section id="use"><h2>Why I use analytics</h2><p>I use these statistics alongside reader feedback and conversations to understand which writing is useful and where readers discover it. This helps me decide what to write and improve next.</p><p>I don’t sell your data, use it for targeted advertising or use analytics to build a long-term profile of your browsing habits.</p></section>
+  <section id="storage"><h2>Cookies & storage</h2><p>DataFast does not use cookies to identify visitors in this mode. It may use temporary browser storage for the current tab session.</p><p>The live site also caches pages on your device to help them load quickly.</p></section>
+  <section id="links"><h2>Links to other sites</h2><p>When you follow a link to another website, including social platforms, that site’s privacy policy applies. I don’t control how those sites handle your information.</p></section>
+  <section id="choices"><h2>Your choices</h2><p>Most modern browsers let you clear site data or block storage. The site works with privacy-focused browsers and extensions.</p></section>
+  <section id="contact"><h2>Questions & changes</h2><p>If I change how I handle information on the site, I’ll update this page and its date.</p><p>For questions about privacy, you can <a href="https://www.linkedin.com/in/gavin-elliott-1326a741/">contact me on LinkedIn</a>.</p></section>
+  <a class="utility-top" href="#main">Back to top ↑</a>
+ </div></div>
+ </main>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from './Layout.astro';
+import './Utility.css';
+import { topics } from '../../data/topics';
+import books from '../../data/books.json';
+const posts=(await getCollection('blog')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const years=[...new Set(posts.map(p=>p.data.pubDate.getUTCFullYear()))];
+const pages=[['Home','/design/home/','The latest writing and what I’m building.'],['Writing','/design/writing/','Posts, guides and the archive.'],['Work & apps','/design/work/','Deel, Crafted by Fort and my apps.'],['Books','/design/books/','Books I’d recommend.'],['Talks','/design/speaking/','Past talks, recordings and appearances.'],['About','/design/about/','A bit more about me.']];
+---
+<Layout title="Sitemap | Gav Elliott">
+ <main id="main" tabindex="-1" class="utility-edition">
+  <header class="utility-cover"><div><p class="eyebrow">Sitemap</p><h1>In this<br/><span>edition.</span></h1></div><p>The main pages, subjects and every post in the archive.</p></header>
+  <section class="map-section" aria-label="Main pages"><ul class="map-pages">{pages.map(([title,url,description])=><li><a href={url}><strong>{title} <span aria-hidden="true">→</span></strong><p>{description}</p></a></li>)}</ul></section>
+  <section class="map-section" aria-labelledby="map-subjects"><header><h2 id="map-subjects">Writing by subject</h2></header><ul class="map-links">{topics.map(t=><li><a href={`/design/writing/${t.slug}/`}>{t.title}</a></li>)}</ul></section>
+  <section class="map-section" aria-labelledby="map-books"><header><h2 id="map-books">On the bookshelf</h2></header><ul class="map-links">{books.map(section=><li><a href={`/design/books/#${section.id}`}>{section.title}</a></li>)}</ul></section>
+  <section class="map-section" aria-labelledby="map-more"><header><h2 id="map-more">Also here</h2></header><ul class="map-links"><li><a href="/design/work/roundtails/">The story behind Roundtails</a></li><li><a href="/design/talks/imposter-syndrome/">The impostor syndrome talk</a></li><li><a href="/design/privacy/">Privacy</a></li><li><a href="/rss.xml">RSS feed</a></li></ul></section>
+  <section class="map-section" aria-labelledby="map-archive"><header><h2 id="map-archive">Every post</h2><p>{posts.length} posts · newest first</p></header><nav class="map-years" aria-label="Jump to a year">{years.map(year=><a href={`#year-${year}`}>{year}</a>)}</nav>{years.map(year=><section class="map-year" id={`year-${year}`} aria-labelledby={`heading-${year}`}><h3 id={`heading-${year}`}>{year}</h3><ul>{posts.filter(p=>p.data.pubDate.getUTCFullYear()===year).map(post=><li><time datetime={post.data.pubDate.toISOString().slice(0,10)}>{post.data.pubDate.toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'})}</time><a href={`/design/post/${post.id}/`}>{post.data.title}</a></li>)}</ul><a class="utility-top" href="#map-archive">Back to years ↑</a></section>)}</section>
+ </main>
+</Layout>

@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://gavinelliott.co.uk',
 	output: 'static',
-	integrations: [sitemap({ filter: (page) => !new URL(page).pathname.startsWith('/work/') && !['/work', '/blog', '/blog/'].includes(new URL(page).pathname) })],
+	integrations: [sitemap({ filter: (page) => (!new URL(page).pathname.startsWith('/work/') || ['/work/', '/work/roundtails/'].includes(new URL(page).pathname)) && !['/blog', '/blog/'].includes(new URL(page).pathname) })],
 	server: { host: '127.0.0.1' },
 	devToolbar: { enabled: false },
 	image: {

@@ -1,0 +1,48 @@
+---
+import Search from './Search.astro';
+import Head from './Head.astro';
+import displayFont from './assets/display.ttf?url';
+import './newspaper.css';
+interface Props { title?: string; description?: string; image?: string; article?: boolean; publishDate?: Date; updatedDate?: Date; noindex?: boolean }
+const { title = 'Gav Elliott | Writing, work and whatever else', description = 'Writing about design, leadership and building apps. By Gavin Elliott, a designer and maker from the North East of England.', ...metadata } = Astro.props;
+const nav = [{label:'Writing',href:'/writing/'},{label:'Work',href:'/work/'},{label:'Books',href:'/recommended-reads/'},{label:'Talks',href:'/speaking/'},{label:'About',href:'/about/'}];
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="theme-color" content="#f4ecd8" />
+    <Head {title} {description} {...metadata} />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preload" href={displayFont} as="font" type="font/ttf" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="paper">
+      <header class="masthead">
+        <div class="strap"><span>Words, work & whatever else.</span><span>From the North East of England</span></div>
+        <div class="nameplate"><a href="/" aria-label="Gav Elliott home">GAV ELLIOTT</a><button class="monogram" type="button" aria-label="Open search" data-open-search><span>GE</span><i></i><i></i><i></i></button></div>
+        <div class="navigation">
+          <details class="mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation">{nav.map(item=><a href={item.href}>{item.label}</a>)}</nav></details>
+          <nav class="desktop-nav" aria-label="Main navigation">{nav.map(item=><a href={item.href}>{item.label}</a>)}</nav>
+          <button class="search-trigger" data-open-search>Search <kbd>/</kbd><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button>
+        </div>
+      </header>
+
+      <slot />
+      <footer><span>Gav Elliott.</span><a href="/writing/">Browse the writing →</a><a href="/privacy-policy/">Privacy</a><a href="/sitemap/">Sitemap</a><a href="/rss.xml">RSS</a></footer>
+    </div>
+
+    <Search />
+    <script>
+      document.addEventListener('keydown',event=>{if(event.key==='Escape'){const menu=document.querySelector<HTMLDetailsElement>('.mobile-menu');if(menu?.open){menu.open=false;menu.querySelector('summary')?.focus();}}});
+      document.querySelectorAll('.mobile-menu a').forEach(link=>link.addEventListener('click',()=>document.querySelector<HTMLDetailsElement>('.mobile-menu')!.open=false));
+    </script>
+  </body>
+</html>
+
+<style>
+@media(max-width:760px){.nameplate{gap:8px}.nameplate>a{font-size:8.8vw;min-width:0}.monogram{width:52px;height:52px}}
+</style>

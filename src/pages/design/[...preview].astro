@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import NewspaperNotFound from '../../design/newspaper/NotFound.astro';
+import NewspaperPrivacy from '../../design/newspaper/Privacy.astro';
+import NewspaperSitemap from '../../design/newspaper/Sitemap.astro';
+import NewspaperAbout from '../../design/newspaper/About.astro';
+import NewspaperSpeaking from '../../design/newspaper/Speaking.astro';
+import NewspaperTalk from '../../design/newspaper/Talk.astro';
+import NewspaperBooks from '../../design/newspaper/Books.astro';
+import NewspaperProject from '../../design/newspaper/Project.astro';
+import NewspaperWork from '../../design/newspaper/Work.astro';
+import NewspaperArchive from '../../design/newspaper/Archive.astro';
+import NewspaperPost from '../../design/newspaper/Post.astro';
+import NewspaperHome from '../../design/newspaper/Home.astro';
+import NewspaperWriting from '../../design/newspaper/Writing.astro';
+import { topics } from '../../data/topics';
+// Exploration only: these routes are deliberately absent from production builds.
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return import.meta.env.DEV || process.env.NEWSPAPER_PREVIEW === '1'
+    ? ['privacy', 'sitemap', '404', 'about', 'home', 'speaking', 'talks/imposter-syndrome', 'books', 'work', 'work/roundtails', 'writing', ...topics.map(t => `writing/${t.slug}`), ...posts.map(p => `post/${p.id}`)].map(preview => ({ params: { preview } }))
+    : [];
+}
+const preview = Astro.params.preview;
+---
+{preview === 'privacy' ? <NewspaperPrivacy /> : preview === 'sitemap' ? <NewspaperSitemap /> : preview === '404' ? <NewspaperNotFound /> : preview === 'about' ? <NewspaperAbout /> : preview === 'speaking' ? <NewspaperSpeaking /> : preview === 'talks/imposter-syndrome' ? <NewspaperTalk /> : preview === 'books' ? <NewspaperBooks /> : preview === 'home' ? <NewspaperHome /> : preview === 'work/roundtails' ? <NewspaperProject /> : preview === 'work' ? <NewspaperWork /> : preview === 'writing' ? <NewspaperArchive /> : preview?.startsWith('post/') ? <NewspaperPost postId={preview.slice(5)} /> : <NewspaperWriting topicSlug={preview?.split('/')[1]} />}

@@ -1,0 +1,20 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from './Layout.astro';
+const talk = await getEntry('talks','imposter-syndrome');
+if (!talk) throw new Error('Talk not found');
+const { Content } = await render(talk);
+---
+<Layout title="Impostor Syndrome · Talk | Gav Elliott">
+ <main id="main" tabindex="-1" class="talk-edition">
+  <nav class="talk-breadcrumb" aria-label="Breadcrumb"><a href="/design/speaking/">Speaking & talks</a><span aria-hidden="true">/</span><span aria-current="page">Impostor Syndrome</span></nav>
+  <header class="talk-heading"><p class="eyebrow">From the talk archive</p><h1>Impostor<br/>Syndrome<span>.</span></h1><p>The original description, audience feedback and writing behind the talk.</p></header>
+  <aside class="talk-perspective"><p>My thinking on this has changed.</p><a href="/design/post/i-dont-think-about-impostor-syndrome-in-the-same-way-anymore/">I don’t think about impostor syndrome in the same way anymore →</a></aside>
+  <div class="talk-body"><aside class="talk-sidebar"><p class="eyebrow">Related writing</p><a href="/design/post/impostor-syndrome/">The original article & slides →</a><a href="/design/post/i-dont-think-about-impostor-syndrome-in-the-same-way-anymore/">My perspective now →</a><a href="/design/speaking/">Speaking history →</a></aside><article class="talk-prose"><Content/></article></div>
+  <a class="talk-back" href="/design/speaking/">← Back to speaking & talks</a>
+ </main>
+</Layout>
+<style is:inline>
+.talk-edition{padding-bottom:35px}.talk-breadcrumb{display:flex;flex-wrap:wrap;gap:12px;font:700 13px/1.5 var(--ui);padding:22px 0}.talk-heading{background:var(--yellow);padding:35px}.talk-heading h1{font:400 clamp(40px,7.5vw,100px)/1.13 var(--display);text-transform:uppercase;letter-spacing:-.025em}.talk-heading h1 span{color:var(--green)}.talk-heading>p:last-child{font-size:21px;line-height:1.6;max-width:650px;margin-top:22px}.talk-perspective{display:flex;gap:25px;justify-content:space-between;align-items:baseline;padding:25px 0;border-bottom:2px solid var(--ink)}.talk-perspective p{font:700 17px/1.6 var(--ui)}.talk-perspective a{font-size:17px;line-height:1.6;max-width:580px}.talk-body{display:grid;grid-template-columns:210px minmax(0,760px);gap:50px;padding-top:35px}.talk-sidebar{position:sticky;top:24px;align-self:start}.talk-sidebar a{display:block;font:700 14px/1.6 var(--ui);padding:14px 0;border-top:1px solid var(--rule)}.talk-prose{min-width:0}.talk-prose p{font-size:20px;line-height:1.65;margin-bottom:24px}.talk-prose img{display:block;width:100%;height:auto}.talk-prose h2{font:400 clamp(27px,3vw,38px)/1.4 var(--display);text-transform:uppercase;margin:35px 0 20px}.talk-prose blockquote{border-left:5px solid var(--green);padding:6px 0 6px 24px;margin:28px 0}.talk-prose blockquote p{font-size:20px;margin:12px 0}.talk-prose a{overflow-wrap:break-word}.talk-back{display:inline-block;font:700 14px/1.6 var(--ui);padding:15px 0;margin-top:25px}
+@media(max-width:760px){.talk-heading{padding:24px}.talk-heading h1{font-size:clamp(32px,9.3vw,62px)}.talk-heading>p:last-child{font-size:18px}.talk-perspective{flex-direction:column;gap:10px}.talk-body{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:28px}.talk-sidebar{position:static;order:2}.talk-prose p,.talk-prose blockquote p{font-size:18px}.talk-prose blockquote{padding-left:18px}.talk-breadcrumb{font-size:12px}}
+</style>
