@@ -1,6 +1,6 @@
 # Full transition to the newspaper design
 
-Status: implementation complete, release testing in progress.
+Status: deployed and tested on production. See `docs/releases/2026-11-14-newspaper.md` for evidence and remaining editorial/maintenance items.
 Reviewed with Gav: 14 November 2026. All page directions approved. Performance measurement and Gav’s editorial/link review will happen on production after the switch.
 
 ## Scope and decisions
@@ -106,7 +106,7 @@ Fix regressions while preserving the approved visual direction. Prioritise share
 
 ## AI search and agent readiness
 
-Status: planned, not implemented. Include this work in the production transition. Technical eligibility does not guarantee indexing, recommendations or citations.
+Status: technical implementation deployed and checked. Search account citation/indexing reports remain a follow-up. Technical eligibility does not guarantee indexing, recommendations or citations.
 
 ### Before release
 
@@ -140,4 +140,4 @@ Rollback triggers include widespread route failures, missing article content, br
 
 ## Completion criteria
 
-The new design is present across all public page families; all previous published URLs remain supported; content comes from existing sources; real 404 and redirects behave correctly; production metadata, analytics, feeds and caching work; Gav’s live content/link feedback is resolved; measured production performance meets the agreed targets or any remaining issue is explicitly recorded. No deployment has been performed as part of this plan.
+The new design is present across all public page families; all previous published URLs remain supported; content comes from existing sources; real 404 and redirects behave correctly; production metadata, analytics, feeds and caching work; Gav’s live content/link feedback is resolved; measured production performance meets the agreed targets or any remaining issue is explicitly recorded. Production deployment is complete. Gav’s live editorial review and field performance observation remain ongoing.
