@@ -1,5 +1,6 @@
 ---
 import Search from './Search.astro';
+import Graphic from './Graphic.astro';
 import Head from './Head.astro';
 import displayFont from './assets/display.ttf?url';
 import './newspaper.css';
@@ -24,7 +25,7 @@ const nav = [{label:'Writing',href:'/writing/'},{label:'Work',href:'/work/'},{la
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="paper">
       <header class="masthead">
-        <div class="strap"><span>Words, work & whatever else.</span><span>From the North East of England</span></div>
+        <div class="strap"><span>Words, work & whatever else.</span><span class="location"><span class="location-label">From the North East of England</span><span class="location-bridge" aria-hidden="true"><Graphic kind="bridge" /></span></span></div>
         <div class="nameplate"><a href="/" aria-label="Gav Elliott home">GAV ELLIOTT</a><button class="monogram" type="button" aria-label="Open search" data-open-search><span>GE</span><i></i><i></i><i></i></button></div>
         <div class="navigation">
           <details class="mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation">{nav.map(item=><a href={item.href}>{item.label}</a>)}</nav></details>
@@ -46,5 +47,14 @@ const nav = [{label:'Writing',href:'/writing/'},{label:'Work',href:'/work/'},{la
 </html>
 
 <style>
+.location-bridge{display:none}
+@media(max-width:760px){
+  .strap{align-items:center}
+  .strap>.location{display:flex;align-items:center;flex:0 0 44px;max-width:none}
+  .location-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+  .location-bridge{display:block;width:44px;height:28px;color:var(--green)}
+  .location-bridge :global(svg){width:44px;height:28px}
+}
+
 @media(max-width:760px){.nameplate{gap:8px}.nameplate>a{font-size:8.8vw;min-width:0}.monogram{width:52px;height:52px}}
 </style>
